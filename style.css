@@ -48,16 +48,15 @@ textarea, input[type="submit"] {
   box-sizing: border-box;
 }
 
-html {
-  height: 100%;
-}
-
 body {
   height: 100%;
   font-size: 100%;
   margin: 0;
   padding: 0;
+  font-family: "Lato", sans-serif;
   line-height: 1.5;
+  background: #F2F2F2;
+  color: #1A1A1A;
   -webkit-font-smoothing: subpixel-antialiased;
   word-wrap: break-word;
   -ms-word-wrap: break-word;
@@ -74,11 +73,31 @@ body {
   margin: 0 auto;
 }
 
+.loop-container:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
 p {
   margin: 1.5em 0;
 }
 
+a {
+  color: #1A1A1A;
+}
+a:link, a:visited {
+  color: #1A1A1A;
+}
+a:hover, a:active, a:focus {
+  color: #1A1A1A;
+}
+
 h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato", sans-serif;
   margin: 0;
   padding: 0;
   font-weight: 400;
@@ -112,17 +131,20 @@ li li {
 /* Markup styles */
 pre {
   word-wrap: break-word;
+  background: #F2F2F2;
   white-space: pre-wrap;
   padding: 0.75em;
 }
 
 code {
+  background: #F2F2F2;
   padding: 0 0.375em;
 }
 
 blockquote {
   margin: 1.5em 1.5em 1.5em 0;
   padding-left: 1.5em;
+  border-left: solid 3px #1A1A1A;
 }
 blockquote cite {
   display: block;
@@ -143,6 +165,7 @@ table {
 td,
 th {
   padding: 0.75em;
+  border: solid 1px #1A1A1A;
 }
 
 /* Images */
@@ -180,13 +203,22 @@ img,
   height: auto;
 }
 
+.wp-caption-text,
+.gallery-caption {
+  margin: 0 0 1.84502em;
+  color: #1A1A1A;
+}
+
 /* Form styles */
 input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
 textarea {
   width: 100%;
+  font-family: "Lato", sans-serif;
   padding: 10px 12px;
   max-width: 27.75em;
-  border: none;
+  background: #F2F2F2;
+  color: #1A1A1A;
+  border: solid 2px #E6E6E6;
   border-radius: 0;
   -webkit-appearance: none;
   -webkit-transition: all 0.1s ease-in-out;
@@ -200,9 +232,10 @@ textarea {
 }
 
 input[type="submit"] {
+  font-family: "Lato", sans-serif;
   padding: 10px 12px;
   color: white;
-  outline: none;
+  background: #1A1A1A;
   border: none;
   border-radius: 0;
   -webkit-appearance: none;
@@ -211,6 +244,30 @@ input[type="submit"] {
 }
 input[type="submit"]:hover {
   cursor: pointer;
+}
+input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
+  background: #4D4D4D;
+}
+
+input[type="search"] {
+  padding-right: 0.375em;
+  /* so safari 'x' doesn't get cut off */
+}
+
+::-webkit-input-placeholder {
+  color: #666666;
+}
+
+:-moz-placeholder {
+  color: #666666;
+}
+
+::-moz-placeholder {
+  color: #666666;
+}
+
+:-ms-input-placeholder {
+  color: #666666;
 }
 
 /* ie image border fix */
@@ -250,6 +307,7 @@ a img {
   color: white !important;
   z-index: 99;
   padding: 1.5em;
+  background: #1A1A1A;
   -webkit-transition: top 0.2s ease-in-out;
   transition: top 0.2s ease-in-out;
 }
@@ -348,7 +406,157 @@ a img {
   margin: 0 auto;
 }
 
-.sticky,
-.bypostauthor {
-  border: solid 1px #000;
+.featured-image {
+  position: relative;
+  height: 0;
+  padding-bottom: 50%;
+  overflow: hidden;
+}
+.featured-image > a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-size: 0;
+}
+.featured-image > a:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: white;
+  opacity: 0;
+  -webkit-transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
+}
+.featured-image > a:focus:after {
+  opacity: 0.2;
+}
+.featured-image > img,
+.featured-image > a > img {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.featured-image > img.no-object-fit,
+.featured-image > a > img.no-object-fit {
+  min-width: 0;
+  min-height: 0;
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  width: auto;
+  top: 50%;
+  right: 50%;
+  left: auto;
+  -webkit-transform: translateX(50%) translateY(-50%);
+  -ms-transform: translateX(50%) translateY(-50%);
+  transform: translateX(50%) translateY(-50%);
+}
+
+.post-content iframe {
+  max-width: 100%;
+}
+.post-content:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.site-header .search-form-container {
+  position: absolute;
+  top: 22px;
+  right: 1.5em;
+}
+.site-header .search-form-container button {
+  position: relative;
+  z-index: 9;
+  background: none;
+  border: none;
+  margin: 5px -10px 0 0;
+  padding: 6px 10px;
+  font-size: 1em;
+  line-height: 1.5;
+}
+.site-header .search-form-container button:hover {
+  cursor: pointer;
+}
+.site-header .search-form-container button:focus {
+  outline: none;
+}
+.site-header .search-form-container button:focus i {
+  color: #1A1A1A;
+}
+.site-header .search-form-container button.open + form {
+  opacity: 1;
+}
+.site-header .search-form-container i {
+  color: #666666;
+  z-index: -1;
+}
+.site-header .search-form-container form {
+  position: absolute;
+  top: 0;
+  right: -12px;
+  left: 0;
+  padding-top: 6px;
+  opacity: 0;
+  -webkit-transition: opacity 0.15s ease-in-out, left 0.15s ease-in-out;
+  transition: opacity 0.15s ease-in-out, left 0.15s ease-in-out;
+}
+.site-header .search-form-container .search-field {
+  max-width: none !important;
+  outline: none !important;
+  padding: 6px 12px !important;
+}
+.site-header .search-form-container .search-field::-webkit-search-decoration, .site-header .search-form-container .search-field::-webkit-search-cancel-button, .site-header .search-form-container .search-field::-webkit-search-results-button, .site-header .search-form-container .search-field::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+.site-header .search-form-container .search-field::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+.site-header .search-form-container .search-field::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+.site-header .search-form-container .search-field:focus {
+  background: #F2F2F2 !important;
+  outline: solid 1px #E6E6E6 !important;
+}
+
+@media all and (min-width: 50em) {
+  .site-header .search-form-container {
+    position: relative;
+    float: right;
+    top: -6px;
+    right: 0;
+    z-index: 9;
+    text-align: right;
+    margin: 0 0 0 1.5em;
+  }
+  .site-header .search-form-container button {
+    margin: 0;
+    padding: 4px 10px;
+  }
+  .site-header .search-form-container button:hover {
+    cursor: pointer;
+  }
+  .site-header .search-form-container button.open + form {
+    left: -266px;
+  }
+  .site-header .search-form-container form {
+    padding-top: 0;
+    right: 0;
+  }
 }
