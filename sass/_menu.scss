@@ -56,13 +56,14 @@
   }
   .menu-primary-container {
     max-height: none;
-    float: left;
+    overflow: visible;
 
     .menu-inner-container {
-      padding: $baseline-height * .75 $baseline-height $baseline-height * .75 $baseline-height * 2;
+      padding: $baseline-height * .75 $column * 2.5 $baseline-height * .75 $baseline-height * 2;
     }
   }
   .menu-primary {
+    float: left;
 
     li {
       display: inline-block;

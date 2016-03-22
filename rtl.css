@@ -416,7 +416,14 @@ a img {
 .site-header {
   background: white;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
-  overflow: hidden;
+}
+.site-header:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
 }
 
 .title-container {
@@ -457,9 +464,24 @@ a img {
   margin: 0;
 }
 
+.social-media-icons {
+  list-style: none;
+  margin: 1.5em 0 0.75em;
+}
+.social-media-icons li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
 @media all and (min-width: 56.25em) {
   .title-container {
     float: right;
+    margin-left: 3em;
+  }
+
+  .social-media-icons {
+    float: left;
+    margin: 0;
   }
 }
 .toggle-navigation {
@@ -516,12 +538,15 @@ a img {
 
   .menu-primary-container {
     max-height: none;
-    float: right;
+    overflow: visible;
   }
   .menu-primary-container .menu-inner-container {
-    padding: 1.125em 3em 1.125em 1.5em;
+    padding: 1.125em 3em 1.125em 6.945%;
   }
 
+  .menu-primary {
+    float: right;
+  }
   .menu-primary li {
     display: inline-block;
     margin: 0 0 0 20px;

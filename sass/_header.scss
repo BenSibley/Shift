@@ -1,7 +1,10 @@
 .site-header {
   background: white;
   box-shadow: 0 0 4px 0 rgba(0,0,0,0.3);
-  overflow: hidden;
+
+  &:after {
+    @include clearfix;
+  }
 }
 .title-container {
   position: relative;
@@ -40,10 +43,24 @@
   color: $color-gray-90;
   margin: 0;
 }
+.social-media-icons {
+  list-style: none;
+  margin: $baseline-height 0 $baseline-height / 2;
+
+  li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+}
 
 @media all and (min-width: $nine-hundred) {
 
   .title-container {
     float: left;
+    margin-right: $baseline-height * 2;
+  }
+  .social-media-icons {
+    float: right;
+    margin: 0;
   }
 }
