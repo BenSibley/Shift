@@ -99,6 +99,11 @@ jQuery(document).ready(function($){
     var menuLink = $('.menu-item').children('a');
 
     toggleNavigation.on('click', openPrimaryMenu);
+    body.on('click', '#search-icon', openSearchBar);
+
+    $('.post-content').fitVids({
+        customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="wordpress.tv"]'
+    });
 
     function openPrimaryMenu() {
 
@@ -107,7 +112,7 @@ jQuery(document).ready(function($){
             $(this).removeClass('open');
 
             // change screen reader text
-            //$(this).children('span').text(objectL10n.openMenu);
+            $(this).children('span').text(objectL10n.openMenu);
 
             // change aria text
             $(this).attr('aria-expanded', 'false');
@@ -117,7 +122,7 @@ jQuery(document).ready(function($){
             $(this).addClass('open');
 
             // change screen reader text
-            //$(this).children('span').text(objectL10n.closeMenu);
+            $(this).children('span').text(objectL10n.closeMenu);
 
             // change aria text
             $(this).attr('aria-expanded', 'true');
@@ -153,6 +158,39 @@ jQuery(document).ready(function($){
 
             // change aria text
             $(this).attr('aria-expanded', 'true');
+        }
+    }
+
+    function openSearchBar(){
+
+        if( $(this).hasClass('open') ) {
+
+            $(this).removeClass('open');
+            socialMediaIcons.removeClass('fade');
+
+            // make search input inaccessible to keyboards
+            siteHeader.find('.search-field').attr('tabindex', -1);
+
+            // handle mobile width search bar sizing
+            if( window.innerWidth < 900 ) {
+                siteHeader.find('.search-form').attr('style', '');
+            }
+        } else {
+
+            $(this).addClass('open');
+            socialMediaIcons.addClass('fade');
+
+            // make search input keyboard accessible
+            siteHeader.find('.search-field').attr('tabindex', 0);
+
+            // handle mobile width search bar sizing
+            if( window.innerWidth < 800 ) {
+
+                // distance to other side (35px is width of icon space)
+                var leftDistance = window.innerWidth * 0.83332 - 35;
+
+                siteHeader.find('.search-form').css('left', -leftDistance + 'px')
+            }
         }
     }
 

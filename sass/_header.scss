@@ -1,15 +1,27 @@
 .site-header {
-  //padding: $baseline-height $column * 2.5;
-  //background: $color-gray-10;
-  //color: white;
+  background: white;
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.3);
+  overflow: hidden;
 }
 .title-container {
-  //display: inline-block;
+  position: relative;
+  display: inline-block;
   background: $color-gray-10;
-  padding: $baseline-height $column * 2.5;
+  padding: $baseline-height * .75 $baseline-height $baseline-height * .75 $column * 2.5;
 
   &:after {
-    @include clearfix;
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 100%;
+    left: 100%;
+    top: 0;
+    transform: translateZ(0);
+    background: linear-gradient(to right bottom, $color-gray-10 47%, transparent 50%)
+  }
+  &.has-tagline {
+    padding-top: 9px;
+    padding-bottom: 9px;
   }
 }
 .site-title {
@@ -21,5 +33,17 @@
   a {
     @extend %light-link;
     text-decoration: none;
+  }
+}
+.tagline {
+  @extend %twelve-pixels;
+  color: $color-gray-90;
+  margin: 0;
+}
+
+@media all and (min-width: $nine-hundred) {
+
+  .title-container {
+    float: left;
   }
 }

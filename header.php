@@ -13,20 +13,22 @@
 	<div id="max-width" class="max-width">
 		<?php do_action( 'before_header' ); ?>
 		<header class="site-header" id="site-header" role="banner">
-			<div id="title-container" class="title-container">
+			<div id="title-container" class="title-container <?php if ( get_bloginfo( 'description' ) ) { echo 'has-tagline'; } ?>">
 				<?php get_template_part( 'logo' ) ?>
 				<?php if ( get_bloginfo( 'description' ) ) {
 					echo '<p class="tagline">' . get_bloginfo( 'description' ) . '</p>';
 				} ?>
-				<button id="toggle-navigation" class="toggle-navigation" name="toggle-navigation" aria-expanded="false">
-					<span class="screen-reader-text"><?php _e( 'open menu', 'shift' ); ?></span>
-					<?php echo ct_shift_svg_output( 'toggle-navigation' ); ?>
-				</button>
 			</div>
+			<button id="toggle-navigation" class="toggle-navigation" name="toggle-navigation" aria-expanded="false">
+				<span class="screen-reader-text"><?php _e( 'open menu', 'shift' ); ?></span>
+				<?php echo ct_shift_svg_output( 'toggle-navigation' ); ?>
+			</button>
 			<div id="menu-primary-container" class="menu-primary-container">
-				<?php get_template_part( 'menu', 'primary' ); ?>
-				<?php get_template_part( 'content/search-bar' ); ?>
-				<?php ct_shift_social_icons_output(); ?>
+				<div class="menu-inner-container">
+					<?php get_template_part( 'menu', 'primary' ); ?>
+					<?php get_template_part( 'content/search-bar' ); ?>
+					<?php ct_shift_social_icons_output(); ?>
+				</div>
 			</div>
 		</header>
 		<?php do_action( 'after_header' ); ?>
