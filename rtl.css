@@ -42,6 +42,13 @@ textarea, input[type="submit"] {
   /* 18px */
 }
 
+.site-title a {
+  color: white;
+}
+.site-title a:link, .site-title a:visited, .site-title a:hover, .site-title a:active, .site-title a:focus {
+  color: white;
+}
+
 /*===== Basic Styles =====*/
 /* apply a natural box layout model to all elements */
 *, *:before, *:after {
@@ -404,6 +411,50 @@ a img {
 }
 .tiled-gallery .gallery-row {
   margin: 0 auto;
+}
+
+.title-container {
+  background: #1A1A1A;
+  padding: 1.5em 6.945%;
+}
+.title-container:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.site-title {
+  display: inline-block;
+  font-size: 1em;
+  line-height: 1.5;
+  font-weight: 900;
+}
+.site-title a {
+  text-decoration: none;
+}
+
+.toggle-navigation {
+  float: left;
+  background: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.toggle-navigation svg g {
+  fill: white;
+}
+
+.menu-primary-container {
+  background: white;
+  padding: 1.5em 6.945%;
+}
+
+.menu-primary ul {
+  margin: 0;
+  list-style: none;
 }
 
 .featured-image {

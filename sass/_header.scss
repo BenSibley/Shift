@@ -1,0 +1,25 @@
+.site-header {
+  //padding: $baseline-height $column * 2.5;
+  //background: $color-gray-10;
+  //color: white;
+}
+.title-container {
+  //display: inline-block;
+  background: $color-gray-10;
+  padding: $baseline-height $column * 2.5;
+
+  &:after {
+    @include clearfix;
+  }
+}
+.site-title {
+  display: inline-block;
+  font-size: 1em;
+  line-height: 1.5;
+  font-weight: 900;
+
+  a {
+    @extend %light-link;
+    text-decoration: none;
+  }
+}

@@ -3,7 +3,7 @@
 // Front-end scripts
 function ct_shift_load_scripts_styles() {
 
-	wp_enqueue_style( 'ct-shift-google-fonts', '//fonts.googleapis.com/css?family=Lato:400,400italic,700' );
+	wp_enqueue_style( 'ct-shift-google-fonts', '//fonts.googleapis.com/css?family=Lato:400,400italic,700,900' );
 
 	wp_enqueue_script( 'ct-shift-js', get_template_directory_uri() . '/js/build/production.min.js', array( 'jquery' ), '', true );
 	wp_localize_script( 'ct-shift-js', 'objectL10n', array(
