@@ -82,11 +82,14 @@
 }
 
 .toggle-dropdown {
+  position: relative;
+  top: 0;
   font-size: 1em;
   padding: 4px 6px;
   margin: 0;
   border: none;
   background: none;
+  transition: all 0.2s;
 
   &:after {
     content: '\f107';
@@ -119,6 +122,16 @@
     li {
       display: inline-block;
       margin: 0 20px 0 0;
+
+      &:hover {
+
+        > a:after {
+          transform: scale(1);
+        }
+        > button {
+          top: 2px;
+        }
+      }
     }
     a {
       position: relative;
@@ -128,15 +141,25 @@
       &:after {
         content: '';
         position: absolute;
-        bottom: -6px;
+        bottom: -4px;
         left: 0;
         height: 2px;
         width: 100%;
-        background: $color-gray-10;
+        background: $color-gray-90;
         transform: scale(0);
         transition: all 0.2s;
       }
-      &:hover {
+      &:before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        height: 4px;
+        left: 0;
+        width: 100%;
+      }
+      &:hover,
+      &:active,
+      &:focus {
 
         &:after {
           transform: scale(1);
@@ -147,6 +170,7 @@
   /* Tier 2 */
   .menu-primary {
 
+    /***** Tier 2 *****/
     ul ul {
       position: absolute;
       z-index: 19;
@@ -154,11 +178,132 @@
       max-height: none;
       overflow: visible;
       background: white;
+      margin-left: 0;
+      padding: 0 $baseline-height / 2 $baseline-height * .75;
       left: 0;
       opacity: 0;
       visibility: hidden;
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
+      border-top: solid 2px $color-gray-90;
       transition: all 0.2s;
-      margin-left: 0;
+
+      &:hover,
+      &.focused {
+        opacity: 1;
+        visibility: visible;
+        top: calc(100% - 2px);
+      }
+      li {
+        white-space: nowrap;
+        margin: 0 10px 6px 0;
+
+        &.current-menu-ancestor {
+          background: none;
+
+          > a {
+            background: none;
+            font-weight: 700;
+          }
+        }
+      }
+      a {
+        width: 100%;
+      }
+    }
+    li {
+      display: inline-block;
+      margin: 0 10px 0 0;
+
+      &.menu-item-has-children {
+        position: relative;
+
+        //&:hover {
+        //
+        //  > a {
+        //
+        //    &:after {
+        //      top: 2px;
+        //    }
+        //  }
+        //}
+        > a {
+
+          &:hover,
+          &:active,
+          &:focus {
+
+            ~ ul {
+              opacity: 1;
+              visibility: visible;
+              top: calc(100% - 2px);
+            }
+            + button {
+              top: 2px;
+            }
+          }
+          //&:after {
+          //  position: relative;
+          //  top: 0;
+          //  font-family: FontAwesome;
+          //  content: '\f107';
+          //  margin-left: 4px;
+          //  transition: top 0.2s ease;
+          //}
+        }
+        /***** Tier 3+ *****/
+        ul {
+
+          li {
+            display: list-item;
+          }
+          .menu-item-has-children {
+
+            &:hover,
+            &:active {
+
+              a {
+
+                &:after {
+                  right: -2px;
+                  top: 0;
+                }
+              }
+            }
+            > a {
+
+              &:after {
+                content: '\f105';
+                transition: right 0.2s ease;
+              }
+              &:hover,
+              &:active,
+              &:focus {
+
+                ~ ul {
+                  opacity: 1;
+                  visibility: visible;
+                  top: -6px;
+                  left: 100%;
+                }
+                &:after {
+                  top: 0;
+                  right: -2px;
+                }
+              }
+            }
+          }
+          ul {
+            top: -6px;
+            left: calc(100% + 4px);
+
+            &:hover,
+            &.focused {
+              top: -6px;
+              left: 100%;
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -551,11 +551,15 @@ a img {
 }
 
 .toggle-dropdown {
+  position: relative;
+  top: 0;
   font-size: 1em;
   padding: 4px 6px;
   margin: 0;
   border: none;
   background: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 .toggle-dropdown:after {
   content: '\f107';
@@ -588,6 +592,14 @@ a img {
     display: inline-block;
     margin: 0 20px 0 0;
   }
+  .menu-primary li:hover > a:after {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  .menu-primary li:hover > button {
+    top: 2px;
+  }
   .menu-primary a {
     position: relative;
     font-size: 0.75em;
@@ -596,24 +608,35 @@ a img {
   .menu-primary a:after {
     content: '';
     position: absolute;
-    bottom: -6px;
+    bottom: -4px;
     left: 0;
     height: 2px;
     width: 100%;
-    background: #1A1A1A;
+    background: #E6E6E6;
     -webkit-transform: scale(0);
     -ms-transform: scale(0);
     transform: scale(0);
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
   }
-  .menu-primary a:hover:after {
+  .menu-primary a:before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    height: 4px;
+    left: 0;
+    width: 100%;
+  }
+  .menu-primary a:hover:after, .menu-primary a:active:after, .menu-primary a:focus:after {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
   }
 
   /* Tier 2 */
+  .menu-primary {
+    /***** Tier 2 *****/
+  }
   .menu-primary ul ul {
     position: absolute;
     z-index: 19;
@@ -621,12 +644,80 @@ a img {
     max-height: none;
     overflow: visible;
     background: white;
+    margin-left: 0;
+    padding: 0 0.75em 1.125em;
     left: 0;
     opacity: 0;
     visibility: hidden;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+    border-top: solid 2px #E6E6E6;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
-    margin-left: 0;
+  }
+  .menu-primary ul ul:hover, .menu-primary ul ul.focused {
+    opacity: 1;
+    visibility: visible;
+    top: calc(100% - 2px);
+  }
+  .menu-primary ul ul li {
+    white-space: nowrap;
+    margin: 0 10px 6px 0;
+  }
+  .menu-primary ul ul li.current-menu-ancestor {
+    background: none;
+  }
+  .menu-primary ul ul li.current-menu-ancestor > a {
+    background: none;
+    font-weight: 700;
+  }
+  .menu-primary ul ul a {
+    width: 100%;
+  }
+  .menu-primary li {
+    display: inline-block;
+    margin: 0 10px 0 0;
+  }
+  .menu-primary li.menu-item-has-children {
+    position: relative;
+    /***** Tier 3+ *****/
+  }
+  .menu-primary li.menu-item-has-children > a:hover ~ ul, .menu-primary li.menu-item-has-children > a:active ~ ul, .menu-primary li.menu-item-has-children > a:focus ~ ul {
+    opacity: 1;
+    visibility: visible;
+    top: calc(100% - 2px);
+  }
+  .menu-primary li.menu-item-has-children > a:hover + button, .menu-primary li.menu-item-has-children > a:active + button, .menu-primary li.menu-item-has-children > a:focus + button {
+    top: 2px;
+  }
+  .menu-primary li.menu-item-has-children ul li {
+    display: list-item;
+  }
+  .menu-primary li.menu-item-has-children ul .menu-item-has-children:hover a:after, .menu-primary li.menu-item-has-children ul .menu-item-has-children:active a:after {
+    right: -2px;
+    top: 0;
+  }
+  .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:after {
+    content: '\f105';
+    -webkit-transition: right 0.2s ease;
+    transition: right 0.2s ease;
+  }
+  .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:hover ~ ul, .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:active ~ ul, .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:focus ~ ul {
+    opacity: 1;
+    visibility: visible;
+    top: -6px;
+    left: 100%;
+  }
+  .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:hover:after, .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:active:after, .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:focus:after {
+    top: 0;
+    right: -2px;
+  }
+  .menu-primary li.menu-item-has-children ul ul {
+    top: -6px;
+    left: calc(100% + 4px);
+  }
+  .menu-primary li.menu-item-has-children ul ul:hover, .menu-primary li.menu-item-has-children ul ul.focused {
+    top: -6px;
+    left: 100%;
   }
 }
 .featured-image {
