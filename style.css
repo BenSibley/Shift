@@ -533,6 +533,9 @@ a img {
 .menu-primary li {
   margin-bottom: 0.75em;
 }
+.menu-primary li.current-menu-item > a, .menu-primary li.current_page_item > a, .menu-primary li.current-menu-ancestor > a {
+  font-weight: 700;
+}
 .menu-primary a {
   text-decoration: none;
 }
@@ -589,7 +592,6 @@ a img {
     position: relative;
     max-height: none;
     overflow: visible;
-    line-height: 0;
     height: 60px;
     z-index: 9;
   }

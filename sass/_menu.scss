@@ -43,6 +43,15 @@
   }
   li {
     margin-bottom: $baseline-height / 2;
+
+    &.current-menu-item,
+    &.current_page_item,
+    &.current-menu-ancestor {
+
+      > a {
+        font-weight: 700;
+      }
+    }
   }
   a {
     text-decoration: none;
@@ -114,7 +123,6 @@
     position: relative;
     max-height: none;
     overflow: visible;
-    line-height: 0;
     height: 60px;
     z-index: 9;
 
