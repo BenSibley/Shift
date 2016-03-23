@@ -471,7 +471,7 @@ function ct_shift_custom_css_output() {
 	$custom_css = get_theme_mod( 'custom_css' );
 	$logo_size = get_theme_mod( 'logo_size' );
 
-	if ( $logo_size != 48 && ! empty( $logo_size ) ) {
+	if ( $logo_size != 200 && ! empty( $logo_size ) ) {
 		$logo_size_css = '.logo {
 							width: ' . $logo_size . 'px;
 						  }';
