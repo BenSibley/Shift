@@ -54,6 +54,30 @@
       transform: translateX(50%) translateY(-50%);
     }
   }
+  .borders {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: $color-gray-10;
+      opacity: 0.3;
+    }
+    &:before {
+      top: 0;
+    }
+    &:after {
+      bottom: 0;
+    }
+  }
   .ccfic {
     position: absolute;
     width: 100%;
@@ -70,7 +94,9 @@
   border: solid 6px $color-gray-90;
   margin-bottom: $baseline-height;
 }
-.post-header {
+.post-header,
+.post-content,
+.after-post-meta {
   margin: $baseline-height $column * 1.5 * 1.06;
 }
 .post-title {
@@ -109,7 +135,7 @@
   }
 }
 .post-content {
-  margin: $baseline-height $column * 1.5 * 1.06 $baseline-height / 2;
+  margin-bottom: $baseline-height / 2;
 
   a {
     text-decoration: underline;
@@ -119,6 +145,23 @@
   }
   &:after {
     @include clearfix;
+  }
+}
+.post-categories {
+
+  span {
+    margin-right: $baseline-height / 2;
+    font-weight: 700;
+  }
+  a {
+    font-style: italic;
+    margin-left: 6px;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+    }
   }
 }
 .sticky-status {
@@ -146,12 +189,17 @@
 
 @media all and (min-width: $nine-hundred) {
 
-  .post-header {
+  .post-header,
+  .post-content,
+  .after-post-meta {
     margin: $baseline-height $column * 1.5 * 1.64;
   }
   .post-title {
     font-size: 1.75em; /* 28px / 16px */
     line-height: 1.357; /* 38px */
+  }
+  .post-content {
+    margin-bottom: $baseline-height / 2;
   }
 }
 

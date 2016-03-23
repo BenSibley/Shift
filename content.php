@@ -3,7 +3,7 @@
 	<article>
 		<div class='post-header'>
 			<h2 class='post-title'><?php the_title(); ?></h2>
-			<?php get_template_part( 'content/post-byline' ); ?>
+			<?php get_template_part( 'content/post-meta' ); ?>
 		</div>
 		<?php ct_shift_featured_image(); ?>
 		<div class="post-content">
@@ -14,7 +14,7 @@
 			) ); ?>
 			<?php do_action( 'post_after' ); ?>
 		</div>
-		<div class="post-meta">
+		<div class="after-post-meta">
 			<?php get_template_part( 'content/post-categories' ); ?>
 			<?php get_template_part( 'content/post-tags' ); ?>
 			<?php get_template_part( 'content/post-nav' ); ?>

@@ -230,9 +230,9 @@ if ( ! function_exists( 'ct_shift_featured_image' ) ) {
 		if ( has_post_thumbnail( $post->ID ) ) {
 
 			if ( is_singular() ) {
-				$featured_image = '<div class="featured-image">' . get_the_post_thumbnail( $post->ID, 'full' ) . '</div>';
+				$featured_image = '<div class="featured-image">' . get_the_post_thumbnail( $post->ID, 'full' ) . '<div class="borders"></div></div>';
 			} else {
-				$featured_image = '<div class="featured-image"><a href="' . esc_url( get_permalink() ) . '">' . get_the_title() . get_the_post_thumbnail( $post->ID, 'full' ) . '</a></div>';
+				$featured_image = '<div class="featured-image"><a href="' . esc_url( get_permalink() ) . '">' . get_the_title() . get_the_post_thumbnail( $post->ID, 'full' ) . '</a><div class="borders"></div></div>';
 			}
 		}
 

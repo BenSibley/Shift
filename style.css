@@ -842,6 +842,28 @@ a img {
   -ms-transform: translateX(50%) translateY(-50%);
   transform: translateX(50%) translateY(-50%);
 }
+.featured-image .borders {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.featured-image .borders:before, .featured-image .borders:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: #1A1A1A;
+  opacity: 0.3;
+}
+.featured-image .borders:before {
+  top: 0;
+}
+.featured-image .borders:after {
+  bottom: 0;
+}
 .featured-image .ccfic {
   position: absolute;
   width: 100%;
@@ -859,7 +881,9 @@ a img {
   margin-bottom: 1.5em;
 }
 
-.post-header {
+.post-header,
+.post-content,
+.after-post-meta {
   margin: 1.5em 4.41543%;
 }
 
@@ -892,7 +916,7 @@ a img {
 }
 
 .post-content {
-  margin: 1.5em 4.41543% 0.75em;
+  margin-bottom: 0.75em;
 }
 .post-content a {
   text-decoration: underline;
@@ -907,6 +931,18 @@ a img {
   visibility: hidden;
   line-height: 0;
   height: 0;
+}
+
+.post-categories span {
+  margin-right: 0.75em;
+  font-weight: 700;
+}
+.post-categories a {
+  font-style: italic;
+  margin-left: 6px;
+}
+.post-categories a:hover, .post-categories a:active, .post-categories a:focus {
+  text-decoration: underline;
 }
 
 .sticky-status {
@@ -934,7 +970,9 @@ a img {
   }
 }
 @media all and (min-width: 56.25em) {
-  .post-header {
+  .post-header,
+  .post-content,
+  .after-post-meta {
     margin: 1.5em 6.83142%;
   }
 
@@ -943,6 +981,10 @@ a img {
     /* 28px / 16px */
     line-height: 1.357;
     /* 38px */
+  }
+
+  .post-content {
+    margin-bottom: 0.75em;
   }
 }
 @media all and (min-width: 68.75em) {
