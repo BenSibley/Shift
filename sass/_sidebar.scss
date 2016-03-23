@@ -1,0 +1,16 @@
+.sidebar-primary {
+
+  .widget {
+    background: white;
+    border: solid 6px $color-gray-90;
+  }
+}
+
+@media all and (min-width: $nine-hundred) {
+
+  .sidebar-primary {
+    width: $column * 11;
+    float: right;
+    margin-right: $column;
+  }
+}

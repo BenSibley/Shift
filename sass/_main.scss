@@ -1,4 +1,11 @@
 .main {
-  margin: 0 auto;
-  padding: $baseline-height $column;
+  margin: $baseline-height $column;
+}
+
+@media all and (min-width: $nine-hundred) {
+
+  .main {
+    width: $column * 22;
+    float: left;
+  }
 }

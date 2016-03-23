@@ -74,7 +74,7 @@
   margin: $baseline-height $column * 1.5 * 1.06;
 }
 .post-title {
-  margin-bottom: 12px;
+  margin-bottom: 6px;
 }
 .post-meta {
 
@@ -123,4 +123,45 @@
 }
 .sticky-status {
   display: none;
+}
+
+@media all and (min-width: $six-hundred) {
+
+  .post-title {
+    font-size: 1.75em; /* 28px / 16px */
+    line-height: 1.357; /* 38px */
+  }
+}
+
+@media all and (min-width: $eight-hundred) {
+
+  .post-header {
+    margin: $baseline-height * 1.5 $column * 1.5 * 1.06;
+  }
+  .post-title {
+    font-size: 2.375em; /* 38px / 16px */
+    line-height: 1.342; /* 51px */
+  }
+}
+
+@media all and (min-width: $nine-hundred) {
+
+  .post-header {
+    margin: $baseline-height $column * 1.5 * 1.64;
+  }
+  .post-title {
+    font-size: 1.75em; /* 28px / 16px */
+    line-height: 1.357; /* 38px */
+  }
+}
+
+@media all and (min-width: $eleven-hundred) {
+
+  .post-header {
+    margin: $baseline-height * 1.5 $column * 1.5 * 1.64;
+  }
+  .post-title {
+    font-size: 2.375em; /* 38px / 16px */
+    line-height: 1.342; /* 51px */
+  }
 }
