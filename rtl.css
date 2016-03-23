@@ -543,27 +543,29 @@ a img {
 .menu-primary ul ul li:last-child {
   margin-bottom: 0;
 }
-.menu-primary .open ul {
+.menu-primary .open > ul {
   max-height: none;
 }
-.menu-primary .open .toggle-dropdown:after {
+.menu-primary .open > .toggle-dropdown:after {
   content: '\f106';
 }
 
 .toggle-dropdown {
-  position: relative;
   top: 0;
   font-size: 1em;
   padding: 4px 6px;
   margin: 0;
   border: none;
   background: none;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
 }
 .toggle-dropdown:after {
   content: '\f107';
+  position: relative;
   font-family: 'FontAwesome';
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  top: 0;
+  left: 0;
 }
 .toggle-dropdown:hover {
   cursor: pointer;
@@ -597,7 +599,7 @@ a img {
     -ms-transform: scale(1);
     transform: scale(1);
   }
-  .menu-primary li:hover > button {
+  .menu-primary li:hover > button:after {
     top: 2px;
   }
   .menu-primary a {
@@ -651,6 +653,7 @@ a img {
     visibility: hidden;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
     border-top: solid 2px #E6E6E6;
+    min-width: 5em;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
   }
@@ -662,13 +665,6 @@ a img {
   .menu-primary ul ul li {
     white-space: nowrap;
     margin: 0 0 6px 10px;
-  }
-  .menu-primary ul ul li.current-menu-ancestor {
-    background: none;
-  }
-  .menu-primary ul ul li.current-menu-ancestor > a {
-    background: none;
-    font-weight: 700;
   }
   .menu-primary ul ul a {
     width: 100%;
@@ -686,37 +682,43 @@ a img {
     visibility: visible;
     top: calc(100% - 2px);
   }
-  .menu-primary li.menu-item-has-children > a:hover + button, .menu-primary li.menu-item-has-children > a:active + button, .menu-primary li.menu-item-has-children > a:focus + button {
+  .menu-primary li.menu-item-has-children > a:hover + button:after, .menu-primary li.menu-item-has-children > a:active + button:after, .menu-primary li.menu-item-has-children > a:focus + button:after {
     top: 2px;
   }
   .menu-primary li.menu-item-has-children ul li {
     display: list-item;
   }
-  .menu-primary li.menu-item-has-children ul .menu-item-has-children:hover a:after, .menu-primary li.menu-item-has-children ul .menu-item-has-children:active a:after {
+  .menu-primary li.menu-item-has-children ul .menu-item-has-children:hover button:after, .menu-primary li.menu-item-has-children ul .menu-item-has-children:active button:after {
     left: -2px;
     top: 0;
   }
-  .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:after {
+  .menu-primary li.menu-item-has-children ul .menu-item-has-children button:after {
     content: '\f105';
     -webkit-transition: left 0.2s ease;
     transition: left 0.2s ease;
   }
+  .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:before {
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    height: 100%;
+  }
   .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:hover ~ ul, .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:active ~ ul, .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:focus ~ ul {
     opacity: 1;
     visibility: visible;
-    top: -6px;
+    top: -12px;
     right: 100%;
   }
-  .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:hover:after, .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:active:after, .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:focus:after {
+  .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:hover + button:after, .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:active + button:after, .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:focus + button:after {
     top: 0;
     left: -2px;
   }
   .menu-primary li.menu-item-has-children ul ul {
-    top: -6px;
+    top: -12px;
     right: calc(100% + 4px);
   }
   .menu-primary li.menu-item-has-children ul ul:hover, .menu-primary li.menu-item-has-children ul ul.focused {
-    top: -6px;
+    top: -12px;
     right: 100%;
   }
 }

@@ -69,10 +69,10 @@
   // li.open
   .open {
 
-    ul {
+    > ul {
       max-height: none;
     }
-    .toggle-dropdown {
+    > .toggle-dropdown {
 
       &:after {
         content: '\f106';
@@ -82,18 +82,20 @@
 }
 
 .toggle-dropdown {
-  position: relative;
   top: 0;
   font-size: 1em;
   padding: 4px 6px;
   margin: 0;
   border: none;
   background: none;
-  transition: all 0.2s;
 
   &:after {
     content: '\f107';
+    position: relative;
     font-family: 'FontAwesome';
+    transition: all 0.2s;
+    top: 0;
+    right: 0;
   }
   &:hover {
     cursor: pointer;
@@ -128,7 +130,7 @@
         > a:after {
           transform: scale(1);
         }
-        > button {
+        > button:after {
           top: 2px;
         }
       }
@@ -185,6 +187,7 @@
       visibility: hidden;
       box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
       border-top: solid 2px $color-gray-90;
+      min-width: 5em;
       transition: all 0.2s;
 
       &:hover,
@@ -197,14 +200,14 @@
         white-space: nowrap;
         margin: 0 10px 6px 0;
 
-        &.current-menu-ancestor {
-          background: none;
-
-          > a {
-            background: none;
-            font-weight: 700;
-          }
-        }
+        //&.current-menu-ancestor {
+        //  background: none;
+        //
+        //  > a {
+        //    background: none;
+        //    font-weight: 700;
+        //  }
+        //}
       }
       a {
         width: 100%;
@@ -237,18 +240,10 @@
               visibility: visible;
               top: calc(100% - 2px);
             }
-            + button {
+            + button:after {
               top: 2px;
             }
           }
-          //&:after {
-          //  position: relative;
-          //  top: 0;
-          //  font-family: FontAwesome;
-          //  content: '\f107';
-          //  margin-left: 4px;
-          //  transition: top 0.2s ease;
-          //}
         }
         /***** Tier 3+ *****/
         ul {
@@ -261,7 +256,7 @@
             &:hover,
             &:active {
 
-              a {
+              button {
 
                 &:after {
                   right: -2px;
@@ -269,11 +264,17 @@
                 }
               }
             }
+            button:after {
+              content: '\f105';
+              transition: right 0.2s ease;
+            }
             > a {
 
-              &:after {
-                content: '\f105';
-                transition: right 0.2s ease;
+              &:before {
+                top: 0;
+                bottom: 0;
+                left: 100%;
+                height: 100%;
               }
               &:hover,
               &:active,
@@ -282,10 +283,10 @@
                 ~ ul {
                   opacity: 1;
                   visibility: visible;
-                  top: -6px;
+                  top: -12px;
                   left: 100%;
                 }
-                &:after {
+                + button:after {
                   top: 0;
                   right: -2px;
                 }
@@ -293,12 +294,12 @@
             }
           }
           ul {
-            top: -6px;
+            top: -12px;
             left: calc(100% + 4px);
 
             &:hover,
             &.focused {
-              top: -6px;
+              top: -12px;
               left: 100%;
             }
           }
