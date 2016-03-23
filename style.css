@@ -604,6 +604,9 @@ a img {
     transform: translateY(-50%);
   }
 
+  .menu-primary .open > .toggle-dropdown:after {
+    content: '\f107';
+  }
   .menu-primary li {
     display: inline-block;
     margin: 0 20px 0 0;

@@ -135,6 +135,16 @@
   }
   .menu-primary {
 
+    // make arrow face downwards if menu opened at mobile then resized
+    .open {
+
+      > .toggle-dropdown {
+
+        &:after {
+          content: '\f107';
+        }
+      }
+    }
     li {
       display: inline-block;
       margin: 0 20px 0 0;
