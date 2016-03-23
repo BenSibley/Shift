@@ -1,0 +1,34 @@
+.more-link {
+  @extend %twelve-pixels;
+  display: inline-block;
+  color: white;
+  background: $color-gray-10;
+  padding: 9px 12px;
+  transition: all 0.2s;
+
+  &:link,
+  &:visited {
+    color: white;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    color: white;
+    background: $color-gray-30;
+
+    &:after {
+      right: -1px;
+    }
+  }
+  &:after {
+    content: '\f105';
+    font-family: "FontAwesome";
+    position: relative;
+    right: 0;
+    margin-left: 3px;
+    transition: all 0.2s;
+  }
+}
+.post-content .more-link {
+  text-decoration: none;
+}

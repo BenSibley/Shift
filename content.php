@@ -1,11 +1,11 @@
 <div <?php post_class(); ?>>
 	<?php do_action( 'post_before' ); ?>
 	<article>
-		<?php ct_shift_featured_image(); ?>
 		<div class='post-header'>
 			<h2 class='post-title'><?php the_title(); ?></h2>
 			<?php get_template_part( 'content/post-byline' ); ?>
 		</div>
+		<?php ct_shift_featured_image(); ?>
 		<div class="post-content">
 			<?php the_content(); ?>
 			<?php wp_link_pages( array(
