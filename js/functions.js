@@ -12,8 +12,10 @@ jQuery(document).ready(function($){
     //var sidebarPrimary = $('#sidebar-primary');
     //var sidebarPrimaryContent = $('#sidebar-primary-content');
     //var sidebarWidgets = $('#sidebar-primary-widgets');
-    //var socialMediaIcons = siteHeader.find('.social-media-icons');
+    var socialMediaIcons = siteHeader.find('.social-media-icons');
     var menuLink = $('.menu-item').children('a');
+
+    positionMenu();
 
     toggleNavigation.on('click', openPrimaryMenu);
     toggleDropdown.on('click', openDropdownMenu);
@@ -21,6 +23,10 @@ jQuery(document).ready(function($){
 
     $('.post-content').fitVids({
         customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="wordpress.tv"]'
+    });
+
+    $(window).resize(function(){
+        positionMenu();
     });
 
     function openPrimaryMenu() {
@@ -73,6 +79,17 @@ jQuery(document).ready(function($){
 
             // change aria text
             $(this).attr('aria-expanded', 'true');
+        }
+    }
+
+    // account for social icons
+    function positionMenu() {
+
+        if ( window.innerWidth > 899 && socialMediaIcons.length > 0 ) {
+            var padding = socialMediaIcons.outerWidth(true);
+            menuPrimary.css('padding-right', padding);
+        } else {
+            menuPrimary.css('padding-right', '');
         }
     }
 

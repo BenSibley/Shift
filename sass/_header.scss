@@ -58,9 +58,13 @@
   .title-container {
     float: left;
     margin-right: $baseline-height * 2;
+    z-index: 19;
   }
   .social-media-icons {
-    float: right;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: $column * 2.5;
     margin: 0;
   }
 }

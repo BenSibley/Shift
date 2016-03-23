@@ -84,7 +84,7 @@
 .toggle-dropdown {
   top: 0;
   font-size: 1em;
-  padding: 4px 6px;
+  padding: 3px 6px;
   margin: 0;
   border: none;
   background: none;
@@ -111,15 +111,21 @@
     display: none;
   }
   .menu-primary-container {
+    position: relative;
     max-height: none;
     overflow: visible;
+    line-height: 0;
+    height: 60px;
+    z-index: 9;
 
     .menu-inner-container {
-      padding: $baseline-height * .75 $column * 2.5 $baseline-height * .75 $baseline-height * 2;
+      position: relative;
+      padding: 0 $column * 2.5 0 $baseline-height * 2;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
   .menu-primary {
-    float: left;
 
     li {
       display: inline-block;

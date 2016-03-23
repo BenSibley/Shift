@@ -477,10 +477,16 @@ a img {
   .title-container {
     float: left;
     margin-right: 3em;
+    z-index: 19;
   }
 
   .social-media-icons {
-    float: right;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 6.945%;
     margin: 0;
   }
 }
@@ -553,7 +559,7 @@ a img {
 .toggle-dropdown {
   top: 0;
   font-size: 1em;
-  padding: 4px 6px;
+  padding: 3px 6px;
   margin: 0;
   border: none;
   background: none;
@@ -580,16 +586,22 @@ a img {
   }
 
   .menu-primary-container {
+    position: relative;
     max-height: none;
     overflow: visible;
+    line-height: 0;
+    height: 60px;
+    z-index: 9;
   }
   .menu-primary-container .menu-inner-container {
-    padding: 1.125em 6.945% 1.125em 3em;
+    position: relative;
+    padding: 0 6.945% 0 3em;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
   }
 
-  .menu-primary {
-    float: left;
-  }
   .menu-primary li {
     display: inline-block;
     margin: 0 20px 0 0;
