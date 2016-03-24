@@ -46,10 +46,14 @@
 .social-media-icons {
   list-style: none;
   margin: $baseline-height 0 $baseline-height / 2;
+  transition: opacity 0.2s;
 
   li {
     display: inline-block;
     margin-right: 20px;
+  }
+  &.fade {
+    opacity: 0;
   }
 }
 .logo {

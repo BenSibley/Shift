@@ -21,10 +21,6 @@
       }
       &:focus {
         outline: none;
-
-        i {
-          color: $color-gray-10;
-        }
       }
       &.open {
 
@@ -34,7 +30,7 @@
       }
     }
     i {
-      color: $color-gray-40;
+      color: $color-gray-10;
       z-index: -1; // so that the button is clicked, not this icon
     }
     form {
@@ -78,13 +74,9 @@
 @media all and (min-width: $eight-hundred ) {
 
   .site-header .search-form-container {
-    position: relative;
-    float: right;
-    top: -6px;
-    right: 0;
-    z-index: 9;
-    text-align: right;
-    margin: 0 0 0 $baseline-height;
+    top: -5px;
+    right: $column;
+    bottom: auto;
 
     button {
       margin: 0;
