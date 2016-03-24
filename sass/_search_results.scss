@@ -1,0 +1,32 @@
+.search-header {
+  @extend %gray-box;
+  margin-bottom: $baseline-height;
+
+  h1 {
+    @extend %twenty-one-pixels;
+    margin-bottom: 12px;
+  }
+  .search-field {
+    border-color: $color-gray-80 !important;
+    margin-bottom: 6px;
+  }
+  .search-submit {
+    padding: 12px 24px;
+  }
+}
+.search-bottom {
+  padding: $baseline-height $column * 1.5 * 1.06;
+  background: white;
+  margin-bottom: $baseline-height * 2;
+
+  p {
+    margin-top: 0;
+  }
+}
+
+@media all and (min-width: $nine-hundred) {
+
+  .search-bottom {
+    padding: $baseline-height $column * 1.5 * 1.64;
+  }
+}

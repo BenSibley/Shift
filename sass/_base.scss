@@ -189,7 +189,7 @@ textarea {
 input[type="submit"] {
   @extend %twelve-pixels;
   font-family: $primary-font-stack;
-  padding: 12px 12px;
+  padding: 12px;
   color: white;
   background: $color-gray-10;
   border: none;

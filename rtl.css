@@ -26,7 +26,7 @@ h1 {
   /* 38px */
 }
 
-h2 {
+h2, .search-header h1 {
   font-size: 1.3125em;
   /* 21px / 16px */
   line-height: 1.143;
@@ -81,7 +81,7 @@ textarea, input[type="submit"], .more-link, .comment-footer > span,
   margin: 1.5em 4.41543%;
 }
 
-.archive-header, .pagination {
+.archive-header, .pagination, .search-header {
   padding: 1.5em 4.41543%;
   background: #E6E6E6;
 }
@@ -93,7 +93,7 @@ textarea, input[type="submit"], .more-link, .comment-footer > span,
     margin: 1.5em 6.83142%;
   }
 
-  .archive-header, .pagination {
+  .archive-header, .pagination, .search-header {
     padding: 1.5em 6.83142%;
   }
 }
@@ -291,7 +291,7 @@ textarea {
 
 input[type="submit"] {
   font-family: "Lato", sans-serif;
-  padding: 12px 12px;
+  padding: 12px;
   color: white;
   background: #1A1A1A;
   border: none;
@@ -1356,6 +1356,34 @@ li.pingback.bypostauthor > article {
   .site-header .search-form-container form {
     padding-top: 0;
     left: 0;
+  }
+}
+.search-header {
+  margin-bottom: 1.5em;
+}
+.search-header h1 {
+  margin-bottom: 12px;
+}
+.search-header .search-field {
+  border-color: #CCCCCC !important;
+  margin-bottom: 6px;
+}
+.search-header .search-submit {
+  padding: 12px 24px;
+}
+
+.search-bottom {
+  padding: 1.5em 4.41543%;
+  background: white;
+  margin-bottom: 3em;
+}
+.search-bottom p {
+  margin-top: 0;
+}
+
+@media all and (min-width: 56.25em) {
+  .search-bottom {
+    padding: 1.5em 6.83142%;
   }
 }
 .sidebar-primary {

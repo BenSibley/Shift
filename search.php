@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-    <div class="post-header search-header">
+    <div class="search-header">
         <h1 class="post-title">
             <?php
             global $wp_query;
