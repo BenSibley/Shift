@@ -35,7 +35,7 @@ h2 {
 
 .wp-caption-text,
 .gallery-caption, input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
-textarea, input[type="submit"], .more-link, .tagline, .post-meta > div {
+textarea, input[type="submit"], .more-link, .tagline, .post-meta > div, .further-reading span {
   font-size: 0.75em;
   /* 12px / 16px */
   line-height: 1.5;
@@ -939,6 +939,45 @@ a img {
   text-decoration: underline;
 }
 
+.post-tags {
+  margin: 1.5em 0;
+}
+.post-tags ul {
+  list-style: none;
+  margin: 0;
+}
+.post-tags li {
+  display: inline-block;
+  margin-right: 8px;
+}
+.post-tags a {
+  display: inline-block;
+  padding: 0 8px;
+  background: #F2F2F2;
+  border: solid 1px #E6E6E6;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.post-tags a:hover, .post-tags a:active, .post-tags a:focus {
+  background: #E6E6E6;
+}
+
+.further-reading {
+  margin: 2.25em 0;
+}
+.further-reading .previous {
+  margin-bottom: 0.75em;
+}
+.further-reading span {
+  display: block;
+}
+.further-reading a {
+  font-style: italic;
+}
+.further-reading a:hover, .further-reading a:active, .further-reading a:focus {
+  text-decoration: underline;
+}
+
 .sticky-status {
   display: none;
 }
@@ -949,6 +988,19 @@ a img {
     /* 28px / 16px */
     line-height: 1.357;
     /* 38px */
+  }
+
+  .further-reading div {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -4px;
+  }
+  .further-reading .previous {
+    margin-bottom: 0;
+  }
+  .further-reading .next {
+    text-align: right;
   }
 }
 @media all and (min-width: 50em) {
