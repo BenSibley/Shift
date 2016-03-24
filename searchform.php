@@ -3,6 +3,6 @@
         <label class="screen-reader-text" for="search-field"><?php _e( 'Search', 'shift' ); ?></label>
         <input id="search-field" type="search" class="search-field" value="" name="s"
                title="<?php _e( 'Search for:', 'shift' ); ?>"/>
-        <input type="submit" class="search-submit" value='<?php _e( 'Go', 'shift' ); ?>'/>
+        <input type="submit" class="search-submit" value='<?php _e( 'Search', 'shift' ); ?>'/>
     </form>
 </div>

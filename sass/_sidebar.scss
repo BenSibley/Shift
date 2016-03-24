@@ -1,8 +1,13 @@
 .sidebar-primary {
+  margin: $baseline-height $column;
 
   .widget {
     background: white;
-    border: solid 6px $color-gray-90;
+    padding: $baseline-height $column * 1.5 * 1.06 $baseline-height * 1.5;
+
+    > *:not(.widget-title) {
+      @extend %fourteen-pixels;
+    }
   }
 }
 
@@ -11,6 +16,10 @@
   .sidebar-primary {
     width: $column * 11;
     float: right;
-    margin-right: $column;
+    margin: $baseline-height $column $baseline-height * 2 0;
+
+    .widget {
+      padding: $baseline-height $column * 1.5 * 1.64;
+    }
   }
 }

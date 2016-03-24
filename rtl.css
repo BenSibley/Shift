@@ -33,14 +33,14 @@ h2 {
   /* 24px */
 }
 
-h3 {
+h3, .widget-title {
   font-size: 1.125em;
   /* 18px / 16px */
   line-height: 1.333;
   /* 24px */
 }
 
-.comment-respond label {
+.comment-respond label, .sidebar-primary .widget > *:not(.widget-title) {
   font-size: 0.875em;
   /* 14px / 16px */
   line-height: 1.714;
@@ -291,7 +291,7 @@ textarea {
 
 input[type="submit"] {
   font-family: "Lato", sans-serif;
-  padding: 10px 12px;
+  padding: 12px 12px;
   color: white;
   background: #1A1A1A;
   border: none;
@@ -1358,15 +1358,158 @@ li.pingback.bypostauthor > article {
     left: 0;
   }
 }
+.sidebar-primary {
+  margin: 1.5em 2.777%;
+}
 .sidebar-primary .widget {
   background: white;
-  border: solid 6px #E6E6E6;
+  padding: 1.5em 4.41543% 2.25em;
 }
 
 @media all and (min-width: 56.25em) {
   .sidebar-primary {
     width: 30.547%;
     float: left;
-    margin-left: 2.777%;
+    margin: 1.5em 0 3em 2.777%;
   }
+  .sidebar-primary .widget {
+    padding: 1.5em 6.83142%;
+  }
+}
+.widget {
+  border: solid 6px #E6E6E6;
+  padding: 1.5em 1.5em 2.25em;
+  margin-bottom: 1.5em;
+}
+.widget ul {
+  list-style: none;
+  margin: 0;
+}
+.widget ul ul {
+  margin: 0.75em 1.5em 0 0;
+}
+.widget li {
+  margin-bottom: 0.75em;
+}
+.widget li a:hover, .widget li a:active, .widget li a:focus {
+  text-decoration: underline;
+}
+.widget .current-cat {
+  font-weight: 700;
+}
+
+.widget-title {
+  margin-bottom: 24px;
+}
+
+.widget_recent_entries span {
+  display: block;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.widget_calendar a:hover, .widget_calendar a:active, .widget_calendar a:focus {
+  text-decoration: none;
+}
+.widget_calendar caption {
+  margin-bottom: 6px;
+}
+.widget_calendar table {
+  margin: 0 auto 0.75em;
+  width: 100%;
+  text-align: center;
+}
+.widget_calendar thead {
+  background: #E6E6E6;
+}
+.widget_calendar th,
+.widget_calendar tr,
+.widget_calendar td {
+  border-color: #CCCCCC;
+}
+.widget_calendar #today {
+  background: #1A1A1A;
+  color: white;
+}
+.widget_calendar #prev,
+.widget_calendar #next,
+.widget_calendar .pad {
+  padding: 0;
+}
+.widget_calendar #prev a,
+.widget_calendar #next a,
+.widget_calendar .pad a {
+  display: block;
+  padding: 8px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.widget_calendar #prev a:hover, .widget_calendar #prev a:active, .widget_calendar #prev a:focus,
+.widget_calendar #next a:hover,
+.widget_calendar #next a:active,
+.widget_calendar #next a:focus,
+.widget_calendar .pad a:hover,
+.widget_calendar .pad a:active,
+.widget_calendar .pad a:focus {
+  background: #E6E6E6;
+}
+
+.widget_recent_comments li a {
+  text-decoration: underline;
+}
+.widget_recent_comments li a:hover, .widget_recent_comments li a:active, .widget_recent_comments li a:focus {
+  text-decoration: none;
+}
+
+.widget_rss .widget-title img {
+  margin-left: 4px;
+}
+.widget_rss .widget-title a:hover, .widget_rss .widget-title a:active, .widget_rss .widget-title a:focus {
+  text-decoration: none;
+}
+.widget_rss .rssSummary {
+  margin: 0.75em 1.5em;
+  color: #666666;
+}
+.widget_rss .rssSummary + cite {
+  display: block;
+  margin: 0 1.5em 1.5em 0;
+}
+.widget_rss .rss-date {
+  font-style: italic;
+}
+.widget_rss li {
+  display: block;
+}
+.widget_rss cite,
+.widget_rss span {
+  margin-bottom: 1.5em;
+  display: block;
+}
+.widget_rss span + cite {
+  margin-top: -1.5em;
+}
+
+.widget_search input {
+  font-size: 12px !important;
+  line-height: 18px !important;
+}
+.widget_search .search-field {
+  width: 74% !important;
+  width: calc(75% - 6px) !important;
+  float: right;
+  margin-left: 2px;
+}
+.widget_search .search-submit {
+  width: auto !important;
+  max-width: 25% !important;
+  min-width: 25% !important;
+}
+.widget_search:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
 }
