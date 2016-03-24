@@ -202,7 +202,7 @@ jQuery(document).ready(function($){
             if( window.innerWidth < 800 ) {
 
                 // distance to other side (35px is width of icon space)
-                var leftDistance = window.innerWidth * 0.83332 - 35;
+                var leftDistance = window.innerWidth * 0.86115 - 24;
 
                 siteHeader.find('.search-form').css('left', -leftDistance + 'px')
             }

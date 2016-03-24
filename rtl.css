@@ -828,6 +828,7 @@ li.pingback.bypostauthor > article {
   overflow: hidden;
 }
 .menu-primary-container .menu-inner-container {
+  position: relative;
   padding: 1.5em 6.9425%;
 }
 .menu-primary-container.open {
@@ -1276,8 +1277,9 @@ li.pingback.bypostauthor > article {
 }
 .site-header .search-form-container {
   position: absolute;
-  top: 22px;
-  left: 1.5em;
+  bottom: 2.25em;
+  left: 6.9425%;
+  z-index: 9;
 }
 .site-header .search-form-container button {
   position: relative;

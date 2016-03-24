@@ -29,6 +29,7 @@
   overflow: hidden;
 
   .menu-inner-container {
+    position: relative;
     padding: $baseline-height $column * 2.5;
   }
   &.open {
