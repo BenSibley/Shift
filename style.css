@@ -731,6 +731,11 @@ li.pingback.bypostauthor > article {
     margin: 0;
   }
 }
+@media all and (min-width: 68.75em) {
+  .site-header {
+    margin-bottom: 0.75em;
+  }
+}
 .pagination {
   text-align: center;
   clear: both;

@@ -73,3 +73,10 @@
     margin: 0;
   }
 }
+
+@media all and (min-width: $eleven-hundred) {
+
+  .site-header {
+    margin-bottom: $baseline-height / 2;
+  }
+}
