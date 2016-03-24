@@ -842,26 +842,20 @@ a img {
   -ms-transform: translateX(50%) translateY(-50%);
   transform: translateX(50%) translateY(-50%);
 }
-.featured-image .borders {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-.featured-image .borders:before, .featured-image .borders:after {
+.featured-image:before, .featured-image:after {
   content: '';
   position: absolute;
   left: 0;
   right: 0;
+  z-index: 9;
   height: 6px;
   background: #1A1A1A;
   opacity: 0.3;
 }
-.featured-image .borders:before {
+.featured-image:before {
   top: 0;
 }
-.featured-image .borders:after {
+.featured-image:after {
   bottom: 0;
 }
 .featured-image .ccfic {
