@@ -7,7 +7,7 @@
 		<i class="fa fa-calendar"></i>
 		<a class='date' href="<?php echo esc_url( get_month_link( get_the_date( 'Y' ), get_the_date( 'n' ) ) ); ?>"><?php echo date_i18n( get_option( 'date_format' ), strtotime( get_the_date( 'r' ) ) ); ?></a>
 	</div>
-	<div class="comments">
+	<div class="post-comments">
 		<?php get_template_part( 'content/comments-link' ); ?>
 	</div>
 </div>

@@ -60,7 +60,10 @@ h1 {
 h2 {
   @extend %twenty-one-pixels;
 }
-h3, h4, h5, h6 {
+h3 {
+  @extend %eighteen-pixels;
+}
+h4, h5, h6 {
   font-size: 1em;
   line-height: 1.5;
 }
@@ -171,7 +174,13 @@ textarea {
   border: solid 2px $color-gray-90;
   border-radius: 0;
   -webkit-appearance: none;
-  transition: all 0.1s ease-in-out;
+  transition: all 0.2s;
+
+  &:focus {
+    outline: none;
+    background: white;
+    border-color: $color-gray-80;
+  }
 }
 textarea {
   max-width: $baseline-height * 15 * 1.85;
@@ -186,7 +195,7 @@ input[type="submit"] {
   border: none;
   border-radius: 0;
   -webkit-appearance: none;
-  transition: all 0.1s ease-in-out;
+  transition: all 0.2s;
 
   &:hover {
     cursor: pointer;
@@ -277,4 +286,28 @@ a img {
 .max-width {
   max-width: 1400px;
   margin: 0 auto;
+}
+
+@media all and (min-width: $eight-hundred) {
+
+  h1 {
+    font-size: 2.375em; /* 38px / 16px */
+    line-height: 1.342; /* 51px */
+  }
+  h2 {
+    font-size: 1.75em; /* 28px / 16px */
+    line-height: 1.357; /* 38px */
+  }
+  h3 {
+    font-size: 1.3125em; /* 21px / 16px */
+    line-height: 1.143; /* 24px */
+  }
+  h4 {
+    font-size: 1.125em; /* 18px / 16px */
+    line-height: 1.333; /* 24px */
+  }
+  h5, h6 {
+    font-size: 1em;
+    line-height: 1.5;
+  }
 }

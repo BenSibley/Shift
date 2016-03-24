@@ -91,7 +91,7 @@
 .post-header,
 .post-content,
 .after-post-meta {
-  margin: $baseline-height $column * 1.5 * 1.06;
+  @extend %layout-margin;
 }
 .post-title {
   margin-bottom: 6px;
@@ -115,17 +115,11 @@
   i {
     margin-right: 2px;
   }
-  a,
   span {
     font-style: italic;
   }
   a {
-
-    &:hover,
-    &:active,
-    &:focus {
-      text-decoration: underline;
-    }
+    @extend %link-italic;
   }
 }
 .post-content {
@@ -148,18 +142,12 @@
     font-weight: 700;
   }
   a {
-    font-style: italic;
+    @extend %link-italic;
     margin-left: 6px;
-
-    &:hover,
-    &:active,
-    &:focus {
-      text-decoration: underline;
-    }
   }
 }
 .post-tags {
-  margin: $baseline-height 0;
+  margin: $baseline-height 0 $baseline-height * .75;
 
   ul {
     list-style: none;
@@ -167,7 +155,7 @@
   }
   li {
     display: inline-block;
-    margin-right: 8px;
+    margin: 0 8px 6px 0;
   }
   a {
     display: inline-block;
@@ -194,13 +182,7 @@
     display: block;
   }
   a {
-    font-style: italic;
-
-    &:hover,
-    &:active,
-    &:focus {
-      text-decoration: underline;
-    }
+    @extend %link-italic;
   }
 }
 .sticky-status {
@@ -243,11 +225,6 @@
 
 @media all and (min-width: $nine-hundred) {
 
-  .post-header,
-  .post-content,
-  .after-post-meta {
-    margin: $baseline-height $column * 1.5 * 1.64;
-  }
   .post-title {
     font-size: 1.75em; /* 28px / 16px */
     line-height: 1.357; /* 38px */

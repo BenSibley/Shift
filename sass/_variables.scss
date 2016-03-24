@@ -8,6 +8,7 @@ $column: 2.777%;
 
 $color-gray-95: #F2F2F2;
 $color-gray-90: #E6E6E6;
+$color-gray-80: #CCCCCC;
 $color-gray-40: #666666;
 $color-gray-30: #4D4D4D;
 $color-gray-10: #1A1A1A;
@@ -131,17 +132,6 @@ $tencent-weibo: #20b8e5;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
-//%dark-link {
-//  color: $color-gray-23;
-//
-//  &:link,
-//  &:visited,
-//  &:hover,
-//  &:active,
-//  &:focus {
-//    color: $color-gray-23;
-//  }
-//}
 %light-link {
   color: white;
 
@@ -153,16 +143,22 @@ $tencent-weibo: #20b8e5;
     color: white;
   }
 }
-//%gray-link {
-//  color: $color-gray-85;
-//
-//  &:link,
-//  &:visited {
-//    color: $color-gray-85;
-//  }
-//  &:hover,
-//  &:active,
-//  &:focus {
-//    color: white;
-//  }
-//}
+%link-italic {
+  font-style: italic;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+%layout-margin {
+  margin: $baseline-height $column * 1.5 * 1.06;
+}
+
+@media all and (min-width: $nine-hundred) {
+
+  %layout-margin {
+    margin: $baseline-height $column * 1.5 * 1.64;
+  }
+}

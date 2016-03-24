@@ -1,0 +1,84 @@
+.comments {
+  @extend %layout-margin;
+  margin-top: $baseline-height * 2;
+}
+.comments-number {
+  margin: $baseline-height 0 $baseline-height * 2;
+}
+.comment-list,
+.comment-list .children {
+  list-style: none;
+  margin: $baseline-height * 1.5 0;
+}
+.comment-list .children {
+  padding-left: $baseline-height;
+  border-left: solid 1px $color-gray-95;
+}
+.comment-author {
+
+  .avatar {
+    width: 36px;
+    height: auto;
+    float: left;
+    margin-right: 6px;
+    border-radius: 50%;
+  }
+  .author-name {
+    line-height: 36px;
+
+    a {
+      font-style: italic;
+
+      &:hover,
+      &:active,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.comment-footer {
+
+  > span,
+  a {
+    @extend %twelve-pixels;
+  }
+  .comment-edit-link,
+  .comment-reply-link {
+    @extend %link-italic;
+    position: relative;
+    padding-left: 9px;
+    margin-left: 4px;
+
+    &:before {
+      content: '|';
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+}
+li.comment,
+li.pingback {
+  margin-bottom: $baseline-height * 1.5;
+}
+
+.comment-pagination {
+  margin: $baseline-height 0;
+
+  p {
+    display: inline-block;
+    margin: 0 -4px 0 0;
+    width: 50%;
+  }
+  a {
+    @extend %link-italic;
+  }
+  .next-comment {
+    float: right;
+    text-align: right;
+  }
+  &:after {
+    @include clearfix;
+  }
+}
