@@ -1,0 +1,9 @@
+.archive-header {
+  @extend %gray-box;
+  margin-bottom: $baseline-height;
+
+  h2 {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+}

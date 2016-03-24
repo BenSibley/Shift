@@ -50,28 +50,28 @@ h3 {
 .wp-caption-text,
 .gallery-caption, input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
 textarea, input[type="submit"], .more-link, .comment-footer > span,
-.comment-footer a, .tagline, .post-meta > div, .further-reading span {
+.comment-footer a, .site-footer .design-credit, .tagline, .post-meta > div, .further-reading span {
   font-size: 0.75em;
   /* 12px / 16px */
   line-height: 1.5;
   /* 18px */
 }
 
-.site-title a {
+.site-footer a, .site-title a {
   color: white;
 }
-.site-title a:link, .site-title a:visited, .site-title a:hover, .site-title a:active, .site-title a:focus {
+.site-footer a:link, .site-title a:link, .site-footer a:visited, .site-title a:visited, .site-footer a:hover, .site-title a:hover, .site-footer a:active, .site-title a:active, .site-footer a:focus, .site-title a:focus {
   color: white;
 }
 
 .comment-footer .comment-edit-link,
-.comment-footer .comment-reply-link, .comment-pagination a, .post-meta a, .post-categories a, .further-reading a {
+.comment-footer .comment-reply-link, .comment-pagination a, .pagination a, .post-meta a, .post-categories a, .further-reading a {
   font-style: italic;
 }
 .comment-footer .comment-edit-link:hover,
-.comment-footer .comment-reply-link:hover, .comment-pagination a:hover, .post-meta a:hover, .post-categories a:hover, .further-reading a:hover, .comment-footer .comment-edit-link:active,
-.comment-footer .comment-reply-link:active, .comment-pagination a:active, .post-meta a:active, .post-categories a:active, .further-reading a:active, .comment-footer .comment-edit-link:focus,
-.comment-footer .comment-reply-link:focus, .comment-pagination a:focus, .post-meta a:focus, .post-categories a:focus, .further-reading a:focus {
+.comment-footer .comment-reply-link:hover, .comment-pagination a:hover, .pagination a:hover, .post-meta a:hover, .post-categories a:hover, .further-reading a:hover, .comment-footer .comment-edit-link:active,
+.comment-footer .comment-reply-link:active, .comment-pagination a:active, .pagination a:active, .post-meta a:active, .post-categories a:active, .further-reading a:active, .comment-footer .comment-edit-link:focus,
+.comment-footer .comment-reply-link:focus, .comment-pagination a:focus, .pagination a:focus, .post-meta a:focus, .post-categories a:focus, .further-reading a:focus {
   text-decoration: underline;
 }
 
@@ -81,11 +81,20 @@ textarea, input[type="submit"], .more-link, .comment-footer > span,
   margin: 1.5em 4.41543%;
 }
 
+.archive-header, .pagination {
+  padding: 1.5em 4.41543%;
+  background: #E6E6E6;
+}
+
 @media all and (min-width: 56.25em) {
   .comments, .post-header,
   .post-content,
   .after-post-meta {
     margin: 1.5em 6.83142%;
+  }
+
+  .archive-header, .pagination {
+    padding: 1.5em 6.83142%;
   }
 }
 /*===== Basic Styles =====*/
@@ -408,6 +417,14 @@ a img {
     line-height: 1.5;
   }
 }
+.archive-header {
+  margin-bottom: 1.5em;
+}
+.archive-header h2 {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
 .more-link {
   display: inline-block;
   color: white;
@@ -540,6 +557,14 @@ li.pingback.bypostauthor > article {
 
 .site-footer {
   clear: both;
+  margin-top: 3em;
+  background: #1A1A1A;
+  color: #CCCCCC;
+  padding: 0.75em 6.9425%;
+  text-align: center;
+}
+.site-footer a {
+  text-decoration: underline;
 }
 
 /**
@@ -707,9 +732,57 @@ li.pingback.bypostauthor > article {
   }
 }
 .pagination {
+  text-align: center;
   clear: both;
+  margin-bottom: 3em;
+}
+.pagination .prev,
+.pagination .next {
+  position: relative;
+}
+.pagination .prev {
+  float: left;
+  margin-left: 0;
+  padding-left: 10px;
+}
+.pagination .prev:before {
+  content: '\00ab';
+  position: absolute;
+  left: 0;
+}
+.pagination .next {
+  float: right;
+  margin-right: 0;
+  padding-right: 10px;
+}
+.pagination .next:after {
+  content: '\00bb';
+  position: absolute;
+  right: 0;
+}
+.pagination a,
+.pagination span {
+  margin: 0 0.75em;
+}
+.pagination a.current,
+.pagination span.current {
+  font-weight: 700;
 }
 
+@media all and (min-width: 37.5em) {
+  .pagination {
+    position: relative;
+  }
+  .pagination.prev, .pagination.next {
+    position: absolute;
+  }
+  .pagination.prev {
+    left: 0;
+  }
+  .pagination.next {
+    right: 0;
+  }
+}
 .main {
   margin: 1.5em 2.777%;
 }

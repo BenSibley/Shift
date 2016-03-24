@@ -1,3 +1,62 @@
 .pagination {
+  @extend %gray-box;
+  text-align: center;
   clear: both;
+  margin-bottom: $baseline-height * 2;
+
+  a {
+    @extend %link-italic;
+  }
+  .prev,
+  .next {
+    position: relative;
+  }
+  .prev {
+    float: left;
+    margin-left: 0;
+    padding-left: 10px;
+
+    &:before {
+      content: '\00ab';
+      position: absolute;
+      left: 0;
+    }
+  }
+  .next {
+    float: right;
+    margin-right: 0;
+    padding-right: 10px;
+
+    &:after {
+      content: '\00bb';
+      position: absolute;
+      right: 0;
+    }
+  }
+  a,
+  span {
+    margin: 0 $baseline-height / 2;
+
+    &.current {
+      font-weight: 700;
+    }
+  }
+}
+
+@media all and (min-width: $six-hundred) {
+
+  .pagination {
+    position: relative;
+
+    &.prev,
+    &.next {
+      position: absolute;
+    }
+    &.prev {
+      left: 0;
+    }
+    &.next {
+      right: 0;
+    }
+  }
 }

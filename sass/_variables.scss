@@ -155,10 +155,17 @@ $tencent-weibo: #20b8e5;
 %layout-margin {
   margin: $baseline-height $column * 1.5 * 1.06;
 }
+%gray-box {
+  padding: $baseline-height $column * 1.5 * 1.06;
+  background: $color-gray-90;
+}
 
 @media all and (min-width: $nine-hundred) {
 
   %layout-margin {
     margin: $baseline-height $column * 1.5 * 1.64;
+  }
+  %gray-box {
+    padding: $baseline-height $column * 1.5 * 1.64;
   }
 }
