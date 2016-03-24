@@ -61,6 +61,11 @@
 li.comment,
 li.pingback {
   margin-bottom: $baseline-height * 1.5;
+
+  &.bypostauthor > article {
+    border: solid 4px $color-gray-90;
+    padding: $baseline-height / 2;
+  }
 }
 
 .comment-pagination {
