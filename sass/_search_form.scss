@@ -63,10 +63,6 @@
         width : 0;
         height: 0;
       }
-      &:focus {
-        background: $color-gray-95 !important;
-        outline: solid 1px $color-gray-90 !important;
-      }
     }
   }
 }
@@ -95,6 +91,7 @@
     form {
       padding-top: 0;
       right: 0;
+      top: -4px;
     }
     + .social-media-icons {
       padding-right: $baseline-height;

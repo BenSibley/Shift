@@ -95,6 +95,15 @@
 }
 .post-title {
   margin-bottom: 6px;
+
+  a {
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-gray-40;
+    }
+  }
 }
 .post-meta {
 

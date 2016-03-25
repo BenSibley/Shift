@@ -268,6 +268,7 @@ textarea {
   font-family: "Lato", sans-serif;
   padding: 10px 12px;
   max-width: 27.75em;
+  min-height: 42px;
   background: #F2F2F2;
   color: #1A1A1A;
   border: solid 2px #E6E6E6;
@@ -712,10 +713,10 @@ li.pingback.bypostauthor > article {
   height: 100%;
   right: 100%;
   top: 0;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  background: -webkit-linear-gradient(right top, #1A1A1A 53%, transparent 50%);
-  background: linear-gradient(to left bottom, #1A1A1A 53%, transparent 50%);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background: -webkit-linear-gradient(right top, #1a1a1a 52%, rgba(26, 26, 26, 0) 52%);
+  background: linear-gradient(to left bottom, #1a1a1a 52%, rgba(26, 26, 26, 0) 52%);
 }
 .title-container.has-tagline {
   padding-top: 9px;
@@ -1196,6 +1197,9 @@ li.pingback.bypostauthor > article {
 .post-title {
   margin-bottom: 6px;
 }
+.post-title a:hover, .post-title a:active, .post-title a:focus {
+  color: #666666;
+}
 
 .post-meta > div {
   display: inline-block;
@@ -1394,10 +1398,6 @@ li.pingback.bypostauthor > article {
   width: 0;
   height: 0;
 }
-.site-header .search-form-container .search-field:focus {
-  background: #F2F2F2 !important;
-  outline: solid 1px #E6E6E6 !important;
-}
 
 @media all and (min-width: 50em) {
   .site-header .search-form-container {
@@ -1418,6 +1418,7 @@ li.pingback.bypostauthor > article {
   .site-header .search-form-container form {
     padding-top: 0;
     left: 0;
+    top: -4px;
   }
   .site-header .search-form-container + .social-media-icons {
     padding-left: 1.5em;
