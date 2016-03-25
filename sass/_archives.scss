@@ -32,3 +32,10 @@
 .post-content .more-link {
   text-decoration: none;
 }
+.sticky-status {
+  @extend %twelve-pixels;
+  padding: 1px 5px;
+  border: solid 2px $color-gray-90;
+  color: $color-gray-40;
+  display: inline-block;
+}
