@@ -1380,6 +1380,9 @@ li.pingback.bypostauthor > article {
     padding-top: 0;
     right: 0;
   }
+  .site-header .search-form-container + .social-media-icons {
+    padding-right: 1.5em;
+  }
 }
 .search-header {
   margin-bottom: 1.5em;
