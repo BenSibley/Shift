@@ -404,12 +404,14 @@ function ct_shift_reset_customizer_options() {
 
 	$mods_array = array(
 		'logo_upload',
+		'logo_size',
 		'search_bar',
 		'full_post',
 		'excerpt_length',
 		'read_more_text',
-		'full_width_post',
-		'author_byline',
+		'display_post_author',
+		'display_post_date',
+		'display_post_comments',
 		'custom_css'
 	);
 
@@ -450,7 +452,7 @@ add_action( 'admin_notices', 'ct_shift_delete_settings_notice' );
 function ct_shift_body_class( $classes ) {
 
 	global $post;
-	$full_post       = get_theme_mod( 'full_post' );
+	$full_post = get_theme_mod( 'full_post' );
 
 	if ( $full_post == 'yes' ) {
 		$classes[] = 'full-post';
