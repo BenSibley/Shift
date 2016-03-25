@@ -226,46 +226,6 @@ function ct_shift_add_customizer_content( $wp_customize ) {
 		'type'     => 'text'
 	) );
 
-	/***** Additional Options *****/
-
-	// section
-	$wp_customize->add_section( 'shift_additional', array(
-		'title'    => __( 'Additional Options', 'shift' ),
-		'priority' => 70
-	) );
-	// extra-wide post - setting
-	$wp_customize->add_setting( 'full_width_post', array(
-		'default'           => 'yes',
-		'sanitize_callback' => 'ct_shift_sanitize_yes_no_settings'
-	) );
-	// extra-wide post - control
-	$wp_customize->add_control( 'full_width_post', array(
-		'label'    => __( 'Make first post on blog extra wide?', 'shift' ),
-		'section'  => 'shift_additional',
-		'settings' => 'full_width_post',
-		'type'     => 'radio',
-		'choices'  => array(
-			'yes' => __( 'Yes', 'shift' ),
-			'no'  => __( 'No', 'shift' )
-		)
-	) );
-	// author byline - setting
-	$wp_customize->add_setting( 'author_byline', array(
-		'default'           => 'no',
-		'sanitize_callback' => 'ct_shift_sanitize_yes_no_settings'
-	) );
-	// author byline - control
-	$wp_customize->add_control( 'author_byline', array(
-		'label'    => __( 'Display post author name in byline?', 'shift' ),
-		'section'  => 'shift_additional',
-		'settings' => 'author_byline',
-		'type'     => 'radio',
-		'choices'  => array(
-			'yes' => __( 'Yes', 'shift' ),
-			'no'  => __( 'No', 'shift' )
-		)
-	) );
-
 	/***** Custom CSS *****/
 
 	// section
