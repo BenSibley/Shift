@@ -36,6 +36,13 @@
   a {
     @extend %light-link;
     text-decoration: none;
+    transition: all 0.2s;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-gray-90;
+    }
   }
 }
 .tagline {

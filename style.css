@@ -731,6 +731,11 @@ li.pingback.bypostauthor > article {
 }
 .site-title a {
   text-decoration: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.site-title a:hover, .site-title a:active, .site-title a:focus {
+  color: #E6E6E6;
 }
 
 .tagline {
