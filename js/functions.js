@@ -8,15 +8,12 @@ jQuery(document).ready(function($){
     var menuPrimary = $('#menu-primary');
     var menuPrimaryItems = $('#menu-primary-items');
     var toggleDropdown = $('.toggle-dropdown');
-    //var toggleSidebar = $('#toggle-sidebar');
-    //var sidebarPrimary = $('#sidebar-primary');
-    //var sidebarPrimaryContent = $('#sidebar-primary-content');
-    //var sidebarWidgets = $('#sidebar-primary-widgets');
     var socialMediaIcons = siteHeader.find('.social-media-icons');
     var menuLink = $('.menu-item').children('a');
 
     positionMenu();
     objectFitAdjustment();
+    tabindexUpdate();
 
     toggleNavigation.on('click', openPrimaryMenu);
     toggleDropdown.on('click', openDropdownMenu);
@@ -28,9 +25,7 @@ jQuery(document).ready(function($){
 
     $(window).resize(function(){
         positionMenu();
-    });
-
-    $(window).resize(function(){
+        tabindexUpdate();
         objectFitAdjustment();
     });
 
@@ -141,6 +136,15 @@ jQuery(document).ready(function($){
 
                 siteHeader.find('.search-form').css('left', -leftDistance + 'px')
             }
+        }
+    }
+
+    function tabindexUpdate() {
+
+        if ( window.innerWidth > 899 ) {
+            toggleDropdown.attr('tabindex', -1);
+        } else {
+            toggleDropdown.attr('tabindex', 0);
         }
     }
 
