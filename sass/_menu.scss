@@ -117,6 +117,12 @@
   .toggle-navigation {
     display: none;
   }
+  .toggle-dropdown {
+    font-size: 14px;
+    padding: 0;
+    margin-left: 3px;
+    vertical-align: middle;
+  }
   .menu-primary-container {
     position: relative;
     max-height: none;
@@ -221,15 +227,6 @@
       li {
         white-space: nowrap;
         margin: 0 10px 6px 0;
-
-        //&.current-menu-ancestor {
-        //  background: none;
-        //
-        //  > a {
-        //    background: none;
-        //    font-weight: 700;
-        //  }
-        //}
       }
       a {
         width: 100%;
@@ -242,15 +239,6 @@
       &.menu-item-has-children {
         position: relative;
 
-        //&:hover {
-        //
-        //  > a {
-        //
-        //    &:after {
-        //      top: 2px;
-        //    }
-        //  }
-        //}
         > a {
 
           &:hover,
@@ -289,6 +277,7 @@
             button:after {
               content: '\f105';
               transition: right 0.2s ease;
+              margin-left: 3px;
             }
             > a {
 

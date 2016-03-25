@@ -932,6 +932,13 @@ li.pingback.bypostauthor > article {
     display: none;
   }
 
+  .toggle-dropdown {
+    font-size: 14px;
+    padding: 0;
+    margin-left: 3px;
+    vertical-align: middle;
+  }
+
   .menu-primary-container {
     position: relative;
     max-height: none;
@@ -1057,6 +1064,7 @@ li.pingback.bypostauthor > article {
     content: '\f105';
     -webkit-transition: right 0.2s ease;
     transition: right 0.2s ease;
+    margin-left: 3px;
   }
   .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:before {
     top: 0;
