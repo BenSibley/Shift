@@ -473,6 +473,7 @@ a img {
   border: solid 2px #E6E6E6;
   color: #666666;
   display: inline-block;
+  margin-bottom: 3px;
 }
 
 .comment-respond {
