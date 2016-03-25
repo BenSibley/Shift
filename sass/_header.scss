@@ -75,6 +75,13 @@
     transform: translateY(-50%);
     right: $column * 2.5;
     margin: 0;
+
+    li {
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 }
 

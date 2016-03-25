@@ -735,6 +735,9 @@ li.pingback.bypostauthor > article {
     left: 6.9425%;
     margin: 0;
   }
+  .social-media-icons li:last-child {
+    margin-left: 0;
+  }
 }
 @media all and (min-width: 68.75em) {
   .site-header {
