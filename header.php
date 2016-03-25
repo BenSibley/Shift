@@ -12,7 +12,7 @@
 <div id="overflow-container" class="overflow-container">
 	<?php do_action( 'before_header' ); ?>
 	<header class="site-header" id="site-header" role="banner">
-		<div id="max-width" class="max-width">
+		<div class="max-width">
 			<div id="title-container" class="title-container <?php if ( get_bloginfo( 'description' ) ) { echo 'has-tagline'; } ?>">
 				<?php get_template_part( 'logo' ) ?>
 				<?php if ( get_bloginfo( 'description' ) ) {
@@ -32,7 +32,7 @@
 			</div>
 		</div>
 	</header>
-	<div id="max-width" class="max-width">
+	<div class="max-width main-max-width">
 		<?php do_action( 'after_header' ); ?>
 		<section id="main" class="main" role="main">
 			<?php do_action( 'main_top' );
