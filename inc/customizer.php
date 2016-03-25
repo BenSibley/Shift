@@ -226,6 +226,63 @@ function ct_shift_add_customizer_content( $wp_customize ) {
 		'type'     => 'text'
 	) );
 
+	/***** Display Controls *****/
+
+	// section
+	$wp_customize->add_section( 'shift_display', array(
+		'title'       => __( 'Display Controls', 'shift' ),
+		'priority'    => 55,
+		'description' => sprintf( __( 'Want more options like these? Check out the <a target="_blank" href="%s"> Shift Pro plugin</a>.', 'shift' ), 'https://www.competethemes.com/shift-pro/' )
+	) );
+	// setting - post author
+	$wp_customize->add_setting( 'display_post_author', array(
+		'default'           => 'show',
+		'sanitize_callback' => 'ct_shift_sanitize_show_hide'
+	) );
+	// control - post author
+	$wp_customize->add_control( 'display_post_author', array(
+		'type'    => 'radio',
+		'label'   => __( 'Post author in byline', 'shift' ),
+		'section' => 'shift_display',
+		'setting' => 'display_post_author',
+		'choices' => array(
+			'show' => __( 'Show', 'shift' ),
+			'hide' => __( 'Hide', 'shift' )
+		)
+	) );
+	// setting - post date
+	$wp_customize->add_setting( 'display_post_date', array(
+		'default'           => 'show',
+		'sanitize_callback' => 'ct_shift_sanitize_show_hide'
+	) );
+	// control - post author
+	$wp_customize->add_control( 'display_post_date', array(
+		'type'    => 'radio',
+		'label'   => __( 'Post date in byline', 'shift' ),
+		'section' => 'shift_display',
+		'setting' => 'display_post_date',
+		'choices' => array(
+			'show' => __( 'Show', 'shift' ),
+			'hide' => __( 'Hide', 'shift' )
+		)
+	) );
+	// setting - post date
+	$wp_customize->add_setting( 'display_post_comments', array(
+		'default'           => 'show',
+		'sanitize_callback' => 'ct_shift_sanitize_show_hide'
+	) );
+	// control - post author
+	$wp_customize->add_control( 'display_post_comments', array(
+		'type'    => 'radio',
+		'label'   => __( 'Post comments in byline', 'shift' ),
+		'section' => 'shift_display',
+		'setting' => 'display_post_comments',
+		'choices' => array(
+			'show' => __( 'Show', 'shift' ),
+			'hide' => __( 'Hide', 'shift' )
+		)
+	) );
+
 	/***** Custom CSS *****/
 
 	// section
