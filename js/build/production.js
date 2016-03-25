@@ -99,6 +99,7 @@ jQuery(document).ready(function($){
     var menuLink = $('.menu-item').children('a');
 
     positionMenu();
+    objectFitAdjustment();
 
     toggleNavigation.on('click', openPrimaryMenu);
     toggleDropdown.on('click', openDropdownMenu);
@@ -110,6 +111,23 @@ jQuery(document).ready(function($){
 
     $(window).resize(function(){
         positionMenu();
+    });
+
+    $(window).resize(function(){
+        objectFitAdjustment();
+    });
+
+    // Jetpack infinite scroll event that reloads posts.
+    $( document.body ).on( 'post-load', function () {
+        objectFitAdjustment();
+    } );
+
+    /* allow keyboard access/visibility for dropdown menu items */
+    menuLink.focus(function(){
+        $(this).parents('ul').addClass('focused');
+    });
+    menuLink.focusout(function(){
+        $(this).parents('ul').removeClass('focused');
     });
 
     function openPrimaryMenu() {
@@ -209,13 +227,53 @@ jQuery(document).ready(function($){
         }
     }
 
-    /* allow keyboard access/visibility for dropdown menu items */
-    menuLink.focus(function(){
-        $(this).parents('ul').addClass('focused');
-    });
-    menuLink.focusout(function(){
-        $(this).parents('ul').removeClass('focused');
-    });
+    // mimic cover positioning without using cover
+    function objectFitAdjustment() {
+
+        // if the object-fit property is not supported
+        if( !('object-fit' in document.body.style) ) {
+
+            $('.featured-image').each(function () {
+
+                if ( !$(this).parent().parent('.post').hasClass('ratio-natural') ) {
+
+                    var image = $(this).children('img').add($(this).children('a').children('img'));
+
+                    // don't process images twice (relevant when using infinite scroll)
+                    if ( image.hasClass('no-object-fit') ) {
+                        return;
+                    }
+
+                    image.addClass('no-object-fit');
+
+                    // if the image is not wide enough to fill the space
+                    if (image.outerWidth() < $(this).outerWidth()) {
+
+                        image.css({
+                            'width': '100%',
+                            'min-width': '100%',
+                            'max-width': '100%',
+                            'height': 'auto',
+                            'min-height': '100%',
+                            'max-height': 'none'
+                        });
+                    }
+                    // if the image is not tall enough to fill the space
+                    if (image.outerHeight() < $(this).outerHeight()) {
+
+                        image.css({
+                            'height': '100%',
+                            'min-height': '100%',
+                            'max-height': '100%',
+                            'width': 'auto',
+                            'min-width': '100%',
+                            'max-width': 'none'
+                        });
+                    }
+                }
+            });
+        }
+    }
 });
 
 /* fix for skip-to-content link bug in Chrome & IE9 */
