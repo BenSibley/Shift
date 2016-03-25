@@ -467,6 +467,9 @@ a img {
 .post-content .more-link {
   text-decoration: none;
 }
+.post-content .more-link:hover, .post-content .more-link:active, .post-content .more-link:focus {
+  color: white;
+}
 
 .sticky-status {
   padding: 1px 5px;
@@ -512,6 +515,9 @@ a img {
   border-left: solid 1px #F2F2F2;
 }
 
+.comment-author {
+  margin-bottom: 1.5em;
+}
 .comment-author .avatar {
   width: 36px;
   height: auto;
@@ -527,6 +533,17 @@ a img {
 }
 .comment-author .author-name a:hover, .comment-author .author-name a:active, .comment-author .author-name a:focus {
   text-decoration: underline;
+}
+
+.comment-content ul,
+.comment-content ol {
+  margin: 1.5em;
+}
+.comment-content ul ul,
+.comment-content ul ol,
+.comment-content ol ul,
+.comment-content ol ol {
+  margin: 0 0 0 1.5em;
 }
 
 .comment-footer .comment-edit-link,
@@ -1207,6 +1224,10 @@ li.pingback.bypostauthor > article {
 }
 .post-content a {
   text-decoration: underline;
+}
+.post-content a:hover, .post-content a:active, .post-content a:focus {
+  color: #666666;
+  text-decoration: none;
 }
 .post-content iframe {
   max-width: 100%;

@@ -127,6 +127,13 @@
 
   a {
     text-decoration: underline;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-gray-40;
+      text-decoration: none;
+    }
   }
   iframe {
     max-width: 100%;

@@ -15,6 +15,7 @@
   border-left: solid 1px $color-gray-95;
 }
 .comment-author {
+  margin-bottom: $baseline-height;
 
   .avatar {
     width: 36px;
@@ -34,6 +35,18 @@
       &:focus {
         text-decoration: underline;
       }
+    }
+  }
+}
+.comment-content {
+
+  ul,
+  ol {
+    margin: $baseline-height;
+
+    ul,
+    ol {
+      margin: 0 0 0 $baseline-height;
     }
   }
 }
