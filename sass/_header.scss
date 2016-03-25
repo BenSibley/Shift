@@ -68,12 +68,23 @@
     float: left;
     margin-right: $baseline-height * 2;
     z-index: 19;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: -999px;
+      z-index: -1;
+      background: $color-gray-10;
+    }
   }
   .social-media-icons {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: $column * 2.5;
+    right: $column * 2;
     margin: 0;
 
     li {

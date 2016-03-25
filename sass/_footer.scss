@@ -3,11 +3,11 @@
   margin-top: $baseline-height * 2;
   background: $color-gray-10;
   color: $color-gray-80;
-  padding: $baseline-height / 2 $column * 2.5;
   text-align: center;
 
   .design-credit {
     @extend %twelve-pixels;
+    padding: $baseline-height / 2 $column * 2.5;
   }
   a {
     @extend %light-link;
