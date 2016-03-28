@@ -178,6 +178,32 @@ function ct_shift_add_customizer_content( $wp_customize ) {
 		),
 	) );
 
+	/***** Layout *****/
+
+	// section
+	$wp_customize->add_section( 'shift_layout', array(
+		'title'       => __( 'Layout', 'shift' ),
+		'priority'    => 40,
+		'description' => sprintf( __( 'Want more layouts? Check out the <a target="_blank" href="%s">Shift Pro plugin</a>.', 'shift' ), 'https://www.competethemes.com/shift-pro/' )
+	) );
+	// setting
+	$wp_customize->add_setting( 'layout', array(
+		'default'           => 'right',
+		'sanitize_callback' => 'ct_shift_sanitize_layout_settings',
+		'transport'         => 'postMessage'
+	) );
+	// control
+	$wp_customize->add_control( 'layout', array(
+		'label'    => __( 'Choose your layout', 'shift' ),
+		'section'  => 'shift_layout',
+		'settings' => 'layout',
+		'type'     => 'radio',
+		'choices'  => array(
+			'right' => __( 'Right sidebar', 'shift' ),
+			'left'  => __( 'Left sidebar', 'shift' )
+		)
+	) );
+
 	/***** Blog *****/
 
 	// section
@@ -352,6 +378,27 @@ function ct_shift_sanitize_css( $css ) {
 	$css = str_replace( '&gt;', '>', $css );
 
 	return $css;
+}
+
+function ct_shift_sanitize_layout_settings( $input ) {
+
+	/*
+	 * Also allow layouts only included in the premium plugin.
+	 * Needs to be done this way b/c sanitize_callback cannot by updated
+	 * via get_setting()
+	 */
+	$valid = array(
+		'right'      => __( 'Right sidebar', 'shift' ),
+		'left'       => __( 'Left sidebar', 'shift' ),
+		'narrow'     => __( 'No sidebar - Narrow', 'shift' ),
+		'wide'       => __( 'No sidebar - Wide', 'shift' ),
+		'two-right'  => __( 'Two column - Right sidebar', 'shift' ),
+		'two-left'   => __( 'Two column - Left sidebar', 'shift' ),
+		'two-narrow' => __( 'Two column - No Sidebar - Narrow', 'shift' ),
+		'two-wide'   => __( 'Two column - No Sidebar - Wide', 'shift' )
+	);
+
+	return array_key_exists( $input, $valid ) ? $input : '';
 }
 
 /***** Helper Functions *****/
