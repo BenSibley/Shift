@@ -510,6 +510,17 @@ function ct_shift_svg_output( $type ) {
 				</svg>';
 	}
 
+	if ( $type == 'triangle' ) {
+
+		$svg = '<svg class="triangle" viewBox="0 0 24 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				    <desc>triangle</desc>
+				    <defs></defs>
+				    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+				        <path d="M0,0 L24,0 L0,60 L0,0 Z" id="Rectangle-1" fill="#191919"></path>
+				    </g>
+				</svg>';
+	}
+
 	return $svg;
 }
 

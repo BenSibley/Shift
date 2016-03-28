@@ -706,18 +706,6 @@ li.pingback.bypostauthor > article {
   background: #1A1A1A;
   padding: 1.125em 1.5em 1.125em 6.9425%;
 }
-.title-container:after {
-  content: '';
-  position: absolute;
-  width: 24px;
-  height: 60px;
-  left: 100%;
-  top: 0;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  background: -webkit-linear-gradient(left top, #1a1a1a 49%, rgba(26, 26, 26, 0) 51%);
-  background: linear-gradient(to right bottom, #1a1a1a 49%, rgba(26, 26, 26, 0) 51%);
-}
 .title-container.has-tagline {
   padding-top: 9px;
   padding-bottom: 9px;
@@ -756,6 +744,13 @@ li.pingback.bypostauthor > article {
 .social-media-icons.fade {
   opacity: 0;
 }
+.social-media-icons a {
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+.social-media-icons a:hover, .social-media-icons a:active, .social-media-icons a:focus {
+  color: #666666;
+}
 
 .logo {
   max-width: 100%;
@@ -768,6 +763,12 @@ li.pingback.bypostauthor > article {
     float: left;
     margin-right: 3em;
     z-index: 19;
+  }
+  .title-container .triangle {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    height: 100%;
   }
   .title-container:before {
     content: '';
@@ -1368,12 +1369,17 @@ li.pingback.bypostauthor > article {
 .site-header .search-form-container button:focus {
   outline: none;
 }
+.site-header .search-form-container button:hover i, .site-header .search-form-container button:active i, .site-header .search-form-container button:focus i {
+  color: #666666;
+}
 .site-header .search-form-container button.open + form {
   opacity: 1;
 }
 .site-header .search-form-container i {
   color: #1A1A1A;
   z-index: -1;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
 }
 .site-header .search-form-container form {
   position: absolute;

@@ -18,6 +18,7 @@
 				<?php if ( get_bloginfo( 'description' ) ) {
 					echo '<p class="tagline">' . get_bloginfo( 'description' ) . '</p>';
 				} ?>
+				<?php echo ct_shift_svg_output( 'triangle' ); ?>
 			</div>
 			<button id="toggle-navigation" class="toggle-navigation" name="toggle-navigation" aria-expanded="false">
 				<span class="screen-reader-text"><?php _e( 'open menu', 'shift' ); ?></span>
