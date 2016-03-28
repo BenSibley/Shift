@@ -33,6 +33,16 @@
         } );
     } );
 
+    wp.customize( 'layout', function( value ) {
+        value.bind( function( to ) {
+            if ( to == 'left' ) {
+                body.addClass('left-sidebar');
+            } else {
+                body.removeClass('left-sidebar');
+            }
+        } );
+    } );
+
     // Custom CSS
 
     // get current Custom CSS
