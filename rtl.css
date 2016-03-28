@@ -761,14 +761,9 @@ li.pingback.bypostauthor > article {
 @media all and (min-width: 56.25em) {
   .title-container {
     float: right;
-    margin-left: 3em;
     z-index: 19;
-  }
-  .title-container .triangle {
-    position: absolute;
-    top: 0;
-    right: 100%;
-    height: 100%;
+    padding-left: 2.25em;
+    margin-left: 2.25em;
   }
   .title-container:before {
     content: '';

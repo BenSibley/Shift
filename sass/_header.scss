@@ -16,7 +16,6 @@
     padding-top: 9px;
     padding-bottom: 9px;
   }
-
 }
 .site-title {
   display: inline-block;
@@ -73,15 +72,10 @@
 
   .title-container {
     float: left;
-    margin-right: $baseline-height * 2;
     z-index: 19;
+    padding-right: $baseline-height * 1.5;
+    margin-right: $baseline-height * 1.5;
 
-    .triangle {
-      position: absolute;
-      top: 0;
-      left: 100%;
-      height: 100%;
-    }
     &:before {
       content: '';
       position: absolute;
