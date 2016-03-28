@@ -22,6 +22,7 @@
   font-size: 1em;
   line-height: 1.5;
   font-weight: 900;
+  -webkit-font-smoothing: antialiased;
 
   a {
     @extend %light-link;
@@ -39,6 +40,7 @@
   @extend %twelve-pixels;
   color: $color-gray-90;
   margin: 0;
+  -webkit-font-smoothing: antialiased;
 }
 .social-media-icons {
   list-style: none;

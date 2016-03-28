@@ -716,6 +716,7 @@ li.pingback.bypostauthor > article {
   font-size: 1em;
   line-height: 1.5;
   font-weight: 900;
+  -webkit-font-smoothing: antialiased;
 }
 .site-title a {
   text-decoration: none;
@@ -729,6 +730,7 @@ li.pingback.bypostauthor > article {
 .tagline {
   color: #E6E6E6;
   margin: 0;
+  -webkit-font-smoothing: antialiased;
 }
 
 .social-media-icons {
