@@ -38,6 +38,8 @@ Shift also has a premium plugin upgrade called Shift Pro that includes the follo
     * Flexible header image
     * Google fonts
     * More widget areas
+    * Fixed Menu
+    * Background Images & Textures
     * Display controls
     * Custom footer text
 
@@ -47,7 +49,7 @@ Shift Pro: https://www.competethemes.com/shift-pro/
     Additional Info:
 -------------------------------------------------------
 
-    * All menus in Shift can have 1-3 tiers
+    * All menus in Shift support 1-3 tiers
     * Featured Images have a 2x1 ratio at all screen sizes
     * Shift is child theme compatible. Download a starter child theme here:
         https://www.competethemes.com/help/child-theme-shift/
