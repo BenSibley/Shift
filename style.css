@@ -274,8 +274,8 @@ textarea {
   border: solid 2px #E6E6E6;
   border-radius: 0;
   -webkit-appearance: none;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: background 0.2s, border-color 0.2s;
+  transition: background 0.2s, border-color 0.2s;
 }
 input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]):focus,
 textarea:focus {
@@ -298,8 +298,8 @@ input[type="submit"] {
   border: none;
   border-radius: 0;
   -webkit-appearance: none;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
 }
 input[type="submit"]:hover {
   cursor: pointer;
@@ -442,8 +442,8 @@ a img {
   color: white;
   background: #1A1A1A;
   padding: 9px 12px;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: color 0.2s, background 0.2s;
+  transition: color 0.2s, background 0.2s;
 }
 .more-link:link, .more-link:visited {
   color: white;
@@ -461,8 +461,8 @@ a img {
   position: relative;
   right: 0;
   margin-left: 3px;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: right 0.2s;
+  transition: right 0.2s;
 }
 
 .post-content .more-link {
@@ -719,8 +719,8 @@ li.pingback.bypostauthor > article {
 }
 .site-title a {
   text-decoration: none;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
 }
 .site-title a:hover, .site-title a:active, .site-title a:focus {
   color: #E6E6E6;
@@ -935,8 +935,8 @@ li.pingback.bypostauthor > article {
   content: '\f107';
   position: relative;
   font-family: 'FontAwesome';
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: top 0.2s;
+  transition: top 0.2s;
   top: 0;
   right: 0;
 }
@@ -1003,8 +1003,8 @@ li.pingback.bypostauthor > article {
     -webkit-transform: scale(0);
     -ms-transform: scale(0);
     transform: scale(0);
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
   }
   .menu-primary a:before {
     content: '';
@@ -1039,8 +1039,8 @@ li.pingback.bypostauthor > article {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
     border-top: solid 2px #E6E6E6;
     min-width: 5em;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
+    -webkit-transition: opacity 0.2s, visibility 0.2s, top 0.2s, left 0.2s;
+    transition: opacity 0.2s, visibility 0.2s, top 0.2s, left 0.2s;
   }
   .menu-primary ul ul:hover, .menu-primary ul ul.focused {
     opacity: 1;
@@ -1268,8 +1268,8 @@ li.pingback.bypostauthor > article {
   padding: 0 8px;
   background: #F2F2F2;
   border: solid 1px #E6E6E6;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
 }
 .post-tags a:hover, .post-tags a:active, .post-tags a:focus {
   background: #E6E6E6;
@@ -1541,8 +1541,8 @@ li.pingback.bypostauthor > article {
 .widget_calendar .pad a {
   display: block;
   padding: 8px;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
 }
 .widget_calendar #prev a:hover, .widget_calendar #prev a:active, .widget_calendar #prev a:focus,
 .widget_calendar #next a:hover,

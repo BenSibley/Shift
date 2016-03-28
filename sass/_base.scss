@@ -175,7 +175,7 @@ textarea {
   border: solid 2px $color-gray-90;
   border-radius: 0;
   -webkit-appearance: none;
-  transition: all 0.2s;
+  transition: background 0.2s, border-color 0.2s;
 
   &:focus {
     outline: none;
@@ -196,7 +196,7 @@ input[type="submit"] {
   border: none;
   border-radius: 0;
   -webkit-appearance: none;
-  transition: all 0.2s;
+  transition: background 0.2s;
 
   &:hover {
     cursor: pointer;

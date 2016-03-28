@@ -1,3 +1,8 @@
+.site-title,
+.tagline {
+  //backface-visibility: hidden;
+  //-webkit-transform: translateZ(0);
+}
 .toggle-navigation {
   float: right;
   font-size: 1em;
@@ -100,7 +105,7 @@
     content: '\f107';
     position: relative;
     font-family: 'FontAwesome';
-    transition: all 0.2s;
+    transition: top 0.2s;
     top: 0;
     right: 0;
   }
@@ -174,7 +179,7 @@
         width: 100%;
         background: $color-gray-90;
         transform: scale(0);
-        transition: all 0.2s;
+        transition: transform 0.2s;
       }
       &:before {
         content: '';
@@ -213,7 +218,7 @@
       box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
       border-top: solid 2px $color-gray-90;
       min-width: 5em;
-      transition: all 0.2s;
+      transition: opacity 0.2s, visibility 0.2s, top 0.2s, left 0.2s;
 
       &:hover,
       &.focused {

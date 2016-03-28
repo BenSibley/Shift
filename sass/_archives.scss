@@ -4,7 +4,7 @@
   color: white;
   background: $color-gray-10;
   padding: 9px 12px;
-  transition: all 0.2s;
+  transition: color 0.2s, background 0.2s;
 
   &:link,
   &:visited {
@@ -26,7 +26,7 @@
     position: relative;
     right: 0;
     margin-left: 3px;
-    transition: all 0.2s;
+    transition: right 0.2s;
   }
 }
 .post-content .more-link {
