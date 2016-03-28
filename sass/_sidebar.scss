@@ -19,7 +19,13 @@
     margin: $baseline-height $column $baseline-height * 2 0;
 
     .widget {
-      padding: $baseline-height $column * 1.5 * 1.64;
+      padding: $baseline-height $column * 2.5 * 1.64;
+    }
+  }
+  .left-sidebar {
+
+    .sidebar-primary {
+      margin: $baseline-height 0 $baseline-height * 2 $column;
     }
   }
 }

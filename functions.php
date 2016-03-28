@@ -453,9 +453,13 @@ function ct_shift_body_class( $classes ) {
 
 	global $post;
 	$full_post = get_theme_mod( 'full_post' );
+	$layout    = get_theme_mod( 'layout' );
 
 	if ( $full_post == 'yes' ) {
 		$classes[] = 'full-post';
+	}
+	if ( $layout == 'left' ) {
+		$classes[] = 'left-sidebar';
 	}
 
 	return $classes;

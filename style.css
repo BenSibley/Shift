@@ -857,6 +857,10 @@ li.pingback.bypostauthor > article {
     width: 61.094%;
     float: left;
   }
+
+  .left-sidebar .main {
+    float: right;
+  }
 }
 .toggle-navigation {
   float: right;
@@ -1475,7 +1479,11 @@ li.pingback.bypostauthor > article {
     margin: 1.5em 2.777% 3em 0;
   }
   .sidebar-primary .widget {
-    padding: 1.5em 6.83142%;
+    padding: 1.5em 11.3857%;
+  }
+
+  .left-sidebar .sidebar-primary {
+    margin: 1.5em 0 3em 2.777%;
   }
 }
 .widget {
