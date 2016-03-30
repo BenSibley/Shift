@@ -705,6 +705,7 @@ li.pingback.bypostauthor > article {
   display: inline-block;
   background: #1A1A1A;
   padding: 1.125em 1.5em 1.125em 6.9425%;
+  min-height: 60px;
 }
 .title-container.has-tagline {
   padding-top: 9px;

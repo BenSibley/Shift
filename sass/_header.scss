@@ -11,6 +11,7 @@
   display: inline-block;
   background: $color-gray-10;
   padding: $baseline-height * .75 $baseline-height $baseline-height * .75 $column * 2.5;
+  min-height: 60px;
 
   &.has-tagline {
     padding-top: 9px;
