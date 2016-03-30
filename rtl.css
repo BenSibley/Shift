@@ -895,6 +895,7 @@ li.pingback.bypostauthor > article {
 .menu-primary-container .menu-inner-container {
   position: relative;
   padding: 1.5em 6.9425%;
+  min-height: 1.5em;
 }
 .menu-primary-container.open {
   max-height: none;

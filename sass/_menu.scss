@@ -31,6 +31,7 @@
   .menu-inner-container {
     position: relative;
     padding: $baseline-height $column * 2.5;
+    min-height: $baseline-height;
   }
   &.open {
     max-height: none;
