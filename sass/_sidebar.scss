@@ -2,7 +2,6 @@
   margin: $baseline-height $column;
 
   .widget {
-    background: white;
     padding: $baseline-height $column * 1.5 * 1.06 $baseline-height * 1.5;
 
     > *:not(.widget-title) {

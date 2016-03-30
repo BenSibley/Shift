@@ -1468,7 +1468,6 @@ li.pingback.bypostauthor > article {
   margin: 1.5em 2.777%;
 }
 .sidebar-primary .widget {
-  background: white;
   padding: 1.5em 4.41543% 2.25em;
 }
 
@@ -1490,6 +1489,7 @@ li.pingback.bypostauthor > article {
   border: solid 6px #E6E6E6;
   padding: 1.5em 1.5em 2.25em;
   margin-bottom: 1.5em;
+  background: white;
 }
 .widget ul {
   list-style: none;
