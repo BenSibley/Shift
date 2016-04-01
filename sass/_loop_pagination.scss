@@ -6,6 +6,7 @@
 
   a {
     @extend %link-italic;
+    transition: color 0.2s;
   }
   .prev,
   .next {

@@ -802,6 +802,10 @@ li.pingback.bypostauthor > article {
   clear: both;
   margin-bottom: 3em;
 }
+.pagination a {
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
 .pagination .prev,
 .pagination .next {
   position: relative;
