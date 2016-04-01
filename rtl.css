@@ -1206,6 +1206,10 @@ li.pingback.bypostauthor > article {
 .post-title {
   margin-bottom: 6px;
 }
+.post-title a {
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
 .post-title a:hover, .post-title a:active, .post-title a:focus {
   color: #666666;
 }
