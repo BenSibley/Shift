@@ -883,6 +883,9 @@ li.pingback.bypostauthor > article {
 .toggle-navigation svg g {
   fill: #1A1A1A;
 }
+.toggle-navigation:hover svg g, .toggle-navigation:active svg g, .toggle-navigation:focus svg g, .toggle-navigation.open svg g {
+  fill: #CCCCCC;
+}
 .toggle-navigation:hover {
   cursor: pointer;
 }

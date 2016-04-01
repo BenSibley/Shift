@@ -15,6 +15,15 @@
       fill: $color-gray-10;
     }
   }
+  &:hover,
+  &:active,
+  &:focus,
+  &.open {
+
+    svg g {
+      fill: $color-gray-80;
+    }
+  }
   &:hover {
     cursor: pointer;
   }
