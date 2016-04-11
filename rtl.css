@@ -33,7 +33,7 @@ h2, .search-header h1 {
   /* 24px */
 }
 
-h3, .widget-title {
+h3, .comments-number h2, .widget-title {
   font-size: 1.125em;
   /* 18px / 16px */
   line-height: 1.333;
@@ -432,7 +432,7 @@ a img {
 .archive-header {
   margin-bottom: 1.5em;
 }
-.archive-header h2 {
+.archive-header h1 {
   font-size: 1em;
   line-height: 1.5;
 }
@@ -592,6 +592,14 @@ li.pingback.bypostauthor > article {
   height: 0;
 }
 
+@media all and (min-width: 50em) {
+  .comments-number h2 {
+    font-size: 1.3125em;
+    /* 21px / 16px */
+    line-height: 1.143;
+    /* 24px */
+  }
+}
 .site-footer {
   clear: both;
   margin-top: 3em;
