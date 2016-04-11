@@ -50,7 +50,7 @@ h3, .widget-title {
 .wp-caption-text,
 .gallery-caption, input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
 textarea, input[type="submit"], .more-link, .sticky-status, .comment-footer > span,
-.comment-footer a, .site-footer .design-credit, .tagline, .post-meta > div, .further-reading span {
+.comment-footer a, .site-footer .design-credit, .tagline, .post-meta > div, .further-reading span, .single-attachment .attachment-caption {
   font-size: 0.75em;
   /* 12px / 16px */
   line-height: 1.5;
@@ -1635,4 +1635,8 @@ li.pingback.bypostauthor > article {
   visibility: hidden;
   line-height: 0;
   height: 0;
+}
+
+.single-attachment .attachment-container img {
+  display: block;
 }
