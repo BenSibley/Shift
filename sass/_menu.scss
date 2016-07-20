@@ -155,6 +155,11 @@
           content: '\f107';
         }
       }
+      > ul {
+        opacity: 1;
+        visibility: visible;
+        top: calc(100% - 2px);
+      }
     }
     li {
       display: inline-block;

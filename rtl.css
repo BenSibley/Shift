@@ -998,6 +998,11 @@ li.pingback.bypostauthor > article {
   .menu-primary .open > .toggle-dropdown:after {
     content: '\f107';
   }
+  .menu-primary .open > ul {
+    opacity: 1;
+    visibility: visible;
+    top: calc(100% - 2px);
+  }
   .menu-primary li {
     display: inline-block;
     margin: 0 0 0 20px;
