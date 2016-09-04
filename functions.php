@@ -22,6 +22,12 @@ if ( ! function_exists( ( 'ct_shift_theme_setup' ) ) ) {
 			'footer'    => 'overflow-container',
 			'render'    => 'ct_shift_infinite_scroll_render'
 		) );
+		add_theme_support( 'custom-logo', array(
+			'height'      => 100,
+			'width'       => 200,
+			'flex-height' => true,
+			'flex-width'  => true
+		) );
 
 		require_once( trailingslashit( get_template_directory() ) . 'theme-options.php' );
 		foreach ( glob( trailingslashit( get_template_directory() ) . 'inc/*' ) as $filename ) {
@@ -407,7 +413,6 @@ function ct_shift_reset_customizer_options() {
 
 	$mods_array = array(
 		'logo_upload',
-		'logo_size',
 		'search_bar',
 		'full_post',
 		'excerpt_length',
@@ -478,14 +483,6 @@ add_filter( 'post_class', 'ct_shift_post_class' );
 function ct_shift_custom_css_output() {
 
 	$custom_css = get_theme_mod( 'custom_css' );
-	$logo_size = get_theme_mod( 'logo_size' );
-
-	if ( $logo_size != 200 && ! empty( $logo_size ) ) {
-		$logo_size_css = '.logo {
-							width: ' . $logo_size . 'px;
-						  }';
-		$custom_css .= $logo_size_css;
-	}
 
 	if ( $custom_css ) {
 		$custom_css = ct_shift_sanitize_css( $custom_css );
