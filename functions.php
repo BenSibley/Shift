@@ -532,10 +532,6 @@ function ct_shift_add_meta_elements() {
 }
 add_action( 'wp_head', 'ct_shift_add_meta_elements', 1 );
 
-// Move the WordPress generator to a better priority.
-remove_action( 'wp_head', 'wp_generator' );
-add_action( 'wp_head', 'wp_generator', 1 );
-
 function ct_shift_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
