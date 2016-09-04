@@ -1,5 +1,5 @@
 <div <?php post_class(); ?>>
-	<?php do_action( 'post_before' ); ?>
+	<?php do_action( 'ct_shift_post_before' ); ?>
 	<article>
 		<div class='post-header'>
 			<h1 class='post-title'><?php the_title(); ?></h1>
@@ -12,7 +12,7 @@
 				'before' => '<p class="singular-pagination">' . __( 'Pages:', 'shift' ),
 				'after'  => '</p>',
 			) ); ?>
-			<?php do_action( 'post_after' ); ?>
+			<?php do_action( 'ct_shift_post_after' ); ?>
 		</div>
 		<div class="after-post-meta">
 			<?php get_template_part( 'content/post-categories' ); ?>

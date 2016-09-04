@@ -395,7 +395,7 @@ function ct_shift_sticky_post_marker() {
 		echo '<div class="sticky-status"><span>' . __( "Featured", "shift" ) . '</span></div>';
 	}
 }
-add_action( 'sticky_post_status', 'ct_shift_sticky_post_marker' );
+add_action( 'ct_shift_sticky_post_status', 'ct_shift_sticky_post_marker' );
 
 function ct_shift_reset_customizer_options() {
 
