@@ -7,7 +7,7 @@ function ct_shift_add_customizer_content( $wp_customize ) {
 
 	/***** Reorder default sections *****/
 
-	$wp_customize->get_section( 'title_tagline' )->priority = 1;
+	$wp_customize->get_section( 'title_tagline' )->priority = 2;
 
 	// check if exists in case user has no pages
 	if ( is_object( $wp_customize->get_section( 'static_front_page' ) ) ) {
@@ -20,6 +20,45 @@ function ct_shift_add_customizer_content( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 
+	/***** Shift Pro Control *****/
+
+	class ct_shift_pro_ad extends WP_Customize_Control {
+		public function render_content() {
+			$link = 'https://www.competethemes.com/shift-pro/';
+			echo "<p class='bold'>" . sprintf( __('<a target="_blank" href="%s">Shift Pro</a> is the plugin that makes advanced customization simple - and fun too.', 'shift'), $link) . "</p>";
+			echo "<ul>
+					<li>" . __('Custom Colors', 'shift') . "</li>
+					<li>" . __('New Layouts', 'shift') . "</li>
+					<li>" . __('Background Images', 'shift') . "</li>
+					<li>" . __('+ 9 more features', 'shift') . "</li>
+				  </ul>";
+			echo "<p>" . __('Download the Shift Pro Plugin to get started now.', 'shift') . "</p>";
+			echo "<p class='button-wrapper'><a target=\"_blank\" class='shift-pro-button' href='" . $link . "'>" . __('Get Shift Pro', 'shift') . "</a></p>";
+		}
+	}
+
+	/***** Shift Pro Section *****/
+
+	// don't add if Shift Pro is active
+	if ( !function_exists( 'ct_shift_pro_init' ) ) {
+		// section
+		$wp_customize->add_section( 'ct_shift_pro', array(
+			'title'    => __( 'Shift Pro', 'shift' ),
+			'priority' => 1
+		) );
+		// Upload - setting
+		$wp_customize->add_setting( 'shift_pro', array(
+			'sanitize_callback' => 'absint'
+		) );
+		// Upload - control
+		$wp_customize->add_control( new ct_shift_pro_ad(
+			$wp_customize, 'shift_pro', array(
+				'section'  => 'ct_shift_pro',
+				'settings' => 'shift_pro'
+			)
+		) );
+	}
+	
 	/***** Social Media Icons *****/
 
 	// get the social sites array
@@ -362,13 +401,3 @@ function ct_shift_sanitize_layout_settings( $input ) {
 
 	return array_key_exists( $input, $valid ) ? $input : '';
 }
-
-/***** Helper Functions *****/
-
-function ct_shift_customize_preview_js() {
-
-	$content = "<script>jQuery('#customize-info').prepend('<div class=\"upgrades-ad\"><a href=\"https://www.competethemes.com/shift-pro/\" target=\"_blank\">" . __( 'View the Shift Pro Plugin', 'shift' ) . " <span>&rarr;</span></a></div>')</script>";
-	echo apply_filters( 'ct_shift_customizer_ad', $content );
-}
-
-add_action( 'customize_controls_print_footer_scripts', 'ct_shift_customize_preview_js' );
