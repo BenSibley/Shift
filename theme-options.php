@@ -14,10 +14,18 @@ function ct_shift_options_content() {
 		),
 		admin_url( 'customize.php' )
 	);
+	$support_url = 'https://www.competethemes.com/documentation/shift-support-center/';
 	?>
 	<div id="shift-dashboard-wrap" class="wrap">
 		<h2><?php _e( 'Shift Dashboard', 'shift' ); ?></h2>
 		<?php do_action( 'ct_shift_theme_options_before' ); ?>
+		<div class="welcome">
+			<h3><?php _e( 'Thanks for Choosing Shift!', 'shift' ); ?></h3>
+			<p>
+				<?php printf( __( 'If you need help getting started, there are detailed tutorials in the <a href="%s">Shift Support Center</a>.', 'shift' ), $support_url ); ?>
+				<?php printf( __( 'Otherwise, you can dive right in with the <a href="%s">Customizer</a>.', 'shift' ), esc_url($customizer_url) ); ?>
+			</p>
+		</div>
 		<div class="content content-customization">
 			<h3><?php _e( 'Customization', 'shift' ); ?></h3>
 			<p><?php _e( 'Click the "Customize" link in your menu, or use the button below to get started customizing Shift', 'shift' ); ?>.</p>
