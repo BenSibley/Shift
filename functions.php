@@ -40,7 +40,7 @@ if ( ! function_exists( ( 'ct_shift_theme_setup' ) ) ) {
 		) );
 
 		register_nav_menus( array(
-			'primary' => __( 'Primary', 'shift' )
+			'primary' => esc_html__( 'Primary', 'shift' )
 		) );
 
 		load_theme_textdomain( 'shift', get_template_directory() . '/languages' );
@@ -85,11 +85,11 @@ if ( ! function_exists( ( 'ct_shift_customize_comments' ) ) ) {
 			<div class="comment-footer">
 				<span class="comment-date"><?php comment_date(); ?></span>
 				<?php comment_reply_link( array_merge( $args, array(
-					'reply_text' => __( 'Reply', 'shift' ),
+					'reply_text' => esc_html__( 'Reply', 'shift' ),
 					'depth'      => $depth,
 					'max_depth'  => $args['max_depth']
 				) ) ); ?>
-				<?php edit_comment_link( __( 'Edit', 'shift' ) ); ?>
+				<?php edit_comment_link( esc_html__( 'Edit', 'shift' ) ); ?>
 			</div>
 		</article>
 		<?php
@@ -526,7 +526,7 @@ function ct_shift_add_meta_elements() {
 
 	$meta_elements = '';
 
-	$meta_elements .= sprintf( '<meta charset="%s" />' . "\n", get_bloginfo( 'charset' ) );
+	$meta_elements .= sprintf( '<meta charset="%s" />' . "\n", esc_html( get_bloginfo( 'charset' ) ) );
 	$meta_elements .= '<meta name="viewport" content="width=device-width, initial-scale=1" />' . "\n";
 
 	$theme    = wp_get_theme( get_template() );
