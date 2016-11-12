@@ -108,21 +108,21 @@ if ( ! function_exists( 'ct_shift_update_fields' ) ) {
 
 		$fields['author'] =
 			'<p class="comment-form-author">
-	            <label for="author">' . esc_attr__( "Name", "shift" ) . $label . '</label>
+	            <label for="author">' . esc_html__( "Name", "shift" ) . $label . '</label>
 	            <input id="author" name="author" type="text" placeholder="' . esc_attr__( "Jane Doe", "shift" ) . '" value="' . esc_attr( $commenter['comment_author'] ) .
 			'" size="30" ' . $aria_req . ' />
 	        </p>';
 
 		$fields['email'] =
 			'<p class="comment-form-email">
-	            <label for="email">' . esc_attr__( "Email", "shift" ) . $label . '</label>
+	            <label for="email">' . esc_html__( "Email", "shift" ) . $label . '</label>
 	            <input id="email" name="email" type="email" placeholder="' . esc_attr__( "name@email.com", "shift" ) . '" value="' . esc_attr( $commenter['comment_author_email'] ) .
 			'" size="30" ' . $aria_req . ' />
 	        </p>';
 
 		$fields['url'] =
 			'<p class="comment-form-url">
-	            <label for="url">' . esc_attr__( "Website", "shift" ) . '</label>
+	            <label for="url">' . esc_html__( "Website", "shift" ) . '</label>
 	            <input id="url" name="url" type="url" placeholder="http://google.com" value="' . esc_attr( $commenter['comment_author_url'] ) .
 			'" size="30" />
 	            </p>';
@@ -337,21 +337,21 @@ if ( ! function_exists( 'ct_shift_social_icons_output' ) ) {
 					<a class="email" target="_blank"
 					   href="mailto:<?php echo antispambot( is_email( get_theme_mod( $key ) ) ); ?>">
 						<i class="fa fa-envelope" title="<?php esc_attr_e( 'email', 'shift' ); ?>"></i>
-						<span class="screen-reader-text"><?php esc_attr_e('email', 'shift'); ?></span>
+						<span class="screen-reader-text"><?php esc_html_e('email', 'shift'); ?></span>
 					</a>
 				<?php } elseif ( $active_site == 'skype' ) { ?>
 					<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
 					   href="<?php echo esc_url( get_theme_mod( $key ), array( 'http', 'https', 'skype' ) ); ?>">
 						<i class="<?php echo esc_attr( $class ); ?>"
 						   title="<?php echo esc_attr( $active_site ); ?>"></i>
-						<span class="screen-reader-text"><?php echo esc_attr( $active_site );  ?></span>
+						<span class="screen-reader-text"><?php echo esc_html( $active_site );  ?></span>
 					</a>
 				<?php } else { ?>
 					<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
 					   href="<?php echo esc_url( get_theme_mod( $key ) ); ?>">
 						<i class="<?php echo esc_attr( $class ); ?>"
 						   title="<?php echo esc_attr( $active_site ); ?>"></i>
-						<span class="screen-reader-text"><?php echo esc_attr( $active_site );  ?></span>
+						<span class="screen-reader-text"><?php echo esc_html( $active_site );  ?></span>
 					</a>
 					<?php
 				}
