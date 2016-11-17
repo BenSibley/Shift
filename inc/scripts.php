@@ -8,8 +8,8 @@ function ct_shift_load_scripts_styles() {
 		'subset' => urlencode( 'latin,latin-ext' )
 	);
 	$fonts_url = add_query_arg( $font_args, '//fonts.googleapis.com/css' );
-	
-	wp_enqueue_style( 'ct-shift-google-fonts', $font_args );
+
+	wp_enqueue_style( 'ct-shift-google-fonts', $fonts_url );
 
 	wp_enqueue_script( 'ct-shift-js', get_template_directory_uri() . '/js/build/production.min.js', array( 'jquery' ), '', true );
 	wp_localize_script( 'ct-shift-js', 'ct_shift_objectL10n', array(
