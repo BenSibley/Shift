@@ -22,7 +22,7 @@ function ct_shift_options_content() {
 		<div class="welcome">
 			<h3><?php _e( 'Thanks for Choosing Shift!', 'shift' ); ?></h3>
 			<p>
-				<?php printf( __( 'If you need help getting started, there are detailed tutorials in the <a href="%s">Shift Support Center</a>.', 'shift' ), $support_url ); ?>
+				<?php printf( __( 'If you need help getting started, there are detailed tutorials in the <a target="_blank" href="%s">Shift Support Center</a>.', 'shift' ), $support_url ); ?>
 				<?php printf( __( 'Otherwise, you can dive right in with the <a href="%s">Customizer</a>.', 'shift' ), esc_url($customizer_url) ); ?>
 			</p>
 		</div>
