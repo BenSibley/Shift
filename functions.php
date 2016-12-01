@@ -288,6 +288,7 @@ if ( ! function_exists( 'ct_shift_social_array' ) ) {
 			'hacker-news'   => 'shift_hacker-news_profile',
 			'steam'         => 'shift_steam_profile',
 			'vk'            => 'shift_vk_profile',
+			'snapchat'      => 'shift_snapchat_profile',
 			'bandcamp'      => 'shift_bandcamp_profile',
 			'etsy'          => 'shift_etsy_profile',
 			'quora'         => 'shift_quora_profile',
