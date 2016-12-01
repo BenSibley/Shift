@@ -875,6 +875,7 @@ li.pingback.bypostauthor > article {
   }
 }
 .toggle-navigation {
+  position: relative;
   float: left;
   font-size: 1em;
   line-height: 1.5;
@@ -882,6 +883,16 @@ li.pingback.bypostauthor > article {
   margin: 0;
   border: none;
   padding: 1.125em 1.5em 1.125em 6.9425%;
+}
+.toggle-navigation:after {
+  content: '';
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 32px;
+  border: solid 1px #CCCCCC;
+  visibility: hidden;
 }
 .toggle-navigation svg {
   display: inline-block;
@@ -891,13 +902,16 @@ li.pingback.bypostauthor > article {
   fill: #1A1A1A;
 }
 .toggle-navigation:hover svg g, .toggle-navigation:active svg g, .toggle-navigation:focus svg g, .toggle-navigation.open svg g {
-  fill: #CCCCCC;
+  fill: #666666;
 }
 .toggle-navigation:hover {
   cursor: pointer;
 }
-.toggle-navigation:focus {
+.toggle-navigation:focus, .toggle-navigation.open {
   outline: none;
+}
+.toggle-navigation:focus:after, .toggle-navigation.open:after {
+  visibility: visible;
 }
 
 .menu-primary-container {
