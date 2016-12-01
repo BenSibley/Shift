@@ -25,15 +25,16 @@ function ct_shift_add_customizer_content( $wp_customize ) {
 	class ct_shift_pro_ad extends WP_Customize_Control {
 		public function render_content() {
 			$link = 'https://www.competethemes.com/shift-pro/';
-			echo "<p class='bold'>" . sprintf( __('<a target="_blank" href="%s">Shift Pro</a> is the plugin that makes advanced customization simple - and fun too.', 'shift'), $link) . "</p>";
+			echo "<a href='" . $link . "' target='_blank'><img src='" . get_template_directory_uri() . "/assets/images/shift-pro.png' srcset='" . get_template_directory_uri() . "/assets/images/shift-pro-2x.png 2x' /></a>";
+			echo "<p class='bold'>" . sprintf( __('<a target="_blank" href="%s">Shift Pro</a> is the plugin that makes advanced customization simple - and fun too!', 'shift'), $link) . "</p>";
+			echo "<p>" . __('Shift Pro adds the following features to Shift:', 'shift') . "</p>";
 			echo "<ul>
-					<li>" . __('Custom Colors', 'shift') . "</li>
-					<li>" . __('New Layouts', 'shift') . "</li>
-					<li>" . __('Background Images', 'shift') . "</li>
-					<li>" . __('+ 9 more features', 'shift') . "</li>
+					<li>" . __('6 new layouts', 'shift') . "</li>
+					<li>" . __('Custom colors', 'shift') . "</li>
+					<li>" . __('New fonts', 'shift') . "</li>
+					<li>" . __('+ 10 more features', 'shift') . "</li>
 				  </ul>";
-			echo "<p>" . __('Download the Shift Pro Plugin to get started now.', 'shift') . "</p>";
-			echo "<p class='button-wrapper'><a target=\"_blank\" class='shift-pro-button' href='" . $link . "'>" . __('Get Shift Pro', 'shift') . "</a></p>";
+			echo "<p class='button-wrapper'><a target=\"_blank\" class='shift-pro-button' href='" . $link . "'>" . __('View Shift Pro', 'shift') . "</a></p>";
 		}
 	}
 
