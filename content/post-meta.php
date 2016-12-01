@@ -17,7 +17,7 @@ if ( $author_display == 'hide' && $date_display == 'hide' && $comments_display =
 	<?php endif; ?>
 	<?php if ( $date_display != 'hide' ) : ?>
 		<div class="date">
-			<i class="fa fa-calendar"></i>
+			<i class="fa fa-calendar" aria-hidden="true"></i>
 			<a class='date' href="<?php echo esc_url( get_month_link( get_the_date( 'Y' ), get_the_date( 'n' ) ) ); ?>"><?php echo date_i18n( get_option( 'date_format' ), strtotime( get_the_date( 'r' ) ) ); ?></a>
 		</div>
 	<?php endif; ?>
