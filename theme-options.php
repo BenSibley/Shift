@@ -41,7 +41,7 @@ function ct_shift_options_content() {
 			<div class="content content-review">
 				<h3><?php _e( 'Leave a Review', 'shift' ); ?></h3>
 				<p><?php _e( 'Help others find Shift by leaving a review on wordpress.org.', 'shift' ); ?></p>
-				<a target="_blank" class="button-primary" href="https://wordpress.org/support/view/theme-reviews/shift"><?php _e( 'Leave a Review', 'shift' ); ?></a>
+				<a target="_blank" class="button-primary" href="https://wordpress.org/support/theme/shift/reviews/"><?php _e( 'Leave a Review', 'shift' ); ?></a>
 			</div>
 			<div class="content content-delete-settings">
 				<h3><?php _e( 'Reset Customizer Settings', 'shift' ); ?></h3>
