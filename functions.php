@@ -476,7 +476,7 @@ if ( ! function_exists( ( 'ct_shift_delete_settings_notice' ) ) ) {
 			} else if ( $_GET['shift_status'] == 'activated' ) {
 				?>
 				<div class="updated">
-					<p><?php _e( 'Shift successfully activated!', 'shift' ); ?></p>
+					<p><?php printf( __( '%s successfully activated!', 'shift' ), wp_get_theme( get_template() ) ); ?></p>
 				</div>
 				<?php
 			}

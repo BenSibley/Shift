@@ -9,7 +9,7 @@
         <div class="design-credit">
             <span>
                 <?php
-                $footer_text = sprintf( __( '<a href="%s">Shift WordPress Theme</a> by Compete Themes.', 'shift' ), 'https://www.competethemes.com/shift/' );
+                $footer_text = sprintf( __( '<a href="%1$s">%2$s WordPress Theme</a> by Compete Themes.', 'shift' ), 'https://www.competethemes.com/shift/', wp_get_theme( get_template() ) );
                 $footer_text = apply_filters( 'ct_shift_footer_text', $footer_text );
                 echo wp_kses_post( $footer_text );
                 ?>
