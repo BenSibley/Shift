@@ -87,11 +87,11 @@ if ( ! function_exists( ( 'ct_shift_customize_comments' ) ) ) {
 			<div class="comment-footer">
 				<span class="comment-date"><?php comment_date(); ?></span>
 				<?php comment_reply_link( array_merge( $args, array(
-					'reply_text' => esc_html__( 'Reply', 'shift' ),
+					'reply_text' => esc_html_x( 'Reply', 'noun: reply to this comment', 'shift' ),
 					'depth'      => $depth,
 					'max_depth'  => $args['max_depth']
 				) ) ); ?>
-				<?php edit_comment_link( esc_html__( 'Edit', 'shift' ) ); ?>
+				<?php edit_comment_link( esc_html_x( 'Edit', 'noun: edit this comment', 'shift' ) ); ?>
 			</div>
 		</article>
 		<?php
