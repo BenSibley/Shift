@@ -108,14 +108,14 @@ if ( ! function_exists( 'ct_shift_update_fields' ) ) {
 
 		$fields['author'] =
 			'<p class="comment-form-author">
-	            <label for="author">' . esc_html__( "Name", "shift" ) . $label . '</label>
+	            <label for="author">' . esc_html_x( "Name", "noun", "shift" ) . $label . '</label>
 	            <input id="author" name="author" type="text" placeholder="' . esc_attr__( "Jane Doe", "shift" ) . '" value="' . esc_attr( $commenter['comment_author'] ) .
 			'" size="30" ' . $aria_req . ' />
 	        </p>';
 
 		$fields['email'] =
 			'<p class="comment-form-email">
-	            <label for="email">' . esc_html__( "Email", "shift" ) . $label . '</label>
+	            <label for="email">' . esc_html_x( "Email", "noun", "shift" ) . $label . '</label>
 	            <input id="email" name="email" type="email" placeholder="' . esc_attr__( "name@email.com", "shift" ) . '" value="' . esc_attr( $commenter['comment_author_email'] ) .
 			'" size="30" ' . $aria_req . ' />
 	        </p>';
@@ -137,7 +137,7 @@ if ( ! function_exists( 'ct_shift_update_comment_field' ) ) {
 
 		$comment_field =
 			'<p class="comment-form-comment">
-	            <label for="comment">' . __( "Comment", "shift" ) . '</label>
+	            <label for="comment">' . _x( "Comment", "noun", "shift" ) . '</label>
 	            <textarea required id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
 	        </p>';
 
@@ -347,8 +347,8 @@ if ( ! function_exists( 'ct_shift_social_icons_output' ) ) {
 				if ( $active_site == 'email' ) { ?>
 					<a class="email" target="_blank"
 					   href="mailto:<?php echo antispambot( is_email( get_theme_mod( $key ) ) ); ?>">
-						<i class="fa fa-envelope" title="<?php esc_attr_e( 'email', 'shift' ); ?>"></i>
-						<span class="screen-reader-text"><?php esc_html_e('email', 'shift'); ?></span>
+						<i class="fa fa-envelope" title="<?php echo esc_attr_x( 'email', 'noun', 'shift' ); ?>"></i>
+						<span class="screen-reader-text"><?php echo esc_html_x('email', 'noun', 'shift'); ?></span>
 					</a>
 				<?php } elseif ( $active_site == 'skype' ) { ?>
 					<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
@@ -393,7 +393,7 @@ if ( ! function_exists( ( 'ct_shift_nav_dropdown_buttons' ) ) ) {
 		if ( $args->theme_location == 'primary' ) {
 
 			if ( in_array( 'menu-item-has-children', $item->classes ) || in_array( 'page_item_has_children', $item->classes ) ) {
-				$item_output = str_replace( $args->link_after . '</a>', $args->link_after . '</a><button class="toggle-dropdown" aria-expanded="false" name="toggle-dropdown"><span class="screen-reader-text">' . __( "open menu", "shift" ) . '</span></button>', $item_output );
+				$item_output = str_replace( $args->link_after . '</a>', $args->link_after . '</a><button class="toggle-dropdown" aria-expanded="false" name="toggle-dropdown"><span class="screen-reader-text">' . _x( "open menu", "verb: open the menu", "shift" ) . '</span></button>', $item_output );
 			}
 		}
 

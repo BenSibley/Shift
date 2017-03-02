@@ -13,10 +13,10 @@ function ct_shift_load_scripts_styles() {
 
 	wp_enqueue_script( 'ct-shift-js', get_template_directory_uri() . '/js/build/production.min.js', array( 'jquery' ), '', true );
 	wp_localize_script( 'ct-shift-js', 'ct_shift_objectL10n', array(
-		'openMenu'       => esc_html__( 'open menu', 'shift' ),
-		'closeMenu'      => esc_html__( 'close menu', 'shift' ),
-		'openChildMenu'  => esc_html__( 'open dropdown menu', 'shift' ),
-		'closeChildMenu' => esc_html__( 'close dropdown menu', 'shift' )
+		'openMenu'       => esc_html_x( 'open menu', 'verb: open the menu', 'shift' ),
+		'closeMenu'      => esc_html_x( 'close menu', 'verb: close the menu', 'shift' ),
+		'openChildMenu'  => esc_html_x( 'open dropdown menu', 'verb: open the dropdown menu', 'shift' ),
+		'closeChildMenu' => esc_html_x( 'close dropdown menu', 'verb: close the dropdown menu', 'shift' )
 	) );
 
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css' );

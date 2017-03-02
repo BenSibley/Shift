@@ -212,7 +212,7 @@ function ct_shift_add_customizer_content( $wp_customize ) {
 
 	// section
 	$wp_customize->add_section( 'shift_blog', array(
-		'title'    => __( 'Blog', 'shift' ),
+		'title'    => _x( 'Blog', 'noun: the blog section', 'shift' ),
 		'priority' => 45
 	) );
 	// setting

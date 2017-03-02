@@ -20,7 +20,7 @@
 				} ?>
 			</div>
 			<button id="toggle-navigation" class="toggle-navigation" name="toggle-navigation" aria-expanded="false">
-				<span class="screen-reader-text"><?php _e( 'open menu', 'shift' ); ?></span>
+				<span class="screen-reader-text"><?php _ex( 'open menu', 'verb: open the menu', 'shift' ); ?></span>
 				<?php echo ct_shift_svg_output( 'toggle-navigation' ); ?>
 			</button>
 			<div id="menu-primary-container" class="menu-primary-container">
