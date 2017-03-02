@@ -15,7 +15,7 @@ jQuery(document).ready(function($){
 
         // add the appropriate image to each label
         layoutInputs.each( function() {
-            $(this).parent().css('background-image', 'url("../wp-content/themes/shift/assets/images/' + $(this).val() + '.png")');
+            $(this).parent().css('background-image', 'url("' + ct_shift_customizer.templateDir + '/assets/images/' + $(this).val() + '.png")');
 
             // add initial 'selected' class
             if ($(this).prop('checked')) {

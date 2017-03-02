@@ -41,8 +41,12 @@ add_action( 'admin_enqueue_scripts', 'ct_shift_enqueue_admin_styles' );
 
 // Customizer scripts
 function ct_shift_enqueue_customizer_scripts() {
-	wp_enqueue_script( 'ct-shift-customizer-js', get_template_directory_uri() . '/js/build/customizer.min.js', array( 'jquery' ), '', true );
 	wp_enqueue_style( 'ct-shift-customizer-styles', get_template_directory_uri() . '/styles/customizer.min.css' );
+	wp_enqueue_script( 'ct-shift-customizer-js', get_template_directory_uri() . '/js/build/customizer.min.js', array( 'jquery' ), '', true );
+
+	wp_localize_script( 'ct-shift-customizer-js', 'ct_shift_customizer', array(
+		'templateDir' => get_template_directory_uri()
+	) );
 }
 add_action( 'customize_controls_enqueue_scripts', 'ct_shift_enqueue_customizer_scripts' );
 
