@@ -472,6 +472,10 @@ a img {
   color: white;
 }
 
+.more-link-wrapper {
+  margin: 1.5em 0;
+}
+
 .sticky-status {
   padding: 1px 5px;
   border: solid 2px #E6E6E6;

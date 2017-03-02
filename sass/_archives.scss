@@ -38,6 +38,9 @@
     color: white;
   }
 }
+.more-link-wrapper {
+  margin: $baseline-height 0;
+}
 .sticky-status {
   @extend %twelve-pixels;
   padding: 1px 5px;
