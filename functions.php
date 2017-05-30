@@ -284,6 +284,7 @@ if ( ! function_exists( 'ct_shift_social_array' ) ) {
 			'amazon'        => 'shift_amazon_profile',
 			'google-wallet' => 'shift_google_wallet_profile',
 			'yelp'          => 'shift_yelp_profile',
+			'twitch'        => 'shift_twitch_profile',
 			'steam'         => 'shift_steam_profile',
 			'vk'            => 'shift_vk_profile',
 			'snapchat'      => 'shift_snapchat_profile',
