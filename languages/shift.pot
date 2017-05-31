@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Shift 1.07\n"
+"Project-Id-Version: Shift 1.09\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2017-03-03 18:35:45+00:00\n"
+"POT-Creation-Date: 2017-05-31 15:29:13+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -113,53 +113,60 @@ msgstr ""
 msgid "<a href=\"%1$s\">%2$s WordPress Theme</a> by Compete Themes."
 msgstr ""
 
-#: functions.php:43
+#: functions.php:12
+msgid ""
+"Hey! Sorry to interrupt, but you've been using Shift for a little while "
+"now. If you're happy with this theme, could you take a minute to leave a "
+"review? <i>You won't see this notice again after closing it.</i>"
+msgstr ""
+
+#: functions.php:51
 msgid "Primary"
 msgstr ""
 
-#: functions.php:55
+#: functions.php:63
 msgid "Primary Sidebar"
 msgstr ""
 
-#: functions.php:57
+#: functions.php:65
 msgid ""
 "Widgets in this area will be shown in the sidebar next to the main post "
 "content"
 msgstr ""
 
-#: functions.php:82
+#: functions.php:90
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:106
+#: functions.php:114
 msgid "(optional)"
 msgstr ""
 
-#: functions.php:112
+#: functions.php:120
 msgid "Jane Doe"
 msgstr ""
 
-#: functions.php:119
+#: functions.php:127
 msgid "name@email.com"
 msgstr ""
 
-#: functions.php:125
+#: functions.php:133
 msgid "Website"
 msgstr ""
 
-#: functions.php:172 inc/customizer.php:248
+#: functions.php:180 inc/customizer.php:248
 msgid "Continue Reading"
 msgstr ""
 
-#: functions.php:404
+#: functions.php:413
 msgid "Featured"
 msgstr ""
 
-#: functions.php:468
+#: functions.php:477
 msgid "Customizer settings deleted."
 msgstr ""
 
-#: functions.php:474
+#: functions.php:483
 msgid "%s successfully activated!"
 msgstr ""
 
@@ -337,6 +344,10 @@ msgstr ""
 msgid "Two column - No Sidebar - Wide"
 msgstr ""
 
+#: inc/review.php:113
+msgid "Click here to leave your review"
+msgstr ""
+
 #: index.php:19
 msgid "Previous"
 msgstr ""
@@ -399,11 +410,25 @@ msgstr ""
 msgid "Help others find %s by leaving a review on wordpress.org."
 msgstr ""
 
-#: theme-options.php:47 theme-options.php:55
-msgid "Reset Customizer Settings"
+#: theme-options.php:47
+msgid "Turn Shift into a Mobile App"
+msgstr ""
+
+#: theme-options.php:48
+msgid ""
+"%s can be converted into a mobile app and listed on the App Store with the "
+"help of PressPad News. Read our tutorial to learn more."
 msgstr ""
 
 #: theme-options.php:49
+msgid "Read Tutorial"
+msgstr ""
+
+#: theme-options.php:52 theme-options.php:60
+msgid "Reset Customizer Settings"
+msgstr ""
+
+#: theme-options.php:54
 msgid ""
 "<strong>Warning:</strong> Clicking this button will erase the %2$s theme's "
 "current settings in the <a href=\"%1$s\">Customizer</a>."
@@ -434,37 +459,37 @@ msgctxt "View all posts in post category"
 msgid "View all posts in %s"
 msgstr ""
 
-#: functions.php:90
+#: functions.php:98
 msgctxt "noun: reply to this comment"
 msgid "Reply"
 msgstr ""
 
-#: functions.php:94
+#: functions.php:102
 msgctxt "noun: edit this comment"
 msgid "Edit"
 msgstr ""
 
-#: functions.php:111
+#: functions.php:119
 msgctxt "noun"
 msgid "Name"
 msgstr ""
 
-#: functions.php:118
+#: functions.php:126
 msgctxt "noun"
 msgid "Email"
 msgstr ""
 
-#: functions.php:140
+#: functions.php:148
 msgctxt "noun"
 msgid "Comment"
 msgstr ""
 
-#: functions.php:345 functions.php:346
+#: functions.php:354 functions.php:355
 msgctxt "noun"
 msgid "email"
 msgstr ""
 
-#: functions.php:391 header.php:23 inc/scripts.php:16
+#: functions.php:400 header.php:23 inc/scripts.php:16
 msgctxt "verb: open the menu"
 msgid "open menu"
 msgstr ""
