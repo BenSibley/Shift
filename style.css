@@ -877,6 +877,13 @@ li.pingback.bypostauthor > article {
   .left-sidebar .main {
     float: right;
   }
+
+  .page-template-full-width .main {
+    width: 100%;
+    float: none;
+    margin: 1.5em 0;
+    padding: 0 2.777%;
+  }
 }
 .toggle-navigation {
   position: relative;
