@@ -1,76 +1,44 @@
+=== Shift ===
+Contributors: bensibley
+Tags: two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-logo, custom-menu, featured-images, flexible-header, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, blog, education, news
+Requires at least: 4.5
+Tested up to: 4.8
+Stable tag: 1.11
 
-Thanks for downloading Shift!
+Shift is a clean and customizable theme made for businesses and bloggers.
 
--------------------------------------------------------
-    Support
--------------------------------------------------------
+== Description ==
 
-You can find tutorials and other support resources for Shift in the Shift Support Center:
-https://www.competethemes.com/documentation/shift-support-center/
+Shift is a clean and customizable theme made for businesses and bloggers. Present your best content in a beautiful, easy-to-read design across mobile devices, tablets, and widescreen monitors with Shift.
 
-Additional support resources:
+**Live Demo**
 
-Support forum: http://wordpress.org/support/theme/shift
-Changelog: https://www.competethemes.com/shift-changelog/
-Shift on Github: https://github.com/BenSibley/shift
+View a fully-setup live demo of Shift here: [Live demo](https://www.competethemes.com/demos/?theme=shift)
 
--------------------------------------------------------
-    Features
--------------------------------------------------------
+**Features**
 
-Shift includes the following features:
+Shift comes with the following features:
 
-    * Custom logo
-    * Social media icons
-    * Show full posts or excerpts
-    * Custom excerpt length
-    * Custom Read More button text
-    * Make first post on blog extra wide
-    * Hide/Show display controls
-    * Custom CSS
+* Custom logo
+* Social media icons
+* Show full posts or excerpts
+* Custom excerpt length
+* Custom Read More button text
+* Make first post on blog extra wide
+* Hide/Show display controls
 
-Shift also has a premium plugin upgrade called Shift Pro that includes the following features:
+**Shift Pro**
 
-    * Custom colors
-    * Featured sliders
-    * Featured videos
-    * Additional layouts
-    * Flexible header image
-    * Google fonts
-    * More widget areas
-    * Fixed Menu
-    * Background Images & Textures
-    * Display controls
-    * Custom footer text
+Shift also has an upgrade called [Shift Pro](https://www.competethemes.com/shift-pro/) that comes with the following features:
 
-Shift Pro: https://www.competethemes.com/shift-pro/
-
--------------------------------------------------------
-    Additional Info:
--------------------------------------------------------
-
-    * All menus in Shift support 1-3 tiers
-    * Featured Images have a 2x1 ratio at all screen sizes
-    * Shift is child theme compatible. Download a starter child theme here:
-        https://www.competethemes.com/help/child-theme-shift/
-
-
--------------------------------------------------------
-    Licenses:
--------------------------------------------------------
-
-Shift WordPress Theme, Copyright 2017 Compete Themes
-Shift is distributed under the terms of the GNU GPL
-
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
-Shift also uses:
-
-* Fitvids, https://github.com/davatron5000/FitVids.js/, Copyright 2011, Chris Coyier & Dave Rupert, WTFPL license, http://www.wtfpl.net/.
-* Google Fonts, http://google.com/fonts, Copyright 2010, Google, open source licenses, see: https://developers.google.com/fonts/faq#Any_Page_OK.
-* Font Awesome, http://fontawesome.io/, Copyright 2011, Dave Gandy, MIT license, https://opensource.org/licenses/mit-license.html
-* WP Review Me, https://github.com/julien731/WP-Review-Me, Copyright 2016, Julien Liabeuf, GPL-2.0+, https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
-* Dismissible Notices Handler, https://github.com/julien731/WP-Dismissible-Notices-Handler, Copyright 2016, Julien Liabeuf,  GPL-2.0+, https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
-* Image in screenshot.png : CC0 by Matthew Henry, https://unsplash.com/search/ocean-person?photo=tBtuxtLvAZs, licensed under Public Domain
-
+* Custom colors
+* Featured sliders
+* Featured videos
+* Additional layouts
+* Flexible header image
+* Google fonts
+* More widget areas
+* Fixed Menu
+* Background Images & Textures
+* Display controls
+* Custom footer text
