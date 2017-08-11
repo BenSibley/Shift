@@ -104,6 +104,9 @@ li.pingback {
     @include clearfix;
   }
 }
+#disqus_thread {
+  @extend %layout-margin;
+}
 
 @media all and (min-width: $eight-hundred) {
 
