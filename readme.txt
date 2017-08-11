@@ -9,7 +9,7 @@ Shift is a clean and customizable theme made for businesses and bloggers.
 
 == Description ==
 
-Shift is a clean and customizable theme made for businesses and bloggers. Present your best content in a beautiful, easy-to-read design across mobile devices, tablets, and widescreen monitors with Shift.
+Shift is a simple and customizable theme made for businesses and bloggers. Present your best content in a beautiful and responsive design across mobile devices, tablets, and widescreen monitors with Shift. With a minimalist design, Shift is great at highlighting your content. That means you’ll get higher engagement whether you’re publishing videos, podcast, photographs, or blog posts. It’s suitable for niche niche from travel and food blogs to corporate business websites. Use Shift for a small, personal content site or publish a ton with an online magazine.
 
 **Live Demo**
 
