@@ -1,9 +1,9 @@
 === Shift ===
 Contributors: bensibley
-Tags: two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-logo, custom-menu, featured-images, flexible-header, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, blog, education, news
+Tags: two-columns, right-sidebar, left-sidebar, accessibility-ready, custom-logo, custom-menu, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, rtl-language-support, blog, education, news
 Requires at least: 4.5
 Tested up to: 4.8
-Stable tag: 1.11
+Stable tag: 1.10
 
 Shift is a clean and customizable theme made for businesses and bloggers.
 
