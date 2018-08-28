@@ -41,7 +41,7 @@ h3, .comments-number h2, .widget-title {
   /* 24px */
 }
 
-.comment-respond label, .sidebar-primary .widget > *:not(.widget-title) {
+.comment-respond label, .sidebar-primary .widget > :not(.widget-title) {
   font-size: 0.875em;
   /* 14px / 16px */
   line-height: 1.714;
@@ -258,7 +258,7 @@ img,
 
 .wp-caption-text,
 .gallery-caption {
-  margin: 0 0 1.84502em;
+  margin: 0 0 1.8450184502em;
   color: #1A1A1A;
 }
 
