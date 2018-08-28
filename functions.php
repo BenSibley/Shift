@@ -290,6 +290,7 @@ if ( ! function_exists( 'ct_shift_social_array' ) ) {
 			'rss'           => 'shift_rss_profile',
 			'reddit'        => 'shift_reddit_profile',
 			'soundcloud'    => 'shift_soundcloud_profile',
+			'mixcloud'    	=> 'shift_mixcloud_profile',
 			'spotify'       => 'shift_spotify_profile',
 			'vine'          => 'shift_vine_profile',
 			'yahoo'         => 'shift_yahoo_profile',
