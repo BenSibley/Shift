@@ -110,7 +110,7 @@ jQuery(document).ready(function($){
         customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="wordpress.tv"]'
     });
 
-    $(window).resize(function(){
+    $(window).on( 'resize', function(){
         positionMenu();
         tabindexUpdate();
         objectFitAdjustment();
@@ -122,10 +122,10 @@ jQuery(document).ready(function($){
     } );
 
     /* allow keyboard access/visibility for dropdown menu items */
-    menuLink.focus(function(){
+    menuLink.on( 'focus', function(){
         $(this).parents('ul').addClass('focused');
     });
-    menuLink.focusout(function(){
+    menuLink.on( 'focusout', function(){
         $(this).parents('ul').removeClass('focused');
     });
 
