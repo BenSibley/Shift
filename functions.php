@@ -388,13 +388,11 @@ if ( ! function_exists( 'ct_shift_social_icons_output' ) ) {
 						<span class="screen-reader-text"><?php echo esc_html( $active_site );  ?></span>
 					</a>
 					<?php } elseif ( $active_site == 'phone' ) { ?>
-						<li>
-							<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
-							   href="<?php echo esc_url( get_theme_mod( $active_site ), array( 'tel' ) ); ?>">
-								<i class="<?php echo esc_attr( $class ); ?>"></i>
-								<span class="screen-reader-text"><?php echo esc_html( $active_site );  ?></span>
-							</a>
-						</li>
+						<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
+								href="<?php echo esc_url( get_theme_mod( $active_site ), array( 'tel' ) ); ?>">
+							<i class="<?php echo esc_attr( $class ); ?>"></i>
+							<span class="screen-reader-text"><?php echo esc_html( $active_site );  ?></span>
+						</a>
 					<?php } else { ?>
 					<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
 					   href="<?php echo esc_url( get_theme_mod( $key ) ); ?>">
