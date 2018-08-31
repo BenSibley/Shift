@@ -331,7 +331,8 @@ if ( ! function_exists( 'ct_shift_social_array' ) ) {
 			'xing'          => 'shift_xing_profile',
 			'paypal'        => 'shift_paypal_profile',
 			'email'         => 'shift_email_profile',
-			'email-form'    => 'shift_email_form_profile'
+			'email-form'    => 'shift_email_form_profile',
+			'phone'    			=> 'shift_phone_profile'
 		);
 
 		return apply_filters( 'ct_shift_social_array_filter', $social_sites );
@@ -366,6 +367,8 @@ if ( ! function_exists( 'ct_shift_social_icons_output' ) ) {
 					$class = 'fab fa-weixin';
 				} elseif ( $active_site == 'ok-ru' ) {
 					$class = 'fab fa-odnoklassniki';
+				} elseif ( $active_site == 'phone' ) {
+					$class = 'fa fa-phone';
 				} else {
 					$class = 'fab fa-' . $active_site;
 				}
@@ -384,7 +387,15 @@ if ( ! function_exists( 'ct_shift_social_icons_output' ) ) {
 						   title="<?php echo esc_attr( $active_site ); ?>"></i>
 						<span class="screen-reader-text"><?php echo esc_html( $active_site );  ?></span>
 					</a>
-				<?php } else { ?>
+					<?php } elseif ( $active_site == 'phone' ) { ?>
+						<li>
+							<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
+							   href="<?php echo esc_url( get_theme_mod( $active_site ), array( 'tel' ) ); ?>">
+								<i class="<?php echo esc_attr( $class ); ?>"></i>
+								<span class="screen-reader-text"><?php echo esc_html( $active_site );  ?></span>
+							</a>
+						</li>
+					<?php } else { ?>
 					<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
 					   href="<?php echo esc_url( get_theme_mod( $key ) ); ?>">
 						<i class="<?php echo esc_attr( $class ); ?>"
