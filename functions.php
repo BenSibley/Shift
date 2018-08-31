@@ -660,3 +660,15 @@ if ( ! function_exists( 'ct_shift_modify_archive_descriptions' ) ) {
 	}
 }
 add_filter( 'get_the_archive_description', 'ct_shift_modify_archive_descriptions' );
+
+//----------------------------------------------------------------------------------
+// Output the markup for the optional scroll-to-top arrow 
+//----------------------------------------------------------------------------------
+function ct_shift_scroll_to_top_arrow() {
+	$setting = get_theme_mod('scroll_to_top');
+	
+	if ( $setting == 'yes' ) {
+		echo '<button id="scroll-to-top" class="scroll-to-top"><span class="screen-reader-text">'. __('Scroll to the top', 'shift') .'</span><i class="fa fa-arrow-up"></i></button>';
+	}
+}
+add_action( 'ct_shift_body_bottom', 'ct_shift_scroll_to_top_arrow');
