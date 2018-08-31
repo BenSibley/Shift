@@ -457,5 +457,9 @@ function ct_shift_sanitize_layout_settings( $input ) {
 }
 
 function ct_shift_sanitize_phone( $input ) {
-	return esc_url_raw( 'tel:' . $input, array( 'tel' ) );
+	if ( $input != '' ) {
+		return esc_url_raw( 'tel:' . $input, array( 'tel' ) );
+	} else {
+		return '';
+	}
 }
