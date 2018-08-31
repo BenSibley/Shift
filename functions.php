@@ -309,6 +309,7 @@ if ( ! function_exists( 'ct_shift_social_array' ) ) {
 			'twitch'        => 'shift_twitch_profile',
 			'steam'         => 'shift_steam_profile',
 			'vk'            => 'shift_vk_profile',
+			'ok-ru'         => 'shift_ok_ru_profile',
 			'snapchat'      => 'shift_snapchat_profile',
 			'bandcamp'      => 'shift_bandcamp_profile',
 			'etsy'          => 'shift_etsy_profile',
@@ -363,6 +364,8 @@ if ( ! function_exists( 'ct_shift_social_icons_output' ) ) {
 					$class = 'fas fa-podcast';
 				} elseif ( $active_site == 'wechat' ) {
 					$class = 'fab fa-weixin';
+				} elseif ( $active_site == 'ok-ru' ) {
+					$class = 'fab fa-odnoklassniki';
 				} else {
 					$class = 'fab fa-' . $active_site;
 				}
