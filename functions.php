@@ -301,6 +301,7 @@ if ( ! function_exists( 'ct_shift_social_array' ) ) {
 			'deviantart'    => 'shift_deviantart_profile',
 			'digg'          => 'shift_digg_profile',
 			'github'        => 'shift_github_profile',
+			'bitbucket'     => 'shift_bitbucket_profile',
 			'hacker-news'   => 'shift_hacker-news_profile',
 			'amazon'        => 'shift_amazon_profile',
 			'google-wallet' => 'shift_google_wallet_profile',
