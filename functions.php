@@ -314,6 +314,7 @@ if ( ! function_exists( 'ct_shift_social_array' ) ) {
 			'google-wallet' => 'shift_google_wallet_profile',
 			'yelp'          => 'shift_yelp_profile',
 			'twitch'        => 'shift_twitch_profile',
+			'stack-overflow' => 'shift_stack_overflow_profile',
 			'steam'         => 'shift_steam_profile',
 			'vk'            => 'shift_vk_profile',
 			'ok-ru'         => 'shift_ok_ru_profile',
