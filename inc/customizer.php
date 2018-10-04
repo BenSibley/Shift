@@ -125,6 +125,8 @@ function ct_shift_add_customizer_content( $wp_customize ) {
 				$label = __('Tencent Weibo', 'shift');
 			} elseif ( $social_site == 'paypal' ) {
 				$label = __('PayPal', 'shift');
+			} elseif ( $social_site == 'stack-overflow' ) {
+				$label = __('Stack Overflow', 'shift');
 			} elseif ( $social_site == 'email-form' ) {
 				$label = __('Contact Form', 'shift');
 			}
