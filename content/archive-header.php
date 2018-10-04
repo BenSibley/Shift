@@ -14,13 +14,13 @@ if ( is_tag() ) {
 } elseif ( is_author() ) {
 	$icon_class = 'user';
 } elseif ( is_date() ) {
-	$icon_class = 'calendar';
+	$icon_class = 'calendar-alt';
 }
 ?>
 
 <div class='archive-header'>
 	<h1>
-		<i class="fa fa-<?php echo $icon_class; ?>"></i>
+		<i class="fas fa-<?php echo $icon_class; ?>"></i>
 		<?php the_archive_title(); ?>
 	</h1>
 	<?php the_archive_description(); ?>

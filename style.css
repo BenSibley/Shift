@@ -998,9 +998,6 @@ li.pingback.bypostauthor > article {
 .menu-primary .open > ul {
   max-height: none;
 }
-.menu-primary .open > .toggle-dropdown:after {
-  content: '\f106';
-}
 
 .toggle-dropdown {
   top: 0;
@@ -1010,10 +1007,7 @@ li.pingback.bypostauthor > article {
   border: none;
   background: none;
 }
-.toggle-dropdown:after {
-  content: '\f107';
-  position: relative;
-  font-family: 'FontAwesome';
+.toggle-dropdown i {
   -webkit-transition: top 0.2s;
           transition: top 0.2s;
   top: 0;
@@ -1050,9 +1044,6 @@ li.pingback.bypostauthor > article {
             transform: translateY(-50%);
   }
 
-  .menu-primary .open > .toggle-dropdown:after {
-    content: '\f107';
-  }
   .menu-primary .open > ul {
     opacity: 1;
     visibility: visible;
@@ -1066,7 +1057,7 @@ li.pingback.bypostauthor > article {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
-  .menu-primary li:hover > button:after {
+  .menu-primary li:hover > button i {
     top: 2px;
   }
   .menu-primary a {
@@ -1147,18 +1138,17 @@ li.pingback.bypostauthor > article {
     visibility: visible;
     top: calc(100% - 2px);
   }
-  .menu-primary li.menu-item-has-children > a:hover + button:after, .menu-primary li.menu-item-has-children > a:active + button:after, .menu-primary li.menu-item-has-children > a:focus + button:after {
+  .menu-primary li.menu-item-has-children > a:hover + button i, .menu-primary li.menu-item-has-children > a:active + button i, .menu-primary li.menu-item-has-children > a:focus + button i {
     top: 2px;
   }
   .menu-primary li.menu-item-has-children ul li {
     display: list-item;
   }
-  .menu-primary li.menu-item-has-children ul .menu-item-has-children:hover button:after, .menu-primary li.menu-item-has-children ul .menu-item-has-children:active button:after {
+  .menu-primary li.menu-item-has-children ul .menu-item-has-children:hover button i, .menu-primary li.menu-item-has-children ul .menu-item-has-children:active button i {
     right: -2px;
     top: 0;
   }
-  .menu-primary li.menu-item-has-children ul .menu-item-has-children button:after {
-    content: '\f105';
+  .menu-primary li.menu-item-has-children ul .menu-item-has-children button i {
     -webkit-transition: right 0.2s ease;
             transition: right 0.2s ease;
     margin-left: 3px;
@@ -1176,7 +1166,7 @@ li.pingback.bypostauthor > article {
     top: -12px;
     left: 100%;
   }
-  .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:hover + button:after, .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:active + button:after, .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:focus + button:after {
+  .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:hover + button i, .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:active + button i, .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:focus + button i {
     top: 0;
     right: -2px;
   }

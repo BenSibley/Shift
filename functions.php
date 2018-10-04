@@ -1,9 +1,16 @@
 <?php
 
+//----------------------------------------------------------------------------------
+//	Include all required files
+//----------------------------------------------------------------------------------
 require_once( trailingslashit( get_template_directory() ) . 'theme-options.php' );
-foreach ( glob( trailingslashit( get_template_directory() ) . 'inc/*' ) as $filename ) {
-	include $filename;
-}
+require_once( trailingslashit( get_template_directory() ) . 'inc/customizer.php' );
+require_once( trailingslashit( get_template_directory() ) . 'inc/review.php' );
+require_once( trailingslashit( get_template_directory() ) . 'inc/scripts.php' );
+
+//----------------------------------------------------------------------------------
+//	Include review request
+//----------------------------------------------------------------------------------
 require_once( trailingslashit( get_template_directory() ) . 'dnh/handler.php' );
 new WP_Review_Me( array(
 		'days_after' => 14,
@@ -368,7 +375,7 @@ if ( ! function_exists( 'ct_shift_social_icons_output' ) ) {
 				} elseif ( $active_site == 'ok-ru' ) {
 					$class = 'fab fa-odnoklassniki';
 				} elseif ( $active_site == 'phone' ) {
-					$class = 'fa fa-phone';
+					$class = 'fas fa-phone';
 				} else {
 					$class = 'fab fa-' . $active_site;
 				}
@@ -429,7 +436,7 @@ if ( ! function_exists( ( 'ct_shift_nav_dropdown_buttons' ) ) ) {
 		if ( $args->theme_location == 'primary' ) {
 
 			if ( in_array( 'menu-item-has-children', $item->classes ) || in_array( 'page_item_has_children', $item->classes ) ) {
-				$item_output = str_replace( $args->link_after . '</a>', $args->link_after . '</a><button class="toggle-dropdown" aria-expanded="false" name="toggle-dropdown"><span class="screen-reader-text">' . _x( "open menu", "verb: open the menu", "shift" ) . '</span></button>', $item_output );
+				$item_output = str_replace( $args->link_after . '</a>', $args->link_after . '</a><button class="toggle-dropdown" aria-expanded="false" name="toggle-dropdown"><span class="screen-reader-text">' . _x( "open menu", "verb: open the menu", "shift" ) . '</span><i class="fas fa-angle-down"></i></button>', $item_output );
 			}
 		}
 
@@ -677,7 +684,7 @@ function ct_shift_scroll_to_top_arrow() {
 	$setting = get_theme_mod('scroll_to_top');
 	
 	if ( $setting == 'yes' ) {
-		echo '<button id="scroll-to-top" class="scroll-to-top"><span class="screen-reader-text">'. __('Scroll to the top', 'shift') .'</span><i class="fa fa-arrow-up"></i></button>';
+		echo '<button id="scroll-to-top" class="scroll-to-top"><span class="screen-reader-text">'. __('Scroll to the top', 'shift') .'</span><i class="fas fa-arrow-up"></i></button>';
 	}
 }
 add_action( 'ct_shift_body_bottom', 'ct_shift_scroll_to_top_arrow');

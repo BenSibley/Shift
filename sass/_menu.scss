@@ -107,9 +107,9 @@
     }
     > .toggle-dropdown {
 
-      &:after {
-        content: '\f106';
-      }
+      // &:after {
+      //   content: '\f106';
+      // }
     }
   }
 }
@@ -122,10 +122,7 @@
   border: none;
   background: none;
 
-  &:after {
-    content: '\f107';
-    position: relative;
-    font-family: 'FontAwesome';
+  i {
     transition: top 0.2s;
     top: 0;
     right: 0;
@@ -167,9 +164,9 @@
 
       > .toggle-dropdown {
 
-        &:after {
-          content: '\f107';
-        }
+        // &:after {
+        //   content: '\f107';
+        // }
       }
       > ul {
         opacity: 1;
@@ -186,7 +183,7 @@
         > a:after {
           transform: scale(1);
         }
-        > button:after {
+        > button i {
           top: 2px;
         }
       }
@@ -278,7 +275,7 @@
               visibility: visible;
               top: calc(100% - 2px);
             }
-            + button:after {
+            + button i {
               top: 2px;
             }
           }
@@ -296,14 +293,13 @@
 
               button {
 
-                &:after {
+                i {
                   right: -2px;
                   top: 0;
                 }
               }
             }
-            button:after {
-              content: '\f105';
+            button i {
               transition: right 0.2s ease;
               margin-left: 3px;
             }
@@ -326,7 +322,7 @@
                   top: -12px;
                   left: 100%;
                 }
-                + button:after {
+                + button i {
                   top: 0;
                   right: -2px;
                 }
