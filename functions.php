@@ -328,6 +328,7 @@ if ( ! function_exists( 'ct_shift_social_array' ) ) {
 			'meetup'        => 'shift_meetup_profile',
 			'mixcloud'    	=> 'shift_mixcloud_profile',
 			'ok-ru'         => 'shift_ok_ru_profile',
+			'patreon'       => 'shift_patreon_profile',
 			'paypal'        => 'shift_paypal_profile',
 			'podcast'       => 'shift_podcast_profile',
 			'qq'            => 'shift_qq_profile',
