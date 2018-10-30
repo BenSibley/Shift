@@ -3,10 +3,10 @@
 global $post;
 
 $previous_post = get_adjacent_post( false, '', true );
-$previous_text = __( 'Previous Post', 'shift' );
+$previous_text = esc_html__( 'Previous Post', 'shift' );
 
 if ( $previous_post == '' ) {
-	$previous_text  = __( 'No Older Posts', 'shift' );
+	$previous_text  = esc_html__( 'No Older Posts', 'shift' );
 	if ( get_option( 'show_on_front' ) == 'page' ) {
 		$previous_url = get_permalink( get_option( 'page_for_posts' ) );
 	} else {
@@ -16,10 +16,10 @@ if ( $previous_post == '' ) {
 }
 
 $next_post  = get_adjacent_post( false, '', false );
-$next_text  = __( 'Next Post', 'shift' );
+$next_text  = esc_html__( 'Next Post', 'shift' );
 
 if ( $next_post == '' ) {
-	$next_text  = __( 'No Newer Posts', 'shift' );
+	$next_text  = esc_html__( 'No Newer Posts', 'shift' );
 	if ( get_option( 'show_on_front' ) == 'page' ) {
 		$next_url = get_permalink( get_option( 'page_for_posts' ) );
 	} else {
