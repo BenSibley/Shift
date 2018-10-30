@@ -26,7 +26,6 @@ get_header(); ?>
 				</article>
 				<?php comments_template(); ?>
 			</div>
-			<?php comments_template(); ?>
 		<?php endwhile;
 	endif; ?>
 </div>
