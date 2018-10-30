@@ -58,6 +58,13 @@ if ( ! function_exists( ( 'ct_shift_theme_setup' ) ) ) {
 			'primary' => esc_html__( 'Primary', 'shift' )
 		) );
 
+		// Add WooCommerce support
+		add_theme_support( 'woocommerce' );
+		// Add support for WooCommerce image gallery features
+		add_theme_support( 'wc-product-gallery-zoom' );
+		add_theme_support( 'wc-product-gallery-lightbox' );
+		add_theme_support( 'wc-product-gallery-slider' );
+
 		load_theme_textdomain( 'shift', get_template_directory() . '/languages' );
 	}
 }
@@ -150,6 +157,13 @@ add_filter( 'comment_form_default_fields', 'ct_shift_update_fields' );
 if ( ! function_exists( 'ct_shift_update_comment_field' ) ) {
 	function ct_shift_update_comment_field( $comment_field ) {
 
+		// don't filter the WooCommerce review form
+		if ( function_exists( 'is_woocommerce' ) ) {
+			if ( is_woocommerce() ) {
+				return $comment_field;
+			}
+		}
+		
 		$comment_field =
 			'<p class="comment-form-comment">
 	            <label for="comment">' . _x( "Comment", "noun", "shift" ) . '</label>
