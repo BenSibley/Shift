@@ -324,6 +324,7 @@ if ( ! function_exists( 'ct_shift_social_array' ) ) {
 			'google-plus'   => 'shift_googleplus_profile',
 			'google-wallet' => 'shift_google_wallet_profile',
 			'hacker-news'   => 'shift_hacker-news_profile',
+			'medium'        => 'shift_medium_profile',
 			'meetup'        => 'shift_meetup_profile',
 			'mixcloud'    	=> 'shift_mixcloud_profile',
 			'ok-ru'         => 'shift_ok_ru_profile',
