@@ -8,7 +8,7 @@
 
 <body id="<?php print get_stylesheet(); ?>" <?php body_class(); ?>>
 <?php do_action( 'ct_shift_body_top' ); ?>
-<a class="skip-content" href="#main"><?php _e( 'Press "Enter" to skip to content', 'shift' ); ?></a>
+<a class="skip-content" href="#main"><?php esc_html_e( 'Press "Enter" to skip to content', 'shift' ); ?></a>
 <div id="overflow-container" class="overflow-container">
 	<?php do_action( 'ct_shift_before_header' ); ?>
 	<header class="site-header" id="site-header" role="banner">
@@ -20,7 +20,7 @@
 				} ?>
 			</div>
 			<button id="toggle-navigation" class="toggle-navigation" name="toggle-navigation" aria-expanded="false">
-				<span class="screen-reader-text"><?php _ex( 'open menu', 'verb: open the menu', 'shift' ); ?></span>
+				<span class="screen-reader-text"><?php echo esc_html_x( 'open menu', 'verb: open the menu', 'shift' ); ?></span>
 				<?php echo ct_shift_svg_output( 'toggle-navigation' ); ?>
 			</button>
 			<div id="menu-primary-container" class="menu-primary-container">

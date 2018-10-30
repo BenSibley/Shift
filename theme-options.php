@@ -1,7 +1,7 @@
 <?php
 
 function ct_shift_register_theme_page() {
-	add_theme_page( sprintf( __( '%s Dashboard', 'shift' ), wp_get_theme( get_template() ) ), sprintf( __( '%s Dashboard', 'shift' ), wp_get_theme( get_template() ) ), 'edit_theme_options', 'shift-options', 'ct_shift_options_content', 'ct_shift_options_content' );
+	add_theme_page( sprintf( esc_html__( '%s Dashboard', 'shift' ), wp_get_theme( get_template() ) ), sprintf( esc_html__( '%s Dashboard', 'shift' ), wp_get_theme( get_template() ) ), 'edit_theme_options', 'shift-options', 'ct_shift_options_content', 'ct_shift_options_content' );
 }
 add_action( 'admin_menu', 'ct_shift_register_theme_page' );
 
@@ -17,39 +17,39 @@ function ct_shift_options_content() {
 	$support_url = 'https://www.competethemes.com/documentation/shift-support-center/';
 	?>
 	<div id="shift-dashboard-wrap" class="wrap">
-		<h2><?php printf( __( '%s Dashboard', 'shift' ), wp_get_theme( get_template() ) ); ?></h2>
+		<h2><?php printf( esc_html__( '%s Dashboard', 'shift' ), wp_get_theme( get_template() ) ); ?></h2>
 		<?php do_action( 'ct_shift_theme_options_before' ); ?>
 		<div class="content-boxes">
 			<div class="content content-support">
-				<h3><?php _e( 'Get Started', 'shift' ); ?></h3>
+				<h3><?php esc_html_e( 'Get Started', 'shift' ); ?></h3>
 				<p><?php printf( __( 'Not sure where to start? The <strong>%1$s Getting Started Guide</strong> will take you step-by-step through every feature in %1$s.', 'shift' ), wp_get_theme( get_template() ) ); ?></p>
 				<p>
 					<a target="_blank" class="button-primary"
-					   href="https://www.competethemes.com/help/getting-started-shift/"><?php _e( 'View Guide', 'shift' ); ?></a>
+					   href="https://www.competethemes.com/help/getting-started-shift/"><?php esc_html_e( 'View Guide', 'shift' ); ?></a>
 				</p>
 			</div>
 			<?php if ( !function_exists( 'ct_shift_pro_init' ) ) : ?>
 				<div class="content content-premium-upgrade">
-					<h3><?php printf( __( '%s Pro', 'shift' ), wp_get_theme( get_template() ) ); ?></h3>
-					<p><?php printf( __( 'Download the %s Pro plugin and unlock custom colors, new layouts, sliders, and more', 'shift' ), wp_get_theme( get_template() ) ); ?>...</p>
+					<h3><?php printf( esc_html__( '%s Pro', 'shift' ), wp_get_theme( get_template() ) ); ?></h3>
+					<p><?php printf( esc_html__( 'Download the %s Pro plugin and unlock custom colors, new layouts, sliders, and more', 'shift' ), wp_get_theme( get_template() ) ); ?>...</p>
 					<p>
 						<a target="_blank" class="button-primary"
-						   href="https://www.competethemes.com/shift-pro/"><?php _e( 'See Full Feature List', 'shift' ); ?></a>
+						   href="https://www.competethemes.com/shift-pro/"><?php esc_html_e( 'See Full Feature List', 'shift' ); ?></a>
 					</p>
 				</div>
 			<?php endif; ?>
 			<div class="content content-review">
-				<h3><?php _e( 'Leave a Review', 'shift' ); ?></h3>
-				<p><?php printf( __( 'Help others find %s by leaving a review on wordpress.org.', 'shift' ), wp_get_theme( get_template() ) ); ?></p>
-				<a target="_blank" class="button-primary" href="https://wordpress.org/support/theme/shift/reviews/"><?php _e( 'Leave a Review', 'shift' ); ?></a>
+				<h3><?php esc_html_e( 'Leave a Review', 'shift' ); ?></h3>
+				<p><?php printf( esc_html__( 'Help others find %s by leaving a review on wordpress.org.', 'shift' ), wp_get_theme( get_template() ) ); ?></p>
+				<a target="_blank" class="button-primary" href="https://wordpress.org/support/theme/shift/reviews/"><?php esc_html_e( 'Leave a Review', 'shift' ); ?></a>
 			</div>
 			<div class="content content-presspad">
-				<h3><?php _e( 'Turn Shift into a Mobile App', 'shift' ); ?></h3>
-				<p><?php printf( __( '%s can be converted into a mobile app and listed on the App Store and Google Play Store with the help of PressPad News. Read our tutorial to learn more.', 'shift' ), wp_get_theme( get_template() ) ); ?></p>
-				<a target="_blank" class="button-primary" href="https://www.competethemes.com/help/convert-mobile-app-shift/"><?php _e( 'Read Tutorial', 'shift' ); ?></a>
+				<h3><?php esc_html_e( 'Turn Shift into a Mobile App', 'shift' ); ?></h3>
+				<p><?php printf( esc_html__( '%s can be converted into a mobile app and listed on the App Store and Google Play Store with the help of PressPad News. Read our tutorial to learn more.', 'shift' ), wp_get_theme( get_template() ) ); ?></p>
+				<a target="_blank" class="button-primary" href="https://www.competethemes.com/help/convert-mobile-app-shift/"><?php esc_html_e( 'Read Tutorial', 'shift' ); ?></a>
 			</div>
 			<div class="content content-delete-settings">
-				<h3><?php _e( 'Reset Customizer Settings', 'shift' ); ?></h3>
+				<h3><?php esc_html_e( 'Reset Customizer Settings', 'shift' ); ?></h3>
 				<p>
 					<?php printf( __( '<strong>Warning:</strong> Clicking this button will erase the %2$s theme\'s current settings in the <a href="%1$s">Customizer</a>.', 'shift' ), esc_url( $customizer_url ), wp_get_theme( get_template() ) ); ?>
 				</p>
@@ -57,7 +57,7 @@ function ct_shift_options_content() {
 					<input type="hidden" name="shift_reset_customizer" value="shift_reset_customizer_settings"/>
 					<p>
 						<?php wp_nonce_field( 'shift_reset_customizer_nonce', 'shift_reset_customizer_nonce' ); ?>
-						<?php submit_button( __( 'Reset Customizer Settings', 'shift' ), 'delete', 'delete', false ); ?>
+						<?php submit_button( esc_html__( 'Reset Customizer Settings', 'shift' ), 'delete', 'delete', false ); ?>
 					</p>
 				</form>
 			</div>

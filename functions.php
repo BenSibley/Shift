@@ -101,7 +101,7 @@ if ( ! function_exists( ( 'ct_shift_customize_comments' ) ) ) {
 			</div>
 			<div class="comment-content">
 				<?php if ( $comment->comment_approved == '0' ) : ?>
-					<em><?php _e( 'Your comment is awaiting moderation.', 'shift' ) ?></em>
+					<em><?php esc_html_e( 'Your comment is awaiting moderation.', 'shift' ) ?></em>
 					<br/>
 				<?php endif; ?>
 				<?php comment_text(); ?>
@@ -125,7 +125,7 @@ if ( ! function_exists( 'ct_shift_update_fields' ) ) {
 
 		$commenter = wp_get_current_commenter();
 		$req       = get_option( 'require_name_email' );
-		$label     = $req ? '*' : ' ' . __( '(optional)', 'shift' );
+		$label     = $req ? '*' : ' ' . esc_html__( '(optional)', 'shift' );
 		$aria_req  = $req ? "aria-required='true'" : '';
 
 		$fields['author'] =
@@ -166,7 +166,7 @@ if ( ! function_exists( 'ct_shift_update_comment_field' ) ) {
 		
 		$comment_field =
 			'<p class="comment-form-comment">
-	            <label for="comment">' . _x( "Comment", "noun", "shift" ) . '</label>
+	            <label for="comment">' . esc_html_x( "Comment", "noun", "shift" ) . '</label>
 	            <textarea required id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
 	        </p>';
 
@@ -198,7 +198,7 @@ if ( ! function_exists( 'ct_shift_filter_read_more_link' ) ) {
 		}
 		// Because i18n text cannot be stored in a variable
 		if ( empty( $read_more_text ) ) {
-			$output .= '<div class="more-link-wrapper"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . __( 'Continue Reading', 'shift' ) . '<span class="screen-reader-text">' . esc_html( get_the_title() ) . '</span></a></div>';
+			$output .= '<div class="more-link-wrapper"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'Continue Reading', 'shift' ) . '<span class="screen-reader-text">' . esc_html( get_the_title() ) . '</span></a></div>';
 		} else {
 			$output .= '<div class="more-link-wrapper"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html( $read_more_text ) . '<span class="screen-reader-text">' . esc_html( get_the_title() ) . '</span></a></div>';
 		}
@@ -262,7 +262,7 @@ add_filter( 'the_content_more_link', 'ct_shift_remove_more_link_scroll' );
 function ct_shift_update_yoast_og_description( $ogdesc ) {
 	$read_more_text = get_theme_mod( 'read_more_text' );
 	if ( empty( $read_more_text ) ) {
-		$read_more_text = __( 'Continue Reading', 'shift' );
+		$read_more_text = esc_html__( 'Continue Reading', 'shift' );
 	}
 	$ogdesc = substr( $ogdesc, 0, strpos( $ogdesc, $read_more_text ) );
 
@@ -452,7 +452,7 @@ if ( ! function_exists( ( 'ct_shift_nav_dropdown_buttons' ) ) ) {
 		if ( $args->theme_location == 'primary' ) {
 
 			if ( in_array( 'menu-item-has-children', $item->classes ) || in_array( 'page_item_has_children', $item->classes ) ) {
-				$item_output = str_replace( $args->link_after . '</a>', $args->link_after . '</a><button class="toggle-dropdown" aria-expanded="false" name="toggle-dropdown"><span class="screen-reader-text">' . _x( "open menu", "verb: open the menu", "shift" ) . '</span><i class="fas fa-angle-down"></i></button>', $item_output );
+				$item_output = str_replace( $args->link_after . '</a>', $args->link_after . '</a><button class="toggle-dropdown" aria-expanded="false" name="toggle-dropdown"><span class="screen-reader-text">' . esc_html_x( "open menu", "verb: open the menu", "shift" ) . '</span><i class="fas fa-angle-down"></i></button>', $item_output );
 			}
 		}
 
@@ -465,7 +465,7 @@ if ( ! function_exists( ( 'ct_shift_sticky_post_marker' ) ) ) {
 	function ct_shift_sticky_post_marker() {
 
 		if ( is_sticky() && !is_archive() && !is_search() ) {
-			echo '<div class="sticky-status"><span>' . __( "Featured", "shift" ) . '</span></div>';
+			echo '<div class="sticky-status"><span>' . esc_html__( "Featured", "shift" ) . '</span></div>';
 		}
 	}
 }
@@ -529,13 +529,13 @@ if ( ! function_exists( ( 'ct_shift_delete_settings_notice' ) ) ) {
 			if ( $_GET['shift_status'] == 'deleted' ) {
 				?>
 				<div class="updated">
-					<p><?php _e( 'Customizer settings deleted.', 'shift' ); ?></p>
+					<p><?php esc_html_e( 'Customizer settings deleted.', 'shift' ); ?></p>
 				</div>
 				<?php
 			} else if ( $_GET['shift_status'] == 'activated' ) {
 				?>
 				<div class="updated">
-					<p><?php printf( __( '%s successfully activated!', 'shift' ), wp_get_theme( get_template() ) ); ?></p>
+					<p><?php printf( esc_html__( '%s successfully activated!', 'shift' ), wp_get_theme( get_template() ) ); ?></p>
 				</div>
 				<?php
 			}
@@ -700,7 +700,7 @@ function ct_shift_scroll_to_top_arrow() {
 	$setting = get_theme_mod('scroll_to_top');
 	
 	if ( $setting == 'yes' ) {
-		echo '<button id="scroll-to-top" class="scroll-to-top"><span class="screen-reader-text">'. __('Scroll to the top', 'shift') .'</span><i class="fas fa-arrow-up"></i></button>';
+		echo '<button id="scroll-to-top" class="scroll-to-top"><span class="screen-reader-text">'. esc_html__('Scroll to the top', 'shift') .'</span><i class="fas fa-arrow-up"></i></button>';
 	}
 }
 add_action( 'ct_shift_body_bottom', 'ct_shift_scroll_to_top_arrow');
