@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Shift 1.12\n"
+"Project-Id-Version: Shift 1.14\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2018-10-04 18:44:10+00:00\n"
+"POT-Creation-Date: 2018-10-31 14:22:17+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -37,7 +37,7 @@ msgid ""
 "post\">trackbacks</a> and pingbacks are open."
 msgstr ""
 
-#: comments.php:68 comments.php:75
+#: comments.php:68 comments.php:85
 msgid "Comments are closed."
 msgstr ""
 
@@ -124,53 +124,53 @@ msgstr ""
 msgid "Primary"
 msgstr ""
 
-#: functions.php:70
+#: functions.php:77
 msgid "Primary Sidebar"
 msgstr ""
 
-#: functions.php:72
+#: functions.php:79
 msgid ""
 "Widgets in this area will be shown in the sidebar next to the main post "
 "content"
 msgstr ""
 
-#: functions.php:97
+#: functions.php:104
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:121
+#: functions.php:128
 msgid "(optional)"
 msgstr ""
 
-#: functions.php:127
+#: functions.php:134
 msgid "Jane Doe"
 msgstr ""
 
-#: functions.php:134
+#: functions.php:141
 msgid "name@email.com"
 msgstr ""
 
-#: functions.php:140
+#: functions.php:147
 msgid "Website"
 msgstr ""
 
-#: functions.php:187 functions.php:251 inc/customizer.php:264
+#: functions.php:201 functions.php:265 inc/customizer.php:264
 msgid "Continue Reading"
 msgstr ""
 
-#: functions.php:454
+#: functions.php:470
 msgid "Featured"
 msgstr ""
 
-#: functions.php:518
+#: functions.php:534
 msgid "Customizer settings deleted."
 msgstr ""
 
-#: functions.php:524
+#: functions.php:540
 msgid "%s successfully activated!"
 msgstr ""
 
-#: functions.php:689
+#: functions.php:705
 msgid "Scroll to the top"
 msgstr ""
 
@@ -454,7 +454,7 @@ msgstr ""
 msgid "Can't find what you're looking for?  Try refining your search:"
 msgstr ""
 
-#: sidebar-primary.php:7
+#: sidebar-primary.php:14
 msgid "Sidebar"
 msgstr ""
 
@@ -543,47 +543,42 @@ msgctxt "noun: 5 comments"
 msgid "% Comments"
 msgstr ""
 
-#: content/archive-header.php:4
-msgctxt "noun: Site Title's Posts"
-msgid "Posts"
-msgstr ""
-
 #: content/post-categories.php:11
 msgctxt "View all posts in post category"
 msgid "View all posts in %s"
 msgstr ""
 
-#: functions.php:105
+#: functions.php:112
 msgctxt "noun: reply to this comment"
 msgid "Reply"
 msgstr ""
 
-#: functions.php:109
+#: functions.php:116
 msgctxt "noun: edit this comment"
 msgid "Edit"
 msgstr ""
 
-#: functions.php:126
+#: functions.php:133
 msgctxt "noun"
 msgid "Name"
 msgstr ""
 
-#: functions.php:133
+#: functions.php:140
 msgctxt "noun"
 msgid "Email"
 msgstr ""
 
-#: functions.php:155
+#: functions.php:169
 msgctxt "noun"
 msgid "Comment"
 msgstr ""
 
-#: functions.php:389 functions.php:390
+#: functions.php:405 functions.php:406
 msgctxt "noun"
 msgid "email"
 msgstr ""
 
-#: functions.php:441 header.php:23 inc/scripts.php:16
+#: functions.php:457 header.php:23 inc/scripts.php:16
 msgctxt "verb: open the menu"
 msgid "open menu"
 msgstr ""
