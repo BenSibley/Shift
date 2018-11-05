@@ -19,46 +19,6 @@ function ct_shift_add_customizer_content( $wp_customize ) {
 
 	$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
-
-	/***** Shift Pro Control *****/
-
-	class ct_shift_pro_ad extends WP_Customize_Control {
-		public function render_content() {
-			$link = 'https://www.competethemes.com/shift-pro/';
-			echo "<a href='" . $link . "' target='_blank'><img src='" . get_template_directory_uri() . "/assets/images/shift-pro.gif' /></a>";
-			echo "<p class='bold'>" . sprintf( __('<a target="_blank" href="%1$s">%2$s Pro</a> is the plugin that makes advanced customization simple - and fun too!', 'shift'), $link, wp_get_theme( get_template() )) . "</p>";
-			echo "<p>" . sprintf( __('%1$s Pro adds the following features to %1$s:', 'shift'), wp_get_theme( get_template() ) ) . "</p>";
-			echo "<ul>
-					<li>" . __('6 new layouts', 'shift') . "</li>
-					<li>" . __('Custom colors', 'shift') . "</li>
-					<li>" . __('New fonts', 'shift') . "</li>
-					<li>" . __('+ 10 more features', 'shift') . "</li>
-				  </ul>";
-			echo "<p class='button-wrapper'><a target=\"_blank\" class='shift-pro-button' href='" . $link . "'>" . sprintf( __('View %s Pro', 'shift'), wp_get_theme( get_template() ) ) . "</a></p>";
-		}
-	}
-
-	/***** Shift Pro Section *****/
-
-	// don't add if Shift Pro is active
-	if ( !function_exists( 'ct_shift_pro_init' ) ) {
-		// section
-		$wp_customize->add_section( 'ct_shift_pro', array(
-			'title'    => sprintf( __( '%s Pro', 'shift' ), wp_get_theme( get_template() ) ),
-			'priority' => 1
-		) );
-		// Upload - setting
-		$wp_customize->add_setting( 'shift_pro', array(
-			'sanitize_callback' => 'absint'
-		) );
-		// Upload - control
-		$wp_customize->add_control( new ct_shift_pro_ad(
-			$wp_customize, 'shift_pro', array(
-				'section'  => 'ct_shift_pro',
-				'settings' => 'shift_pro'
-			)
-		) );
-	}
 	
 	/***** Social Media Icons *****/
 
@@ -465,3 +425,12 @@ function ct_shift_sanitize_phone( $input ) {
 		return '';
 	}
 }
+
+function ct_shift_customize_preview_js() {
+	if ( !function_exists( 'ct_shift_pro_init' ) ) {
+		$url = 'https://www.competethemes.com/shift-pro/?utm_source=wp-dashboard&utm_medium=Customizer&utm_campaign=Shift%20Pro%20-%20Customizer';
+		$content = "<script>jQuery('#customize-info').prepend('<div class=\"upgrades-ad\"><a href=\"". $url ."\" target=\"_blank\">Get New Layouts with Shift Pro <span>&rarr;</span></a></div>')</script>";
+		echo apply_filters('ct_shift_customizer_ad', $content);
+	}
+}
+add_action('customize_controls_print_footer_scripts', 'ct_shift_customize_preview_js');
