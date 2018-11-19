@@ -1377,6 +1377,28 @@ li.pingback.bypostauthor > article {
   display: block;
 }
 
+.wp-block-image.alignfull,
+.wp-block-cover {
+  position: relative;
+  right: -4.75%;
+  width: 109.5%;
+  max-width: none;
+}
+
+.wp-block-quote.is-large {
+  padding-right: 0;
+  border-right: none;
+  margin: 1.5em;
+}
+
+.wp-block-embed {
+  margin: 1.5em 0;
+}
+
+.wp-block-code code {
+  background: none;
+}
+
 @media all and (min-width: 37.5em) {
   .post-title {
     font-size: 1.75em;
@@ -1420,6 +1442,19 @@ li.pingback.bypostauthor > article {
 
   .post-content {
     margin-bottom: 0.75em;
+  }
+
+  .wp-block-image.alignfull,
+  .wp-block-cover {
+    right: -7.8%;
+    width: 115.6%;
+  }
+
+  .wp-block-image.alignwide {
+    position: relative;
+    right: -4%;
+    width: 108%;
+    max-width: none;
   }
 }
 @media all and (min-width: 68.75em) {
