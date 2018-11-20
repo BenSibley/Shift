@@ -75,26 +75,26 @@ if ( ! function_exists( ( 'ct_shift_theme_setup' ) ) ) {
 		// Gutenberg - modify the font sizes
 		add_theme_support( 'editor-font-sizes', array(
 			array(
-					'name' => __( 'small', 'unlimited' ),
-					'shortName' => __( 'S', 'unlimited' ),
+					'name' => __( 'small', 'shift' ),
+					'shortName' => __( 'S', 'shift' ),
 					'size' => 12,
 					'slug' => 'small'
 			),
 			array(
-					'name' => __( 'regular', 'unlimited' ),
-					'shortName' => __( 'M', 'unlimited' ),
+					'name' => __( 'regular', 'shift' ),
+					'shortName' => __( 'M', 'shift' ),
 					'size' => 16,
 					'slug' => 'regular'
 			),
 			array(
-					'name' => __( 'large', 'unlimited' ),
-					'shortName' => __( 'L', 'unlimited' ),
+					'name' => __( 'large', 'shift' ),
+					'shortName' => __( 'L', 'shift' ),
 					'size' => 28,
 					'slug' => 'large'
 			),
 			array(
-					'name' => __( 'larger', 'unlimited' ),
-					'shortName' => __( 'XL', 'unlimited' ),
+					'name' => __( 'larger', 'shift' ),
+					'shortName' => __( 'XL', 'shift' ),
 					'size' => 38,
 					'slug' => 'larger'
 			)
