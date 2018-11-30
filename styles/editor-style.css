@@ -398,6 +398,8 @@ body {
   font-size: 16px;
   line-height: 1.5;
   background: #fff;
+  height: auto;
+  padding: 50px 0;
 }
 
 .wp-block {
