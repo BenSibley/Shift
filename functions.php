@@ -366,6 +366,7 @@ if ( ! function_exists( 'ct_shift_social_array' ) ) {
 			'flickr'        => 'shift_flickr_profile',
 			'foursquare'    => 'shift_foursquare_profile',
 			'github'        => 'shift_github_profile',
+			'goodreads'   	=> 'shift_goodreads_profile',
 			'google-plus'   => 'shift_googleplus_profile',
 			'google-wallet' => 'shift_google_wallet_profile',
 			'hacker-news'   => 'shift_hacker-news_profile',
