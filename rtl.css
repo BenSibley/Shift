@@ -471,15 +471,15 @@ a img {
   color: white;
   background: #4D4D4D;
 }
-.more-link:hover:after, .more-link:active:after, .more-link:focus:after {
+.more-link:hover i, .more-link:active i, .more-link:focus i {
   left: -1px;
 }
-.more-link:after {
-  content: '\f105';
-  font-family: "FontAwesome";
+.more-link i {
+  display: inline-block;
   position: relative;
   left: 0;
   margin-right: 3px;
+  vertical-align: middle;
   -webkit-transition: left 0.2s;
           transition: left 0.2s;
 }

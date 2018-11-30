@@ -16,16 +16,16 @@
     color: white;
     background: $color-gray-30;
 
-    &:after {
+    i {
       right: -1px;
     }
   }
-  &:after {
-    content: '\f105';
-    font-family: "FontAwesome";
+  i {
+    display: inline-block;
     position: relative;
     right: 0;
     margin-left: 3px;
+    vertical-align: middle;
     transition: right 0.2s;
   }
 }

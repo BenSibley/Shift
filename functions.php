@@ -243,9 +243,9 @@ if ( ! function_exists( 'ct_shift_filter_read_more_link' ) ) {
 		}
 		// Because i18n text cannot be stored in a variable
 		if ( empty( $read_more_text ) ) {
-			$output .= '<div class="more-link-wrapper"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'Continue Reading', 'shift' ) . '<span class="screen-reader-text">' . esc_html( get_the_title() ) . '</span></a></div>';
+			$output .= '<div class="more-link-wrapper"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'Continue Reading', 'shift' ) . '<span class="screen-reader-text">' . esc_html( get_the_title() ) . '</span> <i class="fas fa-angle-right"></i></a></div>';
 		} else {
-			$output .= '<div class="more-link-wrapper"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html( $read_more_text ) . '<span class="screen-reader-text">' . esc_html( get_the_title() ) . '</span></a></div>';
+			$output .= '<div class="more-link-wrapper"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html( $read_more_text ) . '<span class="screen-reader-text">' . esc_html( get_the_title() ) . '</span> <i class="fas fa-angle-right"></i></a></div>';
 		}
 		return $output;
 	}
