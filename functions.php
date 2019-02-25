@@ -543,6 +543,7 @@ if ( ! function_exists( ( 'ct_shift_reset_customizer_options' ) ) ) {
 			'display_post_author',
 			'display_post_date',
 			'display_post_comments',
+			'last_updated',
 			'custom_css'
 		);
 
@@ -752,3 +753,22 @@ function ct_shift_scroll_to_top_arrow() {
 	}
 }
 add_action( 'ct_shift_body_bottom', 'ct_shift_scroll_to_top_arrow');
+
+//----------------------------------------------------------------------------------
+// Output the "Last Updated" date on posts
+//----------------------------------------------------------------------------------
+function ct_shift_output_last_updated_date() {
+	
+	global $post;
+
+	if ( get_the_modified_date() != get_the_date() ) {
+		$updated_post = get_post_meta( $post->ID, 'ct_shift_last_updated', true );
+		$updated_customizer = get_theme_mod( 'last_updated' );
+		if ( 
+			( $updated_customizer == 'yes' && ($updated_post != 'no') )
+			|| $updated_post == 'yes' 
+			) {
+				echo '<p class="last-updated">'. esc_html__("Last updated on", "shift") . ' ' . get_the_modified_date() . ' </p>';
+			}
+	}
+}
