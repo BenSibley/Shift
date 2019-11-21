@@ -25,7 +25,7 @@ function ct_shift_last_updated_callback( $post ) {
 
   ?>
 	<p>
-		<select name="shift-last-updated" id="shift-last-updated" class="widefat">
+		<select name="shift-last-updated" id="shift-last-updated" style="box-sizing: border-box; width: 100%;">
 			<option value="default"><?php esc_html_e( 'Use Customizer setting', 'shift' ); ?></option>
 			<option value="yes" <?php if ( $display == 'yes' ) {
 				echo 'selected';
