@@ -25,8 +25,18 @@ h3 {
   /* 24px */
 }
 
-.wp-caption-text,
-.gallery-caption {
+.alignright figcaption,
+.alignleft figcaption,
+.aligncenter figcaption,
+.alignnone figcaption,
+.size-auto figcaption,
+.size-full figcaption,
+.size-large figcaption,
+.size-medium figcaption,
+.size-thumbnail figcaption,
+.wp-block-image figcaption, .wp-caption-text,
+.gallery-caption,
+.wp-caption-dd {
   font-size: 0.75em;
   /* 12px / 16px */
   line-height: 1.5;
@@ -167,15 +177,32 @@ th {
 .size-full,
 .size-large,
 .size-medium,
-.size-thumbnail {
+.size-thumbnail,
+.wp-block-image {
   max-width: 100%;
   height: auto;
 }
+.alignright figcaption,
+.alignleft figcaption,
+.aligncenter figcaption,
+.alignnone figcaption,
+.size-auto figcaption,
+.size-full figcaption,
+.size-large figcaption,
+.size-medium figcaption,
+.size-thumbnail figcaption,
+.wp-block-image figcaption {
+  margin: 3px 0 0 0;
+  color: #1A1A1A;
+  text-align: center;
+}
 
 .wp-caption-text,
-.gallery-caption {
-  margin: 0 0 1.8450184502em;
+.gallery-caption,
+.wp-caption-dd {
+  margin: 3px 0 0 0;
   color: #1A1A1A;
+  text-align: center;
 }
 
 @media all and (min-width: 50em) {
