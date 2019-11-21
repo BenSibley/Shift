@@ -207,6 +207,9 @@
 }
 
 // New Gutenberg blocks
+.wp-block-image {
+  margin: 0;
+}
 .wp-block-image.alignfull,
 .wp-block-cover {
   position: relative;
