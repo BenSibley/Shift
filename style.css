@@ -1430,6 +1430,14 @@ li.pingback.bypostauthor > article {
   background: none;
 }
 
+.wp-block-button a {
+  text-decoration: none;
+  color: #fff;
+}
+.wp-block-button a:link, .wp-block-button a:visited, .wp-block-button a:hover, .wp-block-button a:active, .wp-block-button a:focus {
+  color: #fff;
+}
+
 @media all and (min-width: 37.5em) {
   .post-title {
     font-size: 1.75em;

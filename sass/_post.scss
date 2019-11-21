@@ -228,6 +228,21 @@
 .wp-block-code code {
   background: none;
 }
+.wp-block-button {
+
+  a {
+    text-decoration: none;
+    color: #fff;
+
+    &:link,
+    &:visited,
+    &:hover,
+    &:active,
+    &:focus {
+      color: #fff;
+    }
+  }
+}
 
 @media all and (min-width: $six-hundred) {
 
