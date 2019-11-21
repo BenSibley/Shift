@@ -354,6 +354,7 @@ if ( ! function_exists( 'ct_shift_social_array' ) ) {
 			'phone'    			=> 'shift_phone_profile',
 			'email-form'    => 'shift_email_form_profile',
 			'amazon'        => 'shift_amazon_profile',
+			'artstation'    => 'shift_artstation_profile',
 			'bandcamp'      => 'shift_bandcamp_profile',
 			'behance'       => 'shift_behance_profile',
 			'bitbucket'     => 'shift_bitbucket_profile',
