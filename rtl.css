@@ -560,6 +560,9 @@ a img {
 .comment-respond p.form-submit {
   margin-top: 2.25em;
 }
+.comment-respond .comment-form-cookies-consent label {
+  display: inline-block;
+}
 
 .comments {
   margin-top: 3em;
