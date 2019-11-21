@@ -154,7 +154,8 @@ img,
   height: auto;
 }
 .wp-caption-text,
-.gallery-caption {
+.gallery-caption,
+.wp-caption-dd {
   @extend %twelve-pixels;
   margin: 0 0 $baseline-height / 0.813;
   color: $color-gray-10;
