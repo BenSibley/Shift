@@ -57,7 +57,8 @@ img figcaption,
 .size-full figcaption,
 .size-large figcaption,
 .size-medium figcaption,
-.size-thumbnail figcaption, .wp-caption-text,
+.size-thumbnail figcaption,
+.wp-block-image figcaption, .wp-caption-text,
 .gallery-caption,
 .wp-caption-dd, input[type="text"],
 input[type="email"],
@@ -287,7 +288,8 @@ img,
 .size-full,
 .size-large,
 .size-medium,
-.size-thumbnail {
+.size-thumbnail,
+.wp-block-image {
   max-width: 100%;
   height: auto;
 }
@@ -300,7 +302,8 @@ img figcaption,
 .size-full figcaption,
 .size-large figcaption,
 .size-medium figcaption,
-.size-thumbnail figcaption {
+.size-thumbnail figcaption,
+.wp-block-image figcaption {
   margin: 3px 0 0 0;
   color: #1A1A1A;
   text-align: center;
