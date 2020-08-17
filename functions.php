@@ -231,6 +231,10 @@ add_action( 'comment_form_defaults', 'ct_shift_remove_comments_notes_after' );
 
 if ( ! function_exists( 'ct_shift_filter_read_more_link' ) ) {
 	function ct_shift_filter_read_more_link( $custom = false ) {
+
+		if ( is_feed() ) {
+			return;
+		}
 		global $post;
 		$ismore             = strpos( $post->post_content, '<!--more-->' );
 		$read_more_text     = get_theme_mod( 'read_more_text' );
