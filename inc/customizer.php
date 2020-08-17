@@ -444,7 +444,7 @@ function ct_shift_sanitize_phone( $input ) {
 function ct_shift_customize_preview_js() {
 	if ( !function_exists( 'ct_shift_pro_init' ) && !(isset($_GET['mailoptin_optin_campaign_id']) || isset($_GET['mailoptin_email_campaign_id'])) ) {
 		$url = 'https://www.competethemes.com/shift-pro/?utm_source=wp-dashboard&utm_medium=Customizer&utm_campaign=Shift%20Pro%20-%20Customizer';
-		$content = "<script>jQuery('#customize-info').prepend('<div class=\"upgrades-ad\"><a href=\"". $url ."\" target=\"_blank\">Get New Layouts with Shift Pro <span>&rarr;</span></a></div>')</script>";
+		$content = "<script>jQuery('#customize-info').prepend('<div class=\"upgrades-ad\"><a href=\"". $url ."\" target=\"_blank\">Customize Colors with Shift Pro <span>&rarr;</span></a></div>')</script>";
 		echo apply_filters('ct_shift_customizer_ad', $content);
 	}
 }
