@@ -11,6 +11,10 @@
 <a class="skip-content" href="#main"><?php esc_html_e( 'Press "Enter" to skip to content', 'shift' ); ?></a>
 <div id="overflow-container" class="overflow-container">
 	<?php do_action( 'ct_shift_before_header' ); ?>
+	<?php
+		// Elementor `header` location
+		if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'header' ) ) :
+	?>
 	<header class="site-header" id="site-header" role="banner">
 		<div class="max-width">
 			<div id="title-container" class="title-container <?php if ( get_bloginfo( 'description' ) ) { echo 'has-tagline'; } ?>">
@@ -32,6 +36,7 @@
 			</div>
 		</div>
 	</header>
+	<?php endif; ?>
 	<div class="max-width main-max-width">
 		<?php do_action( 'ct_shift_after_header' ); ?>
 		<section id="main" class="main" role="main">

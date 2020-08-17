@@ -3,6 +3,10 @@
 <?php get_sidebar( 'primary' ); ?>
 <?php do_action( 'ct_shift_after_main' ); ?>
 </div><!-- .max-width -->
+<?php 
+// Elementor `footer` location
+if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'footer' ) ) :
+?>
 <footer id="site-footer" class="site-footer" role="contentinfo">
     <?php do_action( 'ct_shift_footer_top' ); ?>
     <div class="max-width">
@@ -17,6 +21,7 @@
         </div>
     </div>
 </footer>
+<?php endif; ?>
 </div><!-- .overflow-container -->
 
 <?php do_action( 'ct_shift_body_bottom' ); ?>
