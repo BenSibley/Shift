@@ -90,6 +90,9 @@ code {
   background: $color-gray-95;
   padding: 0 $baseline-height / 4;
 }
+pre code {
+  padding: 0;
+}
 blockquote {
   margin: $baseline-height $baseline-height $baseline-height 0;
   padding-left: $baseline-height;
@@ -134,7 +137,7 @@ th {
 }
 .wp-block-table.is-style-stripes {
   border-bottom: none;
-  
+
   thead {
     background: none;
   }
