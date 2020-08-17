@@ -397,6 +397,7 @@ if ( ! function_exists( 'ct_shift_social_array' ) ) {
 			'tencent-weibo' => 'shift_tencent_weibo_profile',
 			'tumblr'        => 'shift_tumblr_profile',
 			'twitch'        => 'shift_twitch_profile',
+			'untappd'       => 'shift_untappd_profile',
 			'vimeo'         => 'shift_vimeo_profile',
 			'vine'          => 'shift_vine_profile',
 			'vk'            => 'shift_vk_profile',
