@@ -116,7 +116,7 @@ module.exports = function(grunt) {
                     'rm -R /Users/bensibley/Documents/compete-themes/dist/shift || true',
                     'rm -R /Users/bensibley/Documents/compete-themes/dist/shift.zip || true',
                     // copy folder without any project/meta files
-                    'rsync -r "/Users/bensibley/Local Sites/shift/app/public/wp-content/themes/shift" /Users/bensibley/Documents/compete-themes/dist/ <%= excludeFiles %>',
+                    'rsync -r "/Users/bensibley/Sites/shift/wp-content/themes/shift" /Users/bensibley/Documents/compete-themes/dist/ <%= excludeFiles %>',
                     // open dist
                     'cd /Users/bensibley/Documents/compete-themes/dist/',
                     // zip the shift folder
