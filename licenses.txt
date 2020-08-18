@@ -11,4 +11,4 @@ Shift also uses:
 * Font Awesome, http://fontawesome.io/, Copyright 2011, Dave Gandy, MIT license, https://opensource.org/licenses/mit-license.html
 * WP Review Me, https://github.com/julien731/WP-Review-Me, Copyright 2016, Julien Liabeuf, GPL-2.0+, https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 * Dismissible Notices Handler, https://github.com/julien731/WP-Dismissible-Notices-Handler, Copyright 2016, Julien Liabeuf,  GPL-2.0+, https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
-* Image in screenshot.png : CC0 by Matthew Henry, https://unsplash.com/search/ocean-person?photo=tBtuxtLvAZs, licensed under Public Domain
+* Image in screenshot.png : CC0 by Matthew Henry
