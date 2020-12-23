@@ -11,7 +11,7 @@ jQuery(document).ready(function($){
     function addLayoutThumbnails() {
 
         // get layout inputs
-        var layoutInputs = panel.find('#customize-control-layout').find('input');
+        var layoutInputs = panel.find('#customize-control-layout, #customize-control-layout_posts, #customize-control-layout_pages, #customize-control-layout_archives, #customize-control-layout_search').find('input');
 
         // add the appropriate image to each label
         layoutInputs.each( function() {
@@ -24,7 +24,7 @@ jQuery(document).ready(function($){
         });
 
         // watch for change of inputs (layouts)
-        panel.on('click', '#customize-control-layout input', function () {
+        panel.on('click', '#customize-control-layout input, #customize-control-layout_posts input, #customize-control-layout_pages input, #customize-control-layout_archives input, #customize-control-layout_search input', function () {
             addSelectedLayoutClass(layoutInputs, $(this));
         });
     }
