@@ -54,6 +54,8 @@ function ct_shift_add_customizer_content( $wp_customize ) {
 
 			if ( $social_site == 'rss' ) {
 				$label = __('RSS', 'shift');
+			} elseif ( $social_site == 'researchgate' ) {
+				$label = __('ResearchGate', 'shift');
 			} elseif ( $social_site == 'soundcloud' ) {
 				$label = __('SoundCloud', 'shift');
 			} elseif ( $social_site == 'slideshare' ) {
