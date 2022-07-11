@@ -1,31 +1,31 @@
 <?php
 
-function ct_shift_register_theme_page() {
-	add_theme_page( 
-		sprintf( esc_html__( '%s Dashboard', 'shift' ), wp_get_theme() ), 
-		sprintf( esc_html__( '%s Dashboard', 'shift' ), wp_get_theme() ), 
-		'edit_theme_options', 
-		'shift-options', 
-		'ct_shift_options_content'
-	);
+function ct_shift_register_theme_page()
+{
+    add_theme_page(
+        sprintf(esc_html__('%s Dashboard', 'shift'), wp_get_theme()),
+        sprintf(esc_html__('%s Dashboard', 'shift'), wp_get_theme()),
+        'edit_theme_options',
+        'shift-options',
+        'ct_shift_options_content'
+    );
 }
-add_action( 'admin_menu', 'ct_shift_register_theme_page' );
+add_action('admin_menu', 'ct_shift_register_theme_page');
 
-function ct_shift_options_content() {
-
-	$pro_url = 'https://www.competethemes.com/shift-pro/?utm_source=wp-dashboard&utm_medium=Dashboard&utm_campaign=Shift%20Pro%20-%20Dashboard';
-	?>
+function ct_shift_options_content()
+{
+    $pro_url = 'https://www.competethemes.com/shift-pro/?utm_source=wp-dashboard&utm_medium=Dashboard&utm_campaign=Shift%20Pro%20-%20Dashboard'; ?>
 	<div id="shift-dashboard-wrap" class="wrap shift-dashboard-wrap">
-		<h2><?php printf( esc_html__( '%s Dashboard', 'shift' ), wp_get_theme() ); ?></h2>
-		<?php do_action( 'ct_shift_theme_options_before' ); ?>
+		<h2><?php printf(esc_html__('%s Dashboard', 'shift'), wp_get_theme()); ?></h2>
+		<?php do_action('ct_shift_theme_options_before'); ?>
 		<div class="main">
-			<?php if ( function_exists( 'ct_shift_pro_init' ) ) : ?>
+			<?php if (function_exists('ct_shift_pro_init')) : ?>
 			<div class="thanks-upgrading" style="background-image: url(<?php echo trailingslashit(get_template_directory_uri()) . 'assets/images/bg-texture.png'; ?>)">
 				<h3>Thanks for upgrading!</h3>
 				<p>You can find the new features in the Customizer</p>
 			</div>
 			<?php endif; ?>
-			<?php if ( !function_exists( 'ct_shift_pro_init' ) ) : ?>
+			<?php if (!function_exists('ct_shift_pro_init')) : ?>
 			<div class="getting-started">
 				<h3>Get Started with Shift</h3>
 				<p>Follow this step-by-step guide to customize your website with Shift:</p>
@@ -192,18 +192,55 @@ function ct_shift_options_content() {
 				<img src="<?php echo trailingslashit(get_template_directory_uri()) . 'assets/images/reviews.png'; ?>" />
 				<p>Users are loving Shift! <a href="https://wordpress.org/support/theme/shift/reviews/?filter=5#new-post" target="_blank">Click here</a> to leave your own review</p>
 			</div>
+			<div class="ad iawp">
+				<div class="logo-container">
+					<img width="308px" height="46px" src="<?php echo trailingslashit(get_template_directory_uri()) . 'assets/images/iawp.svg'; ?>" alt="Independent Analytics logo" />
+				</div>
+				<div class="features">
+					<div class="title">Free WordPress Analytics Plugin</div>
+					<ul>
+						<li>Beautiful analytics dashboard</li>
+						<li>Views & traffic sources</li>
+						<li>Easy setup</li>
+						<li>GDPR compliant</li>
+						<li>Google Analytics alternative</li>
+					</ul>
+				</div>
+				<div class="button">
+					<a href="https://independentwp.com" target="_blank" data-product-name="Independent Analytics">Learn More</a>
+				</div>
+			</div>
+			<div class="ad strive">
+				<div class="logo-container">
+					<img width="308px" height="62px" src="<?php echo trailingslashit(get_template_directory_uri()) . 'assets/images/strive.svg'; ?>" alt="Strive logo" />
+				</div>
+				<div class="features">
+					<div class="title">Content Calendar for WordPress</div>
+					<ul>
+						<li>Plan your posts visually</li>
+						<li>Track progress with post statuses</li>
+						<li>Create custom post checklists</li>
+						<li>Republish posts with revisions</li>
+						<li>Monitor content using the Pipeline</li>
+					</ul>
+				</div>
+				<div class="button">
+					<a href="https://strivecalendar.com/?utm_source=competethemes&utm_medium=sidebar&utm_campaign=competethemes_sidebar_widget" target="_blank" data-product-name="Strive">Learn More</a>
+				</div>
+			</div>
 			<div class="dashboard-widget">
 				<h4>Reset Customizer Settings</h4>
 				<p><b>Warning:</b> Clicking this buttin will erase the Shift theme's current settings in the Customizer.</p>
 				<form method="post">
 					<input type="hidden" name="shift_reset_customizer" value="shift_reset_customizer_settings"/>
 					<p>
-						<?php wp_nonce_field( 'shift_reset_customizer_nonce', 'shift_reset_customizer_nonce' ); ?>
-						<?php submit_button( 'Reset Customizer Settings', 'delete', 'delete', false ); ?>
+						<?php wp_nonce_field('shift_reset_customizer_nonce', 'shift_reset_customizer_nonce'); ?>
+						<?php submit_button('Reset Customizer Settings', 'delete', 'delete', false); ?>
 					</p>
 				</form>
 			</div>
 		</div>
-		<?php do_action( 'ct_shift_theme_options_after' ); ?>
+		<?php do_action('ct_shift_theme_options_after'); ?>
 	</div>
-<?php }
+<?php
+}
