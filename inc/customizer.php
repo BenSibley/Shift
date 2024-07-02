@@ -90,6 +90,8 @@ function ct_shift_add_customizer_content( $wp_customize ) {
 				$label = __('ArtStation', 'shift');
 			} elseif ( $social_site == 'email-form' ) {
 				$label = __('Contact Form', 'shift');
+			} elseif ( $social_site == 'twitter' ) {
+				$label = __('X (Twitter)', 'shift');
 			}
 
 			if ( $social_site == 'skype' ) {
