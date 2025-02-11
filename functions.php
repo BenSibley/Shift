@@ -380,6 +380,7 @@ if (! function_exists('ct_shift_social_array')) {
             'twitter'       => 'shift_twitter_profile',
             'facebook'      => 'shift_facebook_profile',
             'instagram'     => 'shift_instagram_profile',
+            'bluesky'       => 'shift_bluesky_profile',
             'linkedin'      => 'shift_linkedin_profile',
             'pinterest'     => 'shift_pinterest_profile',
             'youtube'       => 'shift_youtube_profile',
