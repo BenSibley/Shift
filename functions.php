@@ -24,7 +24,7 @@ function ct_shift_register_recommended_plugins()
             array(
                 'name'        => 'Resolver',
                 'slug'        => 'resolver-ai-chatbot',
-                'description' => __('an AI-powered chatbot that trains on your website\'s content in seconds and answers visitor questions intelligently.', 'shift'),
+                'description' => __('an AI-powered chatbot that trains on your website\'s content and answers visitor questions intelligently.', 'shift'),
                 'url'         => 'https://resolverchatbot.com',
             ),
         ),
