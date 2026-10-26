@@ -92,6 +92,8 @@ function ct_shift_add_customizer_content( $wp_customize ) {
 				$label = __('Contact Form', 'shift');
 			} elseif ( $social_site == 'twitter' ) {
 				$label = __('X (Twitter)', 'shift');
+			} elseif ( $social_site == 'tiktok' ) {
+				$label = __('TikTok', 'shift');
 			}
 
 			if ( $social_site == 'skype' ) {

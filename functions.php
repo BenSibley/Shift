@@ -369,6 +369,8 @@ if (! function_exists('ct_shift_social_array')) {
             'linkedin'      => 'shift_linkedin_profile',
             'pinterest'     => 'shift_pinterest_profile',
             'youtube'       => 'shift_youtube_profile',
+            'tiktok'        => 'shift_tiktok_profile',
+            'threads'       => 'shift_threads_profile',
             'rss'           => 'shift_rss_profile',
             'email'         => 'shift_email_profile',
             'phone'    			=> 'shift_phone_profile',
